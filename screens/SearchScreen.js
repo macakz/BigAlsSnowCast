@@ -1,9 +1,20 @@
-import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView, StatusBar, StyleSheet, Text, View, TextInput } from 'react-native';
 
 const SearchScreen = () => {
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+        },
+    });
+    const [mountainSearch, setMountainSearch] = useState('')
+    console.log(mountainSearch)
     return (
-        <Text>Hi</Text>
+        <>
+            <TextInput onChangeText={(value) => { setMountainSearch(value) }} />
+        </>
     )
 }
 
