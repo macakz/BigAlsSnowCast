@@ -1,10 +1,10 @@
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
 
-const HomeScreen = () => {
+const SearchScreen = () => {
     return (
         <Text>Hi</Text>
     )
 }
 
-export default HomeScreen
+export default SearchScreen
