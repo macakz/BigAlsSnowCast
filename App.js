@@ -1,6 +1,6 @@
 import React from 'react';
-import {SafeAreaView, StatusBar, StyleSheet, Text, View} from 'react-native';
-
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from 'react-native';
+import Home from './screens/Home'
 const App = () => {
   const styles = StyleSheet.create({
     container: {
@@ -14,9 +14,7 @@ const App = () => {
     <SafeAreaView style={styles.container}>
       <StatusBar />
       <View>
-        <Text>hello world</Text>
-        <Text>hello world</Text>
-        <Text>hello world</Text>
+        <Home />
         <Text>hello world</Text>
       </View>
     </SafeAreaView>
