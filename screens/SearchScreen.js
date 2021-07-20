@@ -34,7 +34,13 @@ const SearchScreen = ({ route, navigation }) => {
             <View style={styles.container}>
                 <TextInput style={styles.search} onSubmitEditing={search} onChangeText={(value) => { setMountainSearch(value) }} />
                 <Button onPress={search} title="let it snow" />
-                <Text>{searchList.name}, {searchList.region}</Text>
+                {
+                    searchList === ''
+                        ? <Text></Text>
+                        :
+                        <Text>{searchList.name}, {searchList.region}</Text>
+
+                }
             </View>
 
         </>
