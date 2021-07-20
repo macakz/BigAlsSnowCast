@@ -20,28 +20,21 @@ const SearchScreen = ({ route, navigation }) => {
         }
     });
 
-    const searchForSkifield = () => {
-        
-    }
 
     const [mountainSearch, setMountainSearch] = useState('')
+    const [searchList, setSearchList] = useState('')
     const search = () => {
-        console.log(mountainSearch)
+        let searchForSkifield = skifields.find(field => field.name === mountainSearch);
+        setSearchList(searchForSkifield);
     }
+
+
     return (
         <>
             <View style={styles.container}>
                 <TextInput style={styles.search} onSubmitEditing={search} onChangeText={(value) => { setMountainSearch(value) }} />
                 <Button onPress={search} title="let it snow" />
-                {
-                    skifields.map(field => {
-                        field.name
-                    })
-                    mountainSearch = 
-                        ? <Text>Coronet Peak</Text>
-                        : null
-
-                }
+                <Text>{searchList.name}, {searchList.region}</Text>
             </View>
 
         </>
