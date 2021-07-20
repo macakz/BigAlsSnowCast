@@ -3,7 +3,9 @@ import 'react-native-gesture-handler';
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import HomeScreen from './screens/HomeScreen'
-import SearchScreen from './screens/SearchScreen';
+import SearchScreen from './screens/SearchScreen'
+
+
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 

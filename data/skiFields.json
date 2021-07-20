@@ -1,0 +1,127 @@
+[
+    {
+        "name": "Tukino ",
+        "region": "Mount Ruapehu",
+        "club": true
+    },
+    {
+        "name": "Turoa",
+        "region": "Mount Ruapehu",
+        "club": false
+    },
+    {
+        "name": "Whakapapa",
+        "region": "Mount Ruapehu",
+        "club": false
+    },
+    {
+        "name": "Manganui ",
+        "region": "Taranaki",
+        "club": true
+    },
+    {
+        "name": "Awakino",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Broken River ",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Craigieburn Valley",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Mount Cheeseman",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Mount Olympus",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Fox Peak",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Hanmer Springs Ski Area",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Mount Dobson",
+        "region": "Canterbury",
+        "club": false
+    },
+    {
+        "name": "Mount Hutt",
+        "region": "Canterbury",
+        "club": false
+    },
+    {
+        "name": "Mount Lyford",
+        "region": "Canterbury",
+        "club": false
+    },
+    {
+        "name": "Ohau",
+        "region": "Canterbury",
+        "club": false
+    },
+    {
+        "name": "Porters Ski Area",
+        "region": "Canterbury",
+        "club": false
+    },
+    {
+        "name": "Roundhill",
+        "region": "Canterbury",
+        "club": false
+    },
+    {
+        "name": "Temple Basin",
+        "region": "Canterbury",
+        "club": true
+    },
+    {
+        "name": "Rainbow",
+        "region": "Nelson Lakes",
+        "club": false
+    },
+    {
+        "name": "Invincible Snowfields",
+        "region": "Otago",
+        "club": true
+    },
+    {
+        "name": "Coronet Peak",
+        "region": "Otago",
+        "club": false
+    },
+    {
+        "name": "The Remarkables",
+        "region": "Otago",
+        "club": false
+    },
+    {
+        "name": "Cardrona Alpine Resort",
+        "region": "Otago",
+        "club": false
+    },
+    {
+        "name": "Snow Farm",
+        "region": "Otago",
+        "club": false
+    },
+    {
+        "name": "Treble Cone",
+        "region": "Otago",
+        "club": false
+    }
+]
