@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StyleSheet, Text, View, TextInput, Button } from 'react-native';
-
+import skifields from '../data/skifields.json'
 const SearchScreen = ({ route, navigation }) => {
     const styles = StyleSheet.create({
         container: {
@@ -20,6 +20,9 @@ const SearchScreen = ({ route, navigation }) => {
         }
     });
 
+    const searchForSkifield = () => {
+        
+    }
 
     const [mountainSearch, setMountainSearch] = useState('')
     const search = () => {
@@ -31,7 +34,10 @@ const SearchScreen = ({ route, navigation }) => {
                 <TextInput style={styles.search} onSubmitEditing={search} onChangeText={(value) => { setMountainSearch(value) }} />
                 <Button onPress={search} title="let it snow" />
                 {
-                    mountainSearch === 'C'
+                    skifields.map(field => {
+                        field.name
+                    })
+                    mountainSearch = 
                         ? <Text>Coronet Peak</Text>
                         : null
 
