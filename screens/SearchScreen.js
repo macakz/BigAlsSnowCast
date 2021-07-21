@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import skifields from '../data/skifields.json'
 import DropDownPicker from 'react-native-dropdown-picker';
 
@@ -43,7 +43,7 @@ const SearchScreen = ({ navigation }) => {
     const [value, setValue] = useState(null);
     const items = skifields.map(field => {
         return (
-            { label: field.name + field.region, value: field.name }
+            { label: field.name + ", " + field.region, value: field.name }
         )
     });
 
