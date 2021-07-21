@@ -19,16 +19,26 @@ const MountainScreen = ({ route, navigation }) => {
         let match = skifields.find(field => field.name === mountain);
         setMountainId(match.weatherId);
     }
-
-    const mountainForecast = async (query) => {
-        let data = await axios.get(`api.weatherunlocked.com/api/resortforecast/4424660?app_id=${app_id}&app_key=${app_key}`)
+    const [mountainForecastData, setMountainForecastData] = useState('')
+    const mountainForecast = () => {
+        axios.get(`https://api.weatherunlocked.com/api/resortforecast/4424660?app_id=${app_id}&app_key=${app_key}`)
+            .then(function (response) {
+                console.log(response.data)
+                // setMountainForecastData(response)
+            })
+            .catch(function (error) {
+                // handle error
+                console.log(error);
+            })
     }
-
     return (
         <>
             <Text style={styles.title}>{mountain}</Text>
             <Text>{mountainId}</Text>
             <Button title="mountain" onPress={() => matchMountainId()} />
+            <Button title="forecast" onPress={() => mountainForecast()} />
+            <Text>{mountainForecastData}</Text>
+
         </>
     )
 }
