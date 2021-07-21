@@ -102,6 +102,7 @@
     {
         "name": "Coronet Peak",
         "region": "Otago",
+        "weatherId": "4424660",
         "club": false
     },
     {
