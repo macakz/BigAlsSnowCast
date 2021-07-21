@@ -12,18 +12,18 @@ const MountainScreen = ({ route, navigation }) => {
         },
     })
 
-    const mountain = route.params
-    const setMountain = mountain.value
+    const mountain = route.params.value
+    
     const [findMountainId, setFindMountainId] = useState('hello')
 
     const matchMountainId = () => {
-        let match = skifields.find(field => field.name === setMountain);
+        let match = skifields.find(field => field.name === mountain);
         setFindMountainId(match.weatherId);
     }
 
     return (
         <>
-            <Text style={styles.title}>{setMountain}</Text>
+            <Text style={styles.title}>{mountain}</Text>
             <Text>{findMountainId}</Text>
             <Button title="mountain" onPress={() => matchMountainId()} />
         </>
