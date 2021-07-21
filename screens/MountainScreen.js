@@ -23,7 +23,7 @@ const MountainScreen = ({ route, navigation }) => {
     const mountainForecast = () => {
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/4424660?app_id=${app_id}&app_key=${app_key}`)
             .then(function (response) {
-                console.log(response.data)
+                console.log(response.data.forecast)
                 // setMountainForecastData(response)
             })
             .catch(function (error) {
