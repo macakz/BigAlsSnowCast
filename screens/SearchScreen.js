@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, TextInput, Button, TouchableOpacity } from 'react-native';
 import skifields from '../data/skifields.json'
 import DropDownPicker from 'react-native-dropdown-picker';
 
-const SearchScreen = ({ route, navigation }) => {
+const SearchScreen = ({ navigation }) => {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -19,21 +19,41 @@ const SearchScreen = ({ route, navigation }) => {
             padding: 9,
             margin: 4,
             width: 300
+        },
+        dropDownPicker: {
+
+        },
+        modalContentContainerStyle: {
+
+        },
+        button: {
+            alignItems: 'center',
+            borderWidth: 1,
+            borderRadius: 10,
+            borderColor: '#1282E9',
+            backgroundColor: '#3C97EA',
+            padding: 9,
+            margin: 4,
+        },
+        buttonText: {
+            color: 'white'
         }
     });
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
     const items = skifields.map(field => {
         return (
-            { label: field.name, value: field.name }
+            { label: field.name + field.region, value: field.name }
         )
     });
-
-
+    const data = "alex"
     return (
         <>
             <View style={styles.container}>
                 <DropDownPicker
+                    listMode="MODAL"
+                    modalContentContainerStyle={styles.modalContentContainerStyle}
+                    style={styles.dropDownPicker}
                     placeholder="Choose your mountain"
                     searchPlaceholder="Search here..."
                     searchable={true}
@@ -43,6 +63,9 @@ const SearchScreen = ({ route, navigation }) => {
                     setOpen={setOpen}
                     setValue={setValue}
                 />
+                <TouchableOpacity onPress={() => navigation.navigate('Mountain', data)} style={styles.button}>
+                    <Text style={styles.buttonText}>Let's see what Big Al has to say...</Text>
+                </TouchableOpacity>
             </View>
 
         </>

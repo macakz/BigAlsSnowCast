@@ -1,126 +1,126 @@
 [
     {
-        "name": "Tukino",
+        "name": "Tukino, ",
         "region": "Mount Ruapehu",
         "club": true
     },
     {
-        "name": "Turoa",
+        "name": "Turoa, ",
         "region": "Mount Ruapehu",
         "club": false
     },
     {
-        "name": "Whakapapa",
+        "name": "Whakapapa, ",
         "region": "Mount Ruapehu",
         "club": false
     },
     {
-        "name": "Manganui ",
+        "name": "Manganui, ",
         "region": "Taranaki",
         "club": true
     },
     {
-        "name": "Awakino",
+        "name": "Awakino, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Broken River ",
+        "name": "Broken River, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Craigieburn Valley",
+        "name": "Craigieburn Valley, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Mount Cheeseman",
+        "name": "Mount Cheeseman,",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Mount Olympus",
+        "name": "Mount Olympus, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Fox Peak",
+        "name": "Fox Peak, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Hanmer Springs Ski Area",
+        "name": "Hanmer Springs Ski Area, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Mount Dobson",
+        "name": "Mount Dobson, ",
         "region": "Canterbury",
         "club": false
     },
     {
-        "name": "Mount Hutt",
+        "name": "Mount Hutt, ",
         "region": "Canterbury",
         "club": false
     },
     {
-        "name": "Mount Lyford",
+        "name": "Mount Lyford, ",
         "region": "Canterbury",
         "club": false
     },
     {
-        "name": "Ohau",
+        "name": "Ohau ",
+        "region": "Canterbury ",
+        "club": false
+    },
+    {
+        "name": "Porters Ski Area, ",
         "region": "Canterbury",
         "club": false
     },
     {
-        "name": "Porters Ski Area",
+        "name": "Roundhill, ",
         "region": "Canterbury",
         "club": false
     },
     {
-        "name": "Roundhill",
-        "region": "Canterbury",
-        "club": false
-    },
-    {
-        "name": "Temple Basin",
+        "name": "Temple Basin, ",
         "region": "Canterbury",
         "club": true
     },
     {
-        "name": "Rainbow",
+        "name": "Rainbow, ",
         "region": "Nelson Lakes",
         "club": false
     },
     {
-        "name": "Invincible Snowfields",
+        "name": "Invincible Snowfields, ",
         "region": "Otago",
         "club": true
     },
     {
-        "name": "Coronet Peak",
+        "name": "Coronet Peak, ",
         "region": "Otago",
         "club": false
     },
     {
-        "name": "The Remarkables",
+        "name": "The Remarkables, ",
         "region": "Otago",
         "club": false
     },
     {
-        "name": "Cardrona Alpine Resort",
+        "name": "Cardrona Alpine Resort, ",
         "region": "Otago",
         "club": false
     },
     {
-        "name": "Snow Farm",
+        "name": "Snow Farm, ",
         "region": "Otago",
         "club": false
     },
     {
-        "name": "Treble Cone",
+        "name": "Treble Cone, ",
         "region": "Otago",
         "club": false
     }
