@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { StyleSheet, Text, } from 'react-native';
 
 const MountainScreen = ({ route, navigation }) => {
     const styles = StyleSheet.create({

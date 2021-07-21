@@ -21,7 +21,8 @@ const SearchScreen = ({ navigation }) => {
             width: 300
         },
         dropDownPicker: {
-
+            width: "80%",
+            alignSelf: "center"
         },
         modalContentContainerStyle: {
 
@@ -33,7 +34,7 @@ const SearchScreen = ({ navigation }) => {
             borderColor: '#1282E9',
             backgroundColor: '#3C97EA',
             padding: 9,
-            margin: 4,
+            margin: 20,
         },
         buttonText: {
             color: 'white'
