@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
-const MountainScreen = () => {
+const MountainScreen = ({ route, navigation }) => {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -10,10 +10,11 @@ const MountainScreen = () => {
         },
     });
 
+    const data = route.params;
 
     return (
         <>
-            <Text>Hello</Text>
+            <Text>{data.value}</Text>
         </>
     )
 }

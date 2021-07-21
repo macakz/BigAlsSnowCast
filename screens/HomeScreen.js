@@ -1,7 +1,7 @@
 import React from 'react';
 import { SafeAreaView, StatusBar, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
 
-const HomeScreen = ({ route, navigation }) => {
+const HomeScreen = ({ navigation }) => {
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -20,9 +20,8 @@ const HomeScreen = ({ route, navigation }) => {
             color: 'white',
         }
     });
-    const data = route.params;
 
-    console.log(data)
+
     return (
 
         <>

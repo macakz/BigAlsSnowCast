@@ -46,7 +46,7 @@ const SearchScreen = ({ navigation }) => {
             { label: field.name + field.region, value: field.name }
         )
     });
-    const data = "alex"
+
     return (
         <>
             <View style={styles.container}>
@@ -63,7 +63,7 @@ const SearchScreen = ({ navigation }) => {
                     setOpen={setOpen}
                     setValue={setValue}
                 />
-                <TouchableOpacity onPress={() => navigation.navigate('Mountain', data)} style={styles.button}>
+                <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.button}>
                     <Text style={styles.buttonText}>Let's see what Big Al has to say...</Text>
                 </TouchableOpacity>
             </View>
