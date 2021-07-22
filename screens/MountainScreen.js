@@ -27,10 +27,7 @@ const MountainScreen = ({ route, navigation }) => {
 
         }
     })
-    // call on load to render the page data
-    useEffect(() => {
-        mountainForecast()
-    }, [mountainId])
+
     //load mountain data
 
     const [mountainIsReady, setMountainIsReady] = useState(false)
@@ -51,9 +48,6 @@ const MountainScreen = ({ route, navigation }) => {
     { label: "mid", value: "mid" },
     { label: "upper", value: "upper" }]
 
-
-
-
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
 
@@ -70,6 +64,13 @@ const MountainScreen = ({ route, navigation }) => {
             })
     }
 
+    // call on load to render the screen data
+
+    useEffect(() => {
+        mountainForecast()
+    }, [mountainId])
+
+    // screen data
     if (!mountainIsReady) {
         return (
             <>
