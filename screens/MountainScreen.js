@@ -22,16 +22,15 @@ const MountainScreen = ({ route, navigation }) => {
     const [mountainForecastData, setMountainForecastData] = useState([])
     const [mountainIsReady, setMountainIsReady] = useState(false)
 
+    useEffect(() => {
+    });
     const mountainForecast = () => {
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?app_id=${app_id}&app_key=${app_key}`)
             .then(function (response) {
                 setMountainForecastData(response.data.forecast)
             })
-            .finally(
-                setMountainIsReady(true)
-            )
+
             .catch(function (error) {
-                // handle error
                 console.log(error);
             })
     }
@@ -42,12 +41,15 @@ const MountainScreen = ({ route, navigation }) => {
                 <Text>{mountainId}</Text>
                 <Button title="mountain" onPress={() => matchMountainId()} />
                 <Button title="forecast" onPress={() => mountainForecast()} />
+                <Button title="SET IT READY BABY" onPress={() => setMountainIsReady(true)} />
+
             </>
         )
     }
     return (
         <>
-            <Text>{mountainForecastData[17].snow_mm}</Text>
+            <Text>hi</Text>
+            <Text>{mountainForecastData[17].date}</Text>
         </>
     )
 }
