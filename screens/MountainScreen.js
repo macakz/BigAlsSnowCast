@@ -71,13 +71,23 @@ const MountainScreen = ({ route, navigation }) => {
                         setOpen={setOpen}
                         setValue={setHeightValue}
                     />
-                    {mountainForecastData.map((info) => {
+                    {mountainForecastData.map((data) => {
                         return (
                             <>
-                                <Text>{info.date}</Text>
-                                <Text>{info.time}</Text>
-                                <Text>{info.mid.freshsnow_cm}cm</Text>
-                                <Text>{info.rain_mm}</Text>
+                                <Text>{data.date}</Text>
+                                <Text>{data.time}</Text>
+                                {
+                                    heightValue === "base"
+                                        ?
+                                        <Text>{data.base.freshsnow_cm}cm</Text>
+                                        :
+                                        heightValue === "mid"
+                                            ?
+                                            <Text>{data.mid.freshsnow_cm}cm</Text>
+                                            :
+                                            <Text>{data.upper.freshsnow_cm}cm</Text>
+                                }
+                                <Text>{data.rain_mm}</Text>
 
                             </>
                         )
