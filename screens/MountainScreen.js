@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Button, StyleSheet, Text, } from 'react-native';
+import { ActivityIndicator, Button, StyleSheet, Text, } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
+import { useFocusEffect } from '@react-navigation/native';
+
 const MountainScreen = ({ route, navigation }) => {
 
     const styles = StyleSheet.create({
@@ -23,33 +25,32 @@ const MountainScreen = ({ route, navigation }) => {
     const [mountainIsReady, setMountainIsReady] = useState(false)
 
     useEffect(() => {
-    });
-    const mountainForecast = () => {
-        axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?app_id=${app_id}&app_key=${app_key}`)
-            .then(function (response) {
-                setMountainForecastData(response.data.forecast)
-            })
+        mountainForecast()
+    }, [mountainId]);
 
-            .catch(function (error) {
-                console.log(error);
+    const mountainForecast = () => {
+        matchMountainId()
+        axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?app_id=${app_id}&app_key=${app_key}`)
+            .then((response) => setMountainForecastData(response.data.forecast))
+            .then(
+                console.log("confirmed data")
+            )
+            .finally(() => setMountainIsReady(true))
+            .catch((error) => {
+                console.log("Error:", error);
             })
     }
     if (!mountainIsReady) {
         return (
             <>
-                <Text style={styles.title}>{mountain}</Text>
-                <Text>{mountainId}</Text>
-                <Button title="mountain" onPress={() => matchMountainId()} />
-                <Button title="forecast" onPress={() => mountainForecast()} />
-                <Button title="SET IT READY BABY" onPress={() => setMountainIsReady(true)} />
-
+                <Text>waiting on data</Text>
             </>
         )
     }
     return (
         <>
             <Text>hi</Text>
-            <Text>{mountainForecastData[17].date}</Text>
+            <Text>{mountainForecastData[0].snow_mm}</Text>
         </>
     )
 }
