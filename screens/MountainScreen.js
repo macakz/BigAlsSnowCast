@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ActivityIndicator, Button, SafeAreaView, ScrollView, StyleSheet, Text, } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
-import { useFocusEffect } from '@react-navigation/native';
 import DropDownPicker from 'react-native-dropdown-picker';
-import { baseProps } from 'react-native-gesture-handler/lib/typescript/handlers/gestureHandlers';
 
 const MountainScreen = ({ route, navigation }) => {
 
@@ -15,6 +13,11 @@ const MountainScreen = ({ route, navigation }) => {
             alignItems: 'center',
             justifyContent: 'center',
         },
+        dropDownPicker: {
+            width: "95%",
+            alignSelf: "center",
+            margin: 20
+        }
     })
 
     const mountain = route.params.value
@@ -83,7 +86,6 @@ const MountainScreen = ({ route, navigation }) => {
                                             <Text>{data.base.freshsnow_cm}cm</Text>
                                             <Text>{data.base.temp_c}°C</Text>
                                             <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
-                                            <Text></Text>
                                         </>
                                         :
                                         heightValue === "mid"
@@ -92,17 +94,12 @@ const MountainScreen = ({ route, navigation }) => {
                                                 <Text>{data.mid.freshsnow_cm}cm</Text>
                                                 <Text>{data.mid.temp_c}°C</Text>
                                                 <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
-                                                <Text></Text>
                                             </>
                                             :
                                             <>
                                                 <Text>{data.upper.freshsnow_cm}cm</Text>
                                                 <Text>{data.upper.temp_c}°C</Text>
                                                 <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
-                                                <Text></Text>
-
-
-
                                             </>
                                 }
                                 <Text>{data.rain_mm}</Text>
