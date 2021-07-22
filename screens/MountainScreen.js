@@ -21,10 +21,9 @@ const MountainScreen = ({ route, navigation }) => {
     }
     const [mountainForecastData, setMountainForecastData] = useState('')
     const mountainForecast = () => {
-        axios.get(`https://api.weatherunlocked.com/api/resortforecast/4424660?app_id=${app_id}&app_key=${app_key}`)
+        axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?app_id=${app_id}&app_key=${app_key}`)
             .then(function (response) {
-                console.log(response.data.forecast)
-                // setMountainForecastData(response)
+                setMountainForecastData(response.data.forecast)
             })
             .catch(function (error) {
                 // handle error
@@ -37,7 +36,6 @@ const MountainScreen = ({ route, navigation }) => {
             <Text>{mountainId}</Text>
             <Button title="mountain" onPress={() => matchMountainId()} />
             <Button title="forecast" onPress={() => mountainForecast()} />
-            <Text>{mountainForecastData}</Text>
 
         </>
     )
