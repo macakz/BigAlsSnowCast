@@ -7,6 +7,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 
 const MountainScreen = ({ route, navigation }) => {
 
+
     const styles = StyleSheet.create({
         container: {
             flex: 1,
@@ -26,6 +27,15 @@ const MountainScreen = ({ route, navigation }) => {
 
         }
     })
+    // call on load to render the page data
+    useEffect(() => {
+        mountainForecast()
+    }, [mountainId])
+    //load mountain data
+
+    const [mountainIsReady, setMountainIsReady] = useState(false)
+
+    //matches the mountain id for api to the chosen mountain from previous screen, passed through params
 
     const mountain = route.params.value
     const [mountainId, setMountainId] = useState()
@@ -33,9 +43,8 @@ const MountainScreen = ({ route, navigation }) => {
         let match = skifields.find(field => field.name === mountain);
         setMountainId(match.weatherId);
     }
-    const [mountainForecastData, setMountainForecastData] = useState([])
-    const [mountainIsReady, setMountainIsReady] = useState(false)
 
+    // dropdown picker
     const [open, setOpen] = useState(false);
     const [heightValue, setHeightValue] = useState("mid");
     const items = [{ label: "base", value: "base" },
@@ -43,9 +52,10 @@ const MountainScreen = ({ route, navigation }) => {
     { label: "upper", value: "upper" }]
 
 
-    useEffect(() => {
-        mountainForecast()
-    }, [mountainId]);
+
+
+    // determine the forecast for selected mountain by calling api
+    const [mountainForecastData, setMountainForecastData] = useState([])
 
     const mountainForecast = () => {
         matchMountainId()
@@ -59,6 +69,7 @@ const MountainScreen = ({ route, navigation }) => {
                 console.log("Error:", error);
             })
     }
+
     if (!mountainIsReady) {
         return (
             <>
