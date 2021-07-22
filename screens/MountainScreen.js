@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
@@ -17,6 +17,13 @@ const MountainScreen = ({ route, navigation }) => {
             width: "95%",
             alignSelf: "center",
             margin: 20
+        },
+        dataContainer: {
+            margin: 5,
+            padding: 5,
+            borderWidth: 2,
+            borderColor: 'black',
+
         }
     })
 
@@ -77,33 +84,34 @@ const MountainScreen = ({ route, navigation }) => {
                     {mountainForecastData.map((data) => {
                         return (
                             <>
-                                <Text>{data.date}</Text>
-                                <Text>{data.time}</Text>
-                                {
-                                    heightValue === "base"
-                                        ?
-                                        <>
-                                            <Text>{data.base.freshsnow_cm}cm</Text>
-                                            <Text>{data.base.temp_c}°C</Text>
-                                            <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
-                                        </>
-                                        :
-                                        heightValue === "mid"
+                                <View style={styles.dataContainer}>
+                                    <Text>{data.date}</Text>
+                                    <Text>{data.time}</Text>
+                                    {
+                                        heightValue === "base"
                                             ?
                                             <>
-                                                <Text>{data.mid.freshsnow_cm}cm</Text>
-                                                <Text>{data.mid.temp_c}°C</Text>
-                                                <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
+                                                <Text>{data.base.freshsnow_cm}cm</Text>
+                                                <Text>{data.base.temp_c}°C</Text>
+                                                <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
                                             </>
                                             :
-                                            <>
-                                                <Text>{data.upper.freshsnow_cm}cm</Text>
-                                                <Text>{data.upper.temp_c}°C</Text>
-                                                <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
-                                            </>
-                                }
-                                <Text>{data.rain_mm}</Text>
-
+                                            heightValue === "mid"
+                                                ?
+                                                <>
+                                                    <Text>{data.mid.freshsnow_cm}cm</Text>
+                                                    <Text>{data.mid.temp_c}°C</Text>
+                                                    <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
+                                                </>
+                                                :
+                                                <>
+                                                    <Text>{data.upper.freshsnow_cm}cm</Text>
+                                                    <Text>{data.upper.temp_c}°C</Text>
+                                                    <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
+                                                </>
+                                    }
+                                    <Text>{data.rain_mm}</Text>
+                                </View>
                             </>
                         )
                     })
