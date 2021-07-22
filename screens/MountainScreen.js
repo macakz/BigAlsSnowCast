@@ -79,13 +79,31 @@ const MountainScreen = ({ route, navigation }) => {
                                 {
                                     heightValue === "base"
                                         ?
-                                        <Text>{data.base.freshsnow_cm}cm</Text>
+                                        <>
+                                            <Text>{data.base.freshsnow_cm}cm</Text>
+                                            <Text>{data.base.temp_c}°C</Text>
+                                            <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
+                                            <Text></Text>
+                                        </>
                                         :
                                         heightValue === "mid"
                                             ?
-                                            <Text>{data.mid.freshsnow_cm}cm</Text>
+                                            <>
+                                                <Text>{data.mid.freshsnow_cm}cm</Text>
+                                                <Text>{data.mid.temp_c}°C</Text>
+                                                <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
+                                                <Text></Text>
+                                            </>
                                             :
-                                            <Text>{data.upper.freshsnow_cm}cm</Text>
+                                            <>
+                                                <Text>{data.upper.freshsnow_cm}cm</Text>
+                                                <Text>{data.upper.temp_c}°C</Text>
+                                                <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
+                                                <Text></Text>
+
+
+
+                                            </>
                                 }
                                 <Text>{data.rain_mm}</Text>
 
