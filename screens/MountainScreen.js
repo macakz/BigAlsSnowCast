@@ -59,7 +59,6 @@ const MountainScreen = ({ route, navigation }) => {
 
     ]
 
-    const imageRequire = require('../data/icons/gifSet/')
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
 
@@ -148,8 +147,8 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <Text>{data.upper.freshsnow_cm}cm</Text>
                                                     <Text>{data.upper.temp_c}°C</Text>
                                                     <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
-                                                    <Image style={styles.logo} source={imageRequire + data.upper.wx_icon} />
-xs
+                                                    <Image style={styles.logo} source={{ uri:  data.upper.wx_icon  }} />
+                                                    
                                                 </>
                                     }
                                     <Text>{data.rain_mm}</Text>
