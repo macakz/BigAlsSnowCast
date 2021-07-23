@@ -81,6 +81,7 @@ const MountainScreen = ({ route, navigation }) => {
         mountainForecast()
     }, [mountainId, hourValue])
 
+
     // screen data
     if (!mountainIsReady) {
         return (
@@ -120,6 +121,7 @@ const MountainScreen = ({ route, navigation }) => {
                     </View>
 
                     {mountainForecastData.map((data) => {
+                        console.log(data.upper.wx_icon)
                         return (
                             <>
                                 <View key={data.time} style={styles.dataContainer}>
@@ -133,6 +135,9 @@ const MountainScreen = ({ route, navigation }) => {
                                                 <Text>{data.base.freshsnow_cm}cm</Text>
                                                 <Text>{data.base.temp_c}°C</Text>
                                                 <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
+                                                <Text>{data.base.wx_desc}</Text>
+                                                <Text>{data.base.wx_icon}</Text>
+
                                             </>
                                             :
                                             heightValue === "Mid"
@@ -141,16 +146,23 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <Text>{data.mid.freshsnow_cm}cm</Text>
                                                     <Text>{data.mid.temp_c}°C</Text>
                                                     <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
+                                                    <Text>{data.mid.wx_desc}</Text>
+                                                    <Text>{data.mid.wx_icon}</Text>
+
+
                                                 </>
                                                 :
                                                 <>
                                                     <Text>{data.upper.freshsnow_cm}cm</Text>
                                                     <Text>{data.upper.temp_c}°C</Text>
                                                     <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
-                                                    <Image style={styles.logo} source={{ uri:  data.upper.wx_icon  }} />
-                                                    
+                                                    <Text>{data.upper.wx_desc}</Text>
+                                                    <Text>{data.upper.wx_icon}</Text>
+                                                    <Image source={require(data.upper.wx_icon)} />
+
                                                 </>
                                     }
+
                                     <Text>{data.rain_mm}</Text>
                                 </View>
                             </>
