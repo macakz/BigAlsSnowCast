@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
@@ -15,16 +15,16 @@ const MountainScreen = ({ route, navigation }) => {
             justifyContent: 'center',
         },
         dropDownPicker: {
-            width: "95%",
             alignSelf: "center",
             margin: 20
+        },
+        dropDownPickerContainer: {
         },
         dataContainer: {
             margin: 5,
             padding: 5,
             borderWidth: 2,
             borderColor: 'black',
-
         }
     })
 
@@ -42,18 +42,30 @@ const MountainScreen = ({ route, navigation }) => {
     }
 
     // dropdown picker
-    const [open, setOpen] = useState(false);
-    const [heightValue, setHeightValue] = useState("mid");
-    const items = [{ label: "base", value: "base" },
-    { label: "mid", value: "mid" },
-    { label: "upper", value: "upper" }]
+    const [heightOpen, setHeightOpen] = useState(false);
+    const [heightValue, setHeightValue] = useState("Mid");
+
+    const [hourOpen, setHourOpen] = useState(false)
+    const [hourValue, setHourValue] = useState(12)
+    const heightOptions = [
+        { label: "Base", value: "Base" },
+        { label: "Mid", value: "Mid" },
+        { label: "Upper", value: "Upper" }
+    ]
+
+    const hourOptions = [
+        { label: 3, value: 3 },
+        { label: 6, value: 6 },
+        { label: 12, value: 12 }
+
+    ]
 
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
 
     const mountainForecast = () => {
         matchMountainId()
-        axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?app_id=${app_id}&app_key=${app_key}`)
+        axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
             .then((response) => setMountainForecastData(response.data.forecast))
             .then(
                 console.log("confirmed data")
@@ -68,13 +80,13 @@ const MountainScreen = ({ route, navigation }) => {
 
     useEffect(() => {
         mountainForecast()
-    }, [mountainId])
+    }, [mountainId, hourValue])
 
     // screen data
     if (!mountainIsReady) {
         return (
             <>
-                <Text>waiting on data</Text>
+                <ActivityIndicator animating={true} />
             </>
         )
     }
@@ -82,17 +94,32 @@ const MountainScreen = ({ route, navigation }) => {
         <>
             <SafeAreaView>
                 <ScrollView>
-                    <DropDownPicker
-                        listMode="MODAL"
-                        modalContentContainerStyle={styles.modalContentContainerStyle}
-                        style={styles.dropDownPicker}
-                        placeholder="Choose your mountain"
-                        open={open}
-                        value={heightValue}
-                        items={items}
-                        setOpen={setOpen}
-                        setValue={setHeightValue}
-                    />
+                    <View style={styles.dropDownPickerContainer}>
+                        <DropDownPicker
+                            listMode="MODAL"
+                            modalContentContainerStyle={styles.modalContentContainerStyle}
+                            style={styles.dropDownPicker}
+                            placeholder="Choose your mountain"
+                            open={heightOpen}
+                            value={heightValue}
+                            items={heightOptions}
+                            setOpen={setHeightOpen}
+                            setValue={setHeightValue}
+                        />
+                        <DropDownPicker
+                            listMode="MODAL"
+                            modalContentContainerStyle={styles.modalContentContainerStyle}
+                            style={styles.dropDownPicker}
+                            placeholder="Choose your mountain"
+                            open={hourOpen}
+                            value={hourValue}
+                            items={hourOptions}
+                            setOpen={setHourOpen}
+                            setValue={setHourValue}
+
+                        />
+                    </View>
+
                     {mountainForecastData.map((data) => {
                         return (
                             <>
@@ -100,7 +127,7 @@ const MountainScreen = ({ route, navigation }) => {
                                     <Text>{data.date}</Text>
                                     <Text>{data.time}</Text>
                                     {
-                                        heightValue === "base"
+                                        heightValue === "Base"
                                             ?
                                             <>
                                                 <Text>{data.base.freshsnow_cm}cm</Text>
@@ -108,7 +135,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                 <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
                                             </>
                                             :
-                                            heightValue === "mid"
+                                            heightValue === "Mid"
                                                 ?
                                                 <>
                                                     <Text>{data.mid.freshsnow_cm}cm</Text>
