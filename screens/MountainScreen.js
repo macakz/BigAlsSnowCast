@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
@@ -11,8 +11,7 @@ const MountainScreen = ({ route, navigation }) => {
     const styles = StyleSheet.create({
         dropDownPicker: {
             flex: 50,
-            margin: 4,
-
+            margin: 4
         },
         dropDownPickerContainer: {
             flexDirection: 'row',
@@ -98,7 +97,6 @@ const MountainScreen = ({ route, navigation }) => {
                             listMode="MODAL"
                             modalContentContainerStyle={styles.modalContentContainerStyle}
                             style={styles.dropDownPicker}
-                            placeholder="Choose your mountain"
                             open={heightOpen}
                             value={heightValue}
                             items={heightOptions}
@@ -111,7 +109,6 @@ const MountainScreen = ({ route, navigation }) => {
                             listMode="MODAL"
                             modalContentContainerStyle={styles.modalContentContainerStyle}
                             style={styles.dropDownPicker}
-                            placeholder="Choose your mountain"
                             open={hourOpen}
                             value={hourValue}
                             items={hourOptions}
@@ -122,11 +119,13 @@ const MountainScreen = ({ route, navigation }) => {
                     </View>
 
                     {mountainForecastData.map((data) => {
+                        console.log(`../data/icons/gifSet/${data.upper.wx_icon}`)
                         return (
                             <>
-                                <View style={styles.dataContainer}>
+                                <View key={data.time} style={styles.dataContainer}>
                                     <Text>{data.date}</Text>
                                     <Text>{data.time}</Text>
+
                                     {
                                         heightValue === "Base"
                                             ?
@@ -148,8 +147,12 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <Text>{data.upper.freshsnow_cm}cm</Text>
                                                     <Text>{data.upper.temp_c}°C</Text>
                                                     <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
+
                                                 </>
                                     }
+                                    <Image source={require(`../data/icons/gifSet/${data.upper.wx_icon}`).default} />
+                                    <Text>hi</Text>
+
                                     <Text>{data.rain_mm}</Text>
                                 </View>
                             </>
