@@ -9,17 +9,16 @@ const MountainScreen = ({ route, navigation }) => {
 
 
     const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-        },
         dropDownPicker: {
-            alignSelf: "center",
-            margin: 20
+            flex: 50,
+            margin: 4,
+
         },
         dropDownPickerContainer: {
+            flexDirection: 'row',
+            width: '49%',
         },
+
         dataContainer: {
             margin: 5,
             padding: 5,
@@ -106,6 +105,8 @@ const MountainScreen = ({ route, navigation }) => {
                             setOpen={setHeightOpen}
                             setValue={setHeightValue}
                         />
+
+
                         <DropDownPicker
                             listMode="MODAL"
                             modalContentContainerStyle={styles.modalContentContainerStyle}
