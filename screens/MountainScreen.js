@@ -21,20 +21,11 @@ const MountainScreen = ({ route, navigation }) => {
             paddingLeft: 2.5,
             paddingRight: 5,
         },
-
         dataContainer: {
             margin: 5,
             padding: 5,
             borderWidth: 2,
             borderColor: 'black',
-        },
-        imageContainer: {
-
-        },
-        weatherIcon: {
-            overflow: 'hidden',
-            height: 100,
-            width: 100
         },
         dataRowContainer: {
             flexDirection: 'row'
@@ -46,6 +37,14 @@ const MountainScreen = ({ route, navigation }) => {
         dataContent: {
 
         },
+        imageContainer: {
+
+        },
+        weatherIcon: {
+            overflow: 'hidden',
+            height: 100,
+            width: 100
+        }
     })
 
     //load mountain data
