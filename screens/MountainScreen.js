@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
@@ -9,6 +9,11 @@ import { Col, Grid } from "react-native-easy-grid";
 import { color } from 'react-native-reanimated';
 
 const MountainScreen = ({ route, navigation }) => {
+    useLayoutEffect(() => {
+		navigation.setOptions({
+			title: `${mountain}`
+		})
+	}, [navigation])
     const styles = StyleSheet.create({
         screen: {
             backgroundColor: 'black',
