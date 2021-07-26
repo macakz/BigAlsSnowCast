@@ -1,19 +1,25 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect, useLayoutEffect } from 'react'
+import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native'
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker'
 import * as weatherIcon from '../data/icons/iconImages'
-import { Col, Grid } from "react-native-easy-grid";
+import { Col, Grid } from "react-native-easy-grid"
+import { Swing } from 'react-native-animated-spinkit'
 
 const MountainScreen = ({ route, navigation }) => {
     useLayoutEffect(() => {
-		navigation.setOptions({
-			title: `${mountain}`
-		})
-	}, [navigation])
+        navigation.setOptions({
+            title: `${mountain}`
+        })
+    }, [navigation])
     const styles = StyleSheet.create({
+        activityIndicatorContainer: {
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: "center"
+        },
         screen: {
             backgroundColor: 'black',
             color: 'white'
@@ -106,7 +112,8 @@ const MountainScreen = ({ route, navigation }) => {
             .then(
                 console.log("confirmed data")
             )
-            .finally(() => setMountainIsReady(true))
+            .then(setTimeout(
+                () => { setMountainIsReady(true) }, 3000))
             .catch((error) => {
                 console.log("Error:", error);
             })
@@ -123,7 +130,10 @@ const MountainScreen = ({ route, navigation }) => {
     if (!mountainIsReady) {
         return (
             <>
-                <ActivityIndicator animating={true} />
+                <View style={styles.activityIndicatorContainer}>
+                    <Swing size={150} color="blue" />
+                    {/* <ActivityIndicator size="large" color="#0000ff" /> */}
+                </View>
             </>
         )
     }
@@ -148,7 +158,6 @@ const MountainScreen = ({ route, navigation }) => {
                         </Col>
                         <Col>
                             <View style={styles.dropDownPickerContainerRight}>
-
                                 <DropDownPicker
                                     listMode="MODAL"
                                     modalContentContainerStyle={styles.modalContentContainerStyle}
@@ -260,12 +269,11 @@ const MountainScreen = ({ route, navigation }) => {
                     })
                     }
                     <View style={styles.weatherUnlockedContainer}>
-                        <TouchableOpacity onPress={() => Linking.openURL('http://www.weatherunlocked.com/')}> 
+                        <TouchableOpacity onPress={() => Linking.openURL('http://www.weatherunlocked.com/')}>
                             <Text style={styles.weatherUnlockedText} >Weather Provided by</Text>
                             <Image style={styles.weatherUnlockedImage} source={require('../data/weatherUnlockedLogo.png')} />
                         </TouchableOpacity>
                     </View>
-
                 </ScrollView>
             </SafeAreaView>
         </>
