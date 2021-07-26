@@ -4,7 +4,7 @@ import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker';
-
+import * as weatherIcon from '../data/icons/iconImages'
 const MountainScreen = ({ route, navigation }) => {
 
 
@@ -106,7 +106,6 @@ const MountainScreen = ({ route, navigation }) => {
                             setValue={setHeightValue}
                         />
 
-
                         <DropDownPicker
                             listMode="MODAL"
                             modalContentContainerStyle={styles.modalContentContainerStyle}
@@ -116,18 +115,17 @@ const MountainScreen = ({ route, navigation }) => {
                             items={hourOptions}
                             setOpen={setHourOpen}
                             setValue={setHourValue}
-
                         />
                     </View>
 
                     {mountainForecastData.map((data) => {
-                        console.log(data.upper.wx_icon)
+                        const imageFinder = data.upper.wx_icon.replace(".gif", "")
+
                         return (
                             <>
                                 <View key={data.time} style={styles.dataContainer}>
                                     <Text>{data.date}</Text>
                                     <Text>{data.time}</Text>
-
                                     {
                                         heightValue === "Base"
                                             ?
@@ -136,8 +134,6 @@ const MountainScreen = ({ route, navigation }) => {
                                                 <Text>{data.base.temp_c}°C</Text>
                                                 <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
                                                 <Text>{data.base.wx_desc}</Text>
-                                                <Text>{data.base.wx_icon}</Text>
-
                                             </>
                                             :
                                             heightValue === "Mid"
@@ -147,9 +143,6 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <Text>{data.mid.temp_c}°C</Text>
                                                     <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
                                                     <Text>{data.mid.wx_desc}</Text>
-                                                    <Text>{data.mid.wx_icon}</Text>
-
-
                                                 </>
                                                 :
                                                 <>
@@ -157,12 +150,10 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <Text>{data.upper.temp_c}°C</Text>
                                                     <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
                                                     <Text>{data.upper.wx_desc}</Text>
-                                                    <Text>{data.upper.wx_icon}</Text>
-                                                    <Image source={require(data.upper.wx_icon)} />
-
                                                 </>
                                     }
-
+                                    <Text></Text>
+                                    <Image source={weatherIcon[imageFinder]} />
                                     <Text>{data.rain_mm}</Text>
                                 </View>
                             </>
