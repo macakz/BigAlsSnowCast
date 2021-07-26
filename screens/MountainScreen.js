@@ -140,7 +140,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                 ?
                                                 <>
                                                     <Text>{data.mid.freshsnow_cm}cm</Text>
-                                                    <Text>{data.mid.temp_c}°C</Text>
+                                                    <Text>{data.base.temp_c}°C</Text>
                                                     <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
                                                     <Text>{data.mid.wx_desc}</Text>
                                                 </>
