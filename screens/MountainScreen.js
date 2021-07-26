@@ -6,7 +6,6 @@ import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker'
 import * as weatherIcon from '../data/icons/iconImages'
 import { Col, Grid } from "react-native-easy-grid";
-import { color } from 'react-native-reanimated';
 
 const MountainScreen = ({ route, navigation }) => {
     useLayoutEffect(() => {

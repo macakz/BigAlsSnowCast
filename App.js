@@ -1,13 +1,19 @@
-import 'react-native-gesture-handler';
-import 'react-native-gesture-handler';
-import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+//React
+import React from 'react'
+import { StyleSheet } from 'react-native'
+import 'react-native-gesture-handler'
+import 'react-native-gesture-handler'
+
+//react navigation
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
+
+//Screens
 import HomeScreen from './screens/HomeScreen'
 import SearchScreen from './screens/SearchScreen'
-import MountainScreen from './screens/MountainScreen';
+import MountainScreen from './screens/MountainScreen'
 
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
 
 const App = () => {
   const styles = StyleSheet.create({
