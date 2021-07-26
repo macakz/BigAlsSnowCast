@@ -6,8 +6,6 @@ import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker';
 import * as weatherIcon from '../data/icons/iconImages'
 const MountainScreen = ({ route, navigation }) => {
-
-
     const styles = StyleSheet.create({
         dropDownPicker: {
             flex: 50,
@@ -17,22 +15,18 @@ const MountainScreen = ({ route, navigation }) => {
             flexDirection: 'row',
             width: '49%',
         },
-
         dataContainer: {
             margin: 5,
             padding: 5,
             borderWidth: 2,
             borderColor: 'black',
         },
-
     })
 
     //load mountain data
-
     const [mountainIsReady, setMountainIsReady] = useState(false)
 
     //matches the mountain id for api to the chosen mountain from previous screen, passed through params
-
     const mountain = route.params.value
     const [mountainId, setMountainId] = useState()
     const matchMountainId = () => {
@@ -40,23 +34,23 @@ const MountainScreen = ({ route, navigation }) => {
         setMountainId(match.weatherId);
     }
 
-    // dropdown picker
+    // dropdown pickers
+
+    // mountain height stats
     const [heightOpen, setHeightOpen] = useState(false);
     const [heightValue, setHeightValue] = useState("Mid");
-
-    const [hourOpen, setHourOpen] = useState(false)
-    const [hourValue, setHourValue] = useState(12)
     const heightOptions = [
         { label: "Base", value: "Base" },
         { label: "Mid", value: "Mid" },
         { label: "Upper", value: "Upper" }
     ]
-
+    // forecast hour interval
+    const [hourOpen, setHourOpen] = useState(false)
+    const [hourValue, setHourValue] = useState(12)
     const hourOptions = [
         { label: 3, value: 3 },
         { label: 6, value: 6 },
         { label: 12, value: 12 }
-
     ]
 
     // determine the forecast for selected mountain by calling api
@@ -119,8 +113,7 @@ const MountainScreen = ({ route, navigation }) => {
                     </View>
 
                     {mountainForecastData.map((data) => {
-                        const imageFinder = data.upper.wx_icon.replace(".gif", "")
-
+                        const icon = data.upper.wx_icon.replace(".gif", "")
                         return (
                             <>
                                 <View key={data.time} style={styles.dataContainer}>
@@ -152,9 +145,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <Text>{data.upper.wx_desc}</Text>
                                                 </>
                                     }
-                                    <Text></Text>
-                                    <Image source={weatherIcon[imageFinder]} />
-                                    <Text>{data.rain_mm}</Text>
+                                    <Image source={weatherIcon[icon]} />
                                 </View>
                             </>
                         )
