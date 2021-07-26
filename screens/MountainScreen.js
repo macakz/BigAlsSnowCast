@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image } from 'react-native';
+import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native';
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker'
 import * as weatherIcon from '../data/icons/iconImages'
 import { Col, Grid } from "react-native-easy-grid";
+import { color } from 'react-native-reanimated';
 
 const MountainScreen = ({ route, navigation }) => {
     const styles = StyleSheet.create({
+        screen: {
+            backgroundColor: 'black',
+            color: 'white'
+        },
         dropDownPickerContainerLeft: {
             paddingTop: 5,
             paddingBottom: 5,
@@ -26,12 +31,13 @@ const MountainScreen = ({ route, navigation }) => {
             padding: 5,
             borderWidth: 2,
             borderColor: 'black',
+            backgroundColor: 'white'
         },
         dataRowContainer: {
             flexDirection: 'row'
         },
         dataTitle: {
-            fontWeight: 'bold'
+            fontWeight: 'bold',
 
         },
         dataContent: {
@@ -44,7 +50,17 @@ const MountainScreen = ({ route, navigation }) => {
             overflow: 'hidden',
             height: 100,
             width: 100
-        }
+        },
+        weatherUnlockedContainer: {
+
+        },
+        weatherUnlockedText: {
+            color: 'white',
+            textAlign: 'center'
+        },
+        weatherUnlockedImage: {
+
+        },
     })
 
     //load mountain data
@@ -109,7 +125,7 @@ const MountainScreen = ({ route, navigation }) => {
     }
     return (
         <>
-            <SafeAreaView>
+            <SafeAreaView style={styles.screen}>
                 <ScrollView>
                     <Grid>
                         <Col>
@@ -144,6 +160,7 @@ const MountainScreen = ({ route, navigation }) => {
                     </Grid>
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
+
                         return (
                             <>
                                 <View key={data.time} style={styles.dataContainer}>
@@ -238,6 +255,13 @@ const MountainScreen = ({ route, navigation }) => {
                         )
                     })
                     }
+                    <View style={styles.weatherUnlockedContainer}>
+                        <TouchableOpacity onPress={() => Linking.openURL('http://www.weatherunlocked.com/')}> 
+                            <Text style={styles.weatherUnlockedText} >Weather Provided by</Text>
+                            <Image style={styles.weatherUnlockedImage} source={require('../data/weatherUnlockedLogo.png')} />
+                        </TouchableOpacity>
+                    </View>
+
                 </ScrollView>
             </SafeAreaView>
         </>
