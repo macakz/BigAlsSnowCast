@@ -3,24 +3,41 @@ import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Im
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
-import DropDownPicker from 'react-native-dropdown-picker';
+import DropDownPicker from 'react-native-dropdown-picker'
 import * as weatherIcon from '../data/icons/iconImages'
+import { Col, Row, Grid } from "react-native-easy-grid";
+
 const MountainScreen = ({ route, navigation }) => {
     const styles = StyleSheet.create({
-        dropDownPicker: {
-            flex: 50,
-            margin: 4
+        dropDownPickerContainerLeft: {
+            paddingTop: 5,
+            paddingBottom: 5,
+            paddingLeft: 5,
+            paddingRight: 2.5
         },
-        dropDownPickerContainer: {
-            flexDirection: 'row',
-            width: '49%',
+        dropDownPickerContainerRight: {
+            paddingTop: 5,
+            paddingBottom: 5,
+            paddingLeft: 2.5,
+            paddingRight: 5,
+        },
+        dropDownPicker: {
         },
         dataContainer: {
             margin: 5,
             padding: 5,
             borderWidth: 2,
             borderColor: 'black',
+
         },
+        imageContainer: {
+
+        },
+        weatherIcon: {
+            overflow: 'hidden',
+            height: 100,
+            width: 100
+        }
     })
 
     //load mountain data
@@ -88,65 +105,87 @@ const MountainScreen = ({ route, navigation }) => {
         <>
             <SafeAreaView>
                 <ScrollView>
-                    <View style={styles.dropDownPickerContainer}>
-                        <DropDownPicker
-                            listMode="MODAL"
-                            modalContentContainerStyle={styles.modalContentContainerStyle}
-                            style={styles.dropDownPicker}
-                            open={heightOpen}
-                            value={heightValue}
-                            items={heightOptions}
-                            setOpen={setHeightOpen}
-                            setValue={setHeightValue}
-                        />
+                    <Grid>
+                        <Col>
+                            <View style={styles.dropDownPickerContainerLeft}>
+                                <DropDownPicker
+                                    listMode="MODAL"
+                                    modalContentContainerStyle={styles.modalContentContainerStyle}
+                                    style={styles.dropDownPicker}
+                                    open={heightOpen}
+                                    value={heightValue}
+                                    items={heightOptions}
+                                    setOpen={setHeightOpen}
+                                    setValue={setHeightValue}
+                                />
+                            </View>
+                        </Col>
+                        <Col>
+                            <View style={styles.dropDownPickerContainerRight}>
 
-                        <DropDownPicker
-                            listMode="MODAL"
-                            modalContentContainerStyle={styles.modalContentContainerStyle}
-                            style={styles.dropDownPicker}
-                            open={hourOpen}
-                            value={hourValue}
-                            items={hourOptions}
-                            setOpen={setHourOpen}
-                            setValue={setHourValue}
-                        />
-                    </View>
+                                <DropDownPicker
+                                    listMode="MODAL"
+                                    modalContentContainerStyle={styles.modalContentContainerStyle}
+                                    style={styles.dropDownPicker}
+                                    open={hourOpen}
+                                    value={hourValue}
+                                    items={hourOptions}
+                                    setOpen={setHourOpen}
+                                    setValue={setHourValue}
+                                />
+                            </View>
+                        </Col>
+                    </Grid>
 
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
                         return (
                             <>
                                 <View key={data.time} style={styles.dataContainer}>
-                                    <Text>{data.date}</Text>
-                                    <Text>{data.time}</Text>
-                                    {
-                                        heightValue === "Base"
-                                            ?
-                                            <>
-                                                <Text>{data.base.freshsnow_cm}cm</Text>
-                                                <Text>{data.base.temp_c}°C</Text>
-                                                <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
-                                                <Text>{data.base.wx_desc}</Text>
-                                            </>
-                                            :
-                                            heightValue === "Mid"
-                                                ?
-                                                <>
-                                                    <Text>{data.mid.freshsnow_cm}cm</Text>
-                                                    <Text>{data.base.temp_c}°C</Text>
-                                                    <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
-                                                    <Text>{data.mid.wx_desc}</Text>
-                                                </>
-                                                :
-                                                <>
-                                                    <Text>{data.upper.freshsnow_cm}cm</Text>
-                                                    <Text>{data.upper.temp_c}°C</Text>
-                                                    <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
-                                                    <Text>{data.upper.wx_desc}</Text>
-                                                </>
-                                    }
-                                    <Image source={weatherIcon[icon]} />
+                                    <Grid>
+                                        <Col>
+                                            <Text>{data.date}</Text>
+                                            <Text>{data.time}</Text>
+                                            {
+                                                heightValue === "Base"
+                                                    ?
+                                                    <>
+                                                        <Text>{data.base.freshsnow_cm}cm</Text>
+                                                        <Text>{data.base.temp_c}°C</Text>
+                                                        <Text>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
+                                                        <Text>{data.base.wx_desc}</Text>
+                                                    </>
+                                                    :
+                                                    heightValue === "Mid"
+                                                        ?
+                                                        <>
+                                                            <Text>{data.mid.freshsnow_cm}cm</Text>
+                                                            <Text>{data.base.temp_c}°C</Text>
+                                                            <Text>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
+                                                            <Text>{data.mid.wx_desc}</Text>
+                                                        </>
+                                                        :
+                                                        <>
+                                                            <Text>{data.upper.freshsnow_cm}cm</Text>
+                                                            <Text>{data.upper.temp_c}°C</Text>
+                                                            <Text>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
+                                                            <Text>{data.upper.wx_desc}</Text>
+                                                        </>
+                                            }
+                                        </Col>
+                                        <Col>
+                                            <View style={styles.imageContainer}>
+                                                <Image style={styles.weatherIcon} source={weatherIcon[icon]} />
+                                            </View>
+                                        </Col>
+                                    </Grid>
+
+
+
+
                                 </View>
+
+
                             </>
                         )
                     })
