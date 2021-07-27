@@ -30,24 +30,29 @@ const SearchScreen = ({ navigation }) => {
             margin: 4,
             width: 300
         },
+
         dropDownPicker: {
+            backgroundColor: theme.primaryContainerColor,
             width: "80%",
             alignSelf: "center"
         },
         modalContentContainerStyle: {
-
+            backgroundColor: theme.primaryContainerColor,
+        },
+        dropDownPickerLabel: {
+            color: theme.secondaryText
         },
         button: {
             alignItems: 'center',
             borderWidth: 1,
             borderRadius: 10,
-            borderColor: '#1282E9',
-            backgroundColor: '#3C97EA',
+            borderColor: theme.primaryBorderColor,
+            backgroundColor: theme.primaryContainerColor,
             padding: 9,
             margin: 20,
         },
         buttonText: {
-            color: 'white'
+            color: theme.secondaryText
         }
     });
     const [open, setOpen] = useState(false);
@@ -64,8 +69,9 @@ const SearchScreen = ({ navigation }) => {
                 <ScrollView>
                     <DropDownPicker
                         listMode="MODAL"
-                        modalContentContainerStyle={styles.modalContentContainerStyle}
                         style={styles.dropDownPicker}
+                        modalContentContainerStyle={styles.modalContentContainerStyle}
+                        labelStyle={styles.dropDownPickerLabel}
                         placeholder="Choose your mountain"
                         searchPlaceholder="Search here..."
                         searchable={true}

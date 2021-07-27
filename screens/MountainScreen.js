@@ -35,7 +35,7 @@ const MountainScreen = ({ route, navigation }) => {
         },
         screen: {
             backgroundColor: theme.primaryBackgroundColor,
-
+            flex: 1
         },
         dropDownPicker: {
             backgroundColor: theme.primaryContainerColor,
@@ -92,6 +92,7 @@ const MountainScreen = ({ route, navigation }) => {
             textAlign: 'center'
         },
         weatherUnlockedImage: {
+            alignItems: 'center',
         },
     })
 
