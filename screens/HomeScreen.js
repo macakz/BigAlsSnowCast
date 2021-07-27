@@ -1,5 +1,8 @@
+//react
 import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+
+//assets
 import * as theme from '../assets/theme/color'
 
 const HomeScreen = ({ navigation }) => {

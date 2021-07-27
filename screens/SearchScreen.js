@@ -1,8 +1,14 @@
-import React, { useState } from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import skifields from '../assets/skifields.json'
-import DropDownPicker from 'react-native-dropdown-picker';
+//react
+import React, { useState } from 'react'
+import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+
+//packages
+import DropDownPicker from 'react-native-dropdown-picker'
+
+//assets
 import * as theme from '../assets/theme/color'
+import skifields from '../assets/skifields.json'
+
 const SearchScreen = ({ navigation }) => {
     const styles = StyleSheet.create({
         screen: {

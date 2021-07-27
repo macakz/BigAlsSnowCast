@@ -1,13 +1,24 @@
+//react
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native'
-import skifields from '../assets/skifields.json'
+
+//config
 import { app_id, app_key } from '../config/weatherKeys'
+
+//assets
+import * as theme from '../assets/theme/color'
+import * as weatherIcon from '../assets/icons/iconImages'
+import skifields from '../assets/skifields.json'
+
+//packages
 import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker'
-import * as weatherIcon from '../assets/icons/iconImages'
 import { Col, Grid } from "react-native-easy-grid"
 import { Swing } from 'react-native-animated-spinkit'
-import * as theme from '../assets/theme/color'
+
+
+
+
 
 const MountainScreen = ({ route, navigation }) => {
     useLayoutEffect(() => {
