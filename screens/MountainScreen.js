@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
-import { ActivityIndicator, SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native'
+import { SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native'
 import skifields from '../data/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
@@ -11,18 +11,40 @@ import { Swing } from 'react-native-animated-spinkit'
 const MountainScreen = ({ route, navigation }) => {
     useLayoutEffect(() => {
         navigation.setOptions({
-            title: `${mountain}`
+            title: `${mountain}`,
+            headerStyle: {
+                backgroundColor: '#1E3C4F',
+
+            },
+            headerTitleStyle: {
+                color: 'white'
+            },
+            headerTintColor: '#fff',
+
+
         })
     }, [navigation])
     const styles = StyleSheet.create({
         activityIndicatorContainer: {
             flex: 1,
             alignItems: 'center',
-            justifyContent: "center"
+            justifyContent: 'center',
+            backgroundColor: '#1E3C4F'
         },
         screen: {
-            backgroundColor: 'black',
+            backgroundColor: '#1E3C4F',
             color: 'white'
+        },
+        dropDownPicker: {
+            backgroundColor: '#AED0E6',
+            color: 'white'
+        },
+        modalContentContainerStyle: {
+            backgroundColor: '#AED0E6',
+            color: 'white'
+        },
+        dropDownPickerLabel: {
+            color: 'black'
         },
         dropDownPickerContainerLeft: {
             paddingTop: 5,
@@ -41,17 +63,18 @@ const MountainScreen = ({ route, navigation }) => {
             padding: 5,
             borderWidth: 2,
             borderColor: 'black',
-            backgroundColor: 'white'
+            backgroundColor: '#AED0E6'
         },
         dataRowContainer: {
             flexDirection: 'row'
         },
         dataTitle: {
             fontWeight: 'bold',
+            color: 'black'
 
         },
         dataContent: {
-
+            color: 'black'
         },
         imageContainer: {
 
@@ -69,7 +92,6 @@ const MountainScreen = ({ route, navigation }) => {
             textAlign: 'center'
         },
         weatherUnlockedImage: {
-
         },
     })
 
@@ -90,16 +112,16 @@ const MountainScreen = ({ route, navigation }) => {
     const [heightValue, setHeightValue] = useState("Mid");
     const heightOptions = [
         { label: "Base", value: "Base" },
-        { label: "Mid", value: "Mid" },
-        { label: "Upper", value: "Upper" }
+        { label: "Mid-Mountain", value: "Mid" },
+        { label: "Upper-Mountain", value: "Upper" }
     ]
     // forecast hour interval
     const [hourOpen, setHourOpen] = useState(false)
     const [hourValue, setHourValue] = useState(12)
     const hourOptions = [
-        { label: 3, value: 3 },
-        { label: 6, value: 6 },
-        { label: 12, value: 12 }
+        { label: "3 hourly", value: 3 },
+        { label: "6 hourly", value: 6 },
+        { label: "12 hourly", value: 12 }
     ]
 
     // determine the forecast for selected mountain by calling api
@@ -146,8 +168,9 @@ const MountainScreen = ({ route, navigation }) => {
                             <View style={styles.dropDownPickerContainerLeft}>
                                 <DropDownPicker
                                     listMode="MODAL"
-                                    modalContentContainerStyle={styles.modalContentContainerStyle}
                                     style={styles.dropDownPicker}
+                                    modalContentContainerStyle={styles.modalContentContainerStyle}
+                                    labelStyle={styles.dropDownPickerLabel}
                                     open={heightOpen}
                                     value={heightValue}
                                     items={heightOptions}
@@ -160,8 +183,9 @@ const MountainScreen = ({ route, navigation }) => {
                             <View style={styles.dropDownPickerContainerRight}>
                                 <DropDownPicker
                                     listMode="MODAL"
-                                    modalContentContainerStyle={styles.modalContentContainerStyle}
                                     style={styles.dropDownPicker}
+                                    modalContentContainerStyle={styles.modalContentContainerStyle}
+                                    labelStyle={styles.dropDownPickerLabel}
                                     open={hourOpen}
                                     value={hourValue}
                                     items={hourOptions}
@@ -184,7 +208,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                 <Text style={styles.dataContent}>{data.date}</Text>
                                             </View>
                                             <View style={styles.dataRowContainer}>
-                                                <Text style={styles.dataTitle}>Time({hourValue} hourly intervals): </Text>
+                                                <Text style={styles.dataTitle}>Time ({hourValue} hourly intervals): </Text>
                                                 <Text style={styles.dataContent}>{data.time}</Text>
                                             </View>
                                             <View style={styles.dataRowContainer}>
