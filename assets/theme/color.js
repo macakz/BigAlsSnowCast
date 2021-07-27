@@ -1,0 +1,5 @@
+export const primaryText = 'white'
+export const secondaryText = 'black'
+export const primaryBackgroundColor = '#1E3C4F'
+export const primaryContainerColor = '#AED0E6'
+export const primaryBorderColor = 'black'

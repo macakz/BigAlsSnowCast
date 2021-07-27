@@ -7,18 +7,11 @@ import DropDownPicker from 'react-native-dropdown-picker'
 import * as weatherIcon from '../assets/icons/iconImages'
 import { Col, Grid } from "react-native-easy-grid"
 import { Swing } from 'react-native-animated-spinkit'
-
+import * as theme from '../assets/theme/color'
 const MountainScreen = ({ route, navigation }) => {
     useLayoutEffect(() => {
         navigation.setOptions({
             title: `${mountain}`,
-            headerStyle: {
-                backgroundColor: '#1E3C4F',
-            },
-            headerTitleStyle: {
-                color: 'white'
-            },
-            headerTintColor: '#fff',
         })
     }, [navigation])
     const styles = StyleSheet.create({
@@ -26,22 +19,19 @@ const MountainScreen = ({ route, navigation }) => {
             flex: 1,
             alignItems: 'center',
             justifyContent: 'center',
-            backgroundColor: '#1E3C4F'
+            backgroundColor: theme.primaryBackgroundColor
         },
         screen: {
-            backgroundColor: '#1E3C4F',
-            color: 'white'
+            backgroundColor: theme.primaryBackgroundColor,
         },
         dropDownPicker: {
-            backgroundColor: '#AED0E6',
-            color: 'white'
+            backgroundColor: theme.primaryContainerColor,
         },
         modalContentContainerStyle: {
-            backgroundColor: '#AED0E6',
-            color: 'white'
+            backgroundColor: theme.primaryContainerColor,
         },
         dropDownPickerLabel: {
-            color: 'black'
+            color: theme.secondaryText
         },
         dropDownPickerContainerLeft: {
             paddingTop: 5,
@@ -59,19 +49,19 @@ const MountainScreen = ({ route, navigation }) => {
             margin: 5,
             padding: 5,
             borderWidth: 2,
-            borderColor: 'black',
-            backgroundColor: '#AED0E6'
+            borderColor: theme.primaryBorderColor,
+            backgroundColor: theme.primaryContainerColor
         },
         dataRowContainer: {
             flexDirection: 'row'
         },
         dataTitle: {
             fontWeight: 'bold',
-            color: 'black'
+            color: theme.secondaryText
 
         },
         dataContent: {
-            color: 'black'
+            color: theme.secondaryText
         },
         imageContainer: {
 
@@ -85,7 +75,7 @@ const MountainScreen = ({ route, navigation }) => {
 
         },
         weatherUnlockedText: {
-            color: 'white',
+            color: theme.primaryText,
             textAlign: 'center'
         },
         weatherUnlockedImage: {
@@ -150,8 +140,7 @@ const MountainScreen = ({ route, navigation }) => {
         return (
             <>
                 <View style={styles.activityIndicatorContainer}>
-                    <Swing size={150} color="blue" />
-                    {/* <ActivityIndicator size="large" color="#0000ff" /> */}
+                    <Swing size={150} color="white" />
                 </View>
             </>
         )
