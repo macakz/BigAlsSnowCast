@@ -8,6 +8,7 @@ import * as weatherIcon from '../assets/icons/iconImages'
 import { Col, Grid } from "react-native-easy-grid"
 import { Swing } from 'react-native-animated-spinkit'
 import * as theme from '../assets/theme/color'
+
 const MountainScreen = ({ route, navigation }) => {
     useLayoutEffect(() => {
         navigation.setOptions({

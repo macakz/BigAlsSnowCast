@@ -13,6 +13,8 @@ import HomeScreen from './screens/HomeScreen'
 import SearchScreen from './screens/SearchScreen'
 import MountainScreen from './screens/MountainScreen'
 
+//theme
+import * as theme from './assets/theme/color'
 
 
 const App = () => {
@@ -30,12 +32,12 @@ const App = () => {
       <StatusBar barStyle='light-content' />
       <Stack.Navigator screenOptions={{
         headerStyle: {
-          backgroundColor: '#1E3C4F',
+          backgroundColor: theme.primaryBackgroundColor,
         },
         headerTitleStyle: {
-          color: 'white'
+          color: theme.primaryText
         },
-        headerTintColor: '#fff',
+        headerTintColor: theme.primaryText,
       }}
       >
         <Stack.Screen name="Home" component={HomeScreen} />
