@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import skifields from '../data/skifields.json'
+import skifields from '../assets/skifields.json'
 import DropDownPicker from 'react-native-dropdown-picker';
 
 const SearchScreen = ({ navigation }) => {

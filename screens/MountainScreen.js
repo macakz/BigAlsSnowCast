@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
 import { SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, TouchableOpacity } from 'react-native'
-import skifields from '../data/skifields.json'
+import skifields from '../assets/skifields.json'
 import { app_id, app_key } from '../config/weatherKeys'
 import axios from 'axios'
 import DropDownPicker from 'react-native-dropdown-picker'
-import * as weatherIcon from '../data/icons/iconImages'
+import * as weatherIcon from '../assets/icons/iconImages'
 import { Col, Grid } from "react-native-easy-grid"
 import { Swing } from 'react-native-animated-spinkit'
 
@@ -14,14 +14,11 @@ const MountainScreen = ({ route, navigation }) => {
             title: `${mountain}`,
             headerStyle: {
                 backgroundColor: '#1E3C4F',
-
             },
             headerTitleStyle: {
                 color: 'white'
             },
             headerTintColor: '#fff',
-
-
         })
     }, [navigation])
     const styles = StyleSheet.create({
@@ -131,9 +128,9 @@ const MountainScreen = ({ route, navigation }) => {
         matchMountainId()
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
             .then((response) => setMountainForecastData(response.data.forecast))
-            .then(
-                console.log("confirmed data")
-            )
+            // .then(
+            //     console.log("confirmed data")
+            // )
             .then(setTimeout(
                 () => { setMountainIsReady(true) }, 3000))
             .catch((error) => {
@@ -295,7 +292,7 @@ const MountainScreen = ({ route, navigation }) => {
                     <View style={styles.weatherUnlockedContainer}>
                         <TouchableOpacity onPress={() => Linking.openURL('http://www.weatherunlocked.com/')}>
                             <Text style={styles.weatherUnlockedText} >Weather Provided by</Text>
-                            <Image style={styles.weatherUnlockedImage} source={require('../data/weatherUnlockedLogo.png')} />
+                            <Image style={styles.weatherUnlockedImage} source={require('../assets/weatherUnlockedLogo.png')} />
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
