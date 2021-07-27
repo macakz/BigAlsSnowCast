@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import skifields from '../assets/skifields.json'
 import DropDownPicker from 'react-native-dropdown-picker';
-
+import * as theme from '../assets/theme/color'
 const SearchScreen = ({ navigation }) => {
     const styles = StyleSheet.create({
+        screen: {
+            backgroundColor: theme.primaryBackgroundColor,
+            flex: 1,
+        },
         container: {
             flex: 1,
             alignItems: 'center',
@@ -50,25 +54,26 @@ const SearchScreen = ({ navigation }) => {
 
     return (
         <>
-            <View style={styles.container}>
-                <DropDownPicker
-                    listMode="MODAL"
-                    modalContentContainerStyle={styles.modalContentContainerStyle}
-                    style={styles.dropDownPicker}
-                    placeholder="Choose your mountain"
-                    searchPlaceholder="Search here..."
-                    searchable={true}
-                    open={open}
-                    value={value}
-                    items={items}
-                    setOpen={setOpen}
-                    setValue={setValue}
-                />
-                <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.button}>
-                    <Text style={styles.buttonText}>Let's see what Big Al has to say...</Text>
-                </TouchableOpacity>
-            </View>
-
+            <SafeAreaView style={styles.screen}>
+                <ScrollView>
+                    <DropDownPicker
+                        listMode="MODAL"
+                        modalContentContainerStyle={styles.modalContentContainerStyle}
+                        style={styles.dropDownPicker}
+                        placeholder="Choose your mountain"
+                        searchPlaceholder="Search here..."
+                        searchable={true}
+                        open={open}
+                        value={value}
+                        items={items}
+                        setOpen={setOpen}
+                        setValue={setValue}
+                    />
+                    <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.button}>
+                        <Text style={styles.buttonText}>Let's see what Big Al has to say...</Text>
+                    </TouchableOpacity>
+                </ScrollView>
+            </SafeAreaView>
         </>
     )
 }

@@ -24,6 +24,7 @@ const MountainScreen = ({ route, navigation }) => {
         },
         screen: {
             backgroundColor: theme.primaryBackgroundColor,
+
         },
         dropDownPicker: {
             backgroundColor: theme.primaryContainerColor,

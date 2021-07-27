@@ -1,13 +1,14 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import * as theme from '../assets/theme/color'
 
 const HomeScreen = ({ navigation }) => {
     const styles = StyleSheet.create({
-        container: {
+        screen: {
+            backgroundColor: theme.primaryBackgroundColor,
             flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
         },
+
         search: {
             backgroundColor: 'black',
             alignSelf: 'center',
@@ -25,11 +26,15 @@ const HomeScreen = ({ navigation }) => {
     return (
 
         <>
-            <View style={styles.container}>
-                <TouchableOpacity style={styles.search} onPress={() => navigation.navigate('Search')}>
-                    <Text style={styles.searchText}>Search for your local mountain here!</Text>
-                </TouchableOpacity>
-            </View>
+            <SafeAreaView style={styles.screen}>
+                <ScrollView>
+                    <View style={styles.container}>
+                        <TouchableOpacity style={styles.search} onPress={() => navigation.navigate('Search')}>
+                            <Text style={styles.searchText}>Search for your local mountain here!</Text>
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
+            </SafeAreaView>
         </>
     )
 }
