@@ -6,9 +6,10 @@ import { SafeAreaView, ScrollView, StyleSheet, Text, View, Image, Linking, Touch
 import { app_id, app_key } from '../config/weatherKeys'
 
 //assets
-import * as theme from '../assets/theme/color'
 import * as weatherIcon from '../assets/icons/iconImages'
 import skifields from '../assets/skifields.json'
+import styles from '../style/MountainScreenStyle'
+
 
 //packages
 import axios from 'axios'
@@ -16,86 +17,7 @@ import DropDownPicker from 'react-native-dropdown-picker'
 import { Col, Grid } from "react-native-easy-grid"
 import { Swing } from 'react-native-animated-spinkit'
 
-
-
-
-
 const MountainScreen = ({ route, navigation }) => {
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            title: `${mountain}`,
-        })
-    }, [navigation])
-    const styles = StyleSheet.create({
-        activityIndicatorContainer: {
-            flex: 1,
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: theme.primaryBackgroundColor
-        },
-        screen: {
-            backgroundColor: theme.primaryBackgroundColor,
-            flex: 1
-        },
-        dropDownPicker: {
-            backgroundColor: theme.primaryContainerColor,
-        },
-        modalContentContainerStyle: {
-            backgroundColor: theme.primaryContainerColor,
-        },
-        dropDownPickerLabel: {
-            color: theme.secondaryText
-        },
-        dropDownPickerContainerLeft: {
-            paddingTop: 5,
-            paddingBottom: 5,
-            paddingLeft: 5,
-            paddingRight: 2.5
-        },
-        dropDownPickerContainerRight: {
-            paddingTop: 5,
-            paddingBottom: 5,
-            paddingLeft: 2.5,
-            paddingRight: 5,
-        },
-        dataContainer: {
-            margin: 5,
-            padding: 5,
-            borderWidth: 2,
-            borderColor: theme.primaryBorderColor,
-            backgroundColor: theme.primaryContainerColor
-        },
-        dataRowContainer: {
-            flexDirection: 'row'
-        },
-        dataTitle: {
-            fontWeight: 'bold',
-            color: theme.secondaryText
-
-        },
-        dataContent: {
-            color: theme.secondaryText
-        },
-        imageContainer: {
-
-        },
-        weatherIcon: {
-            overflow: 'hidden',
-            height: 100,
-            width: 100
-        },
-        weatherUnlockedContainer: {
-
-        },
-        weatherUnlockedText: {
-            color: theme.primaryText,
-            textAlign: 'center'
-        },
-        weatherUnlockedImage: {
-            alignItems: 'center',
-        },
-    })
-
     //load mountain data
     const [mountainIsReady, setMountainIsReady] = useState(false)
 
@@ -116,6 +38,7 @@ const MountainScreen = ({ route, navigation }) => {
         { label: "Mid-Mountain", value: "Mid" },
         { label: "Upper-Mountain", value: "Upper" }
     ]
+
     // forecast hour interval
     const [hourOpen, setHourOpen] = useState(false)
     const [hourValue, setHourValue] = useState(12)
@@ -127,7 +50,6 @@ const MountainScreen = ({ route, navigation }) => {
 
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
-
     const mountainForecast = () => {
         matchMountainId()
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
@@ -136,7 +58,7 @@ const MountainScreen = ({ route, navigation }) => {
             //     console.log("confirmed data")
             // )
             .then(setTimeout(
-                () => { setMountainIsReady(true) }, 3000))
+                () => { setMountainIsReady(true) }, 5000))
             .catch((error) => {
                 console.log("Error:", error);
             })
@@ -148,6 +70,11 @@ const MountainScreen = ({ route, navigation }) => {
         mountainForecast()
     }, [mountainId, hourValue])
 
+    useLayoutEffect(() => {
+        navigation.setOptions({
+            title: `${mountain}`,
+        })
+    }, [navigation])
 
     // screen data
     if (!mountainIsReady) {
@@ -195,12 +122,12 @@ const MountainScreen = ({ route, navigation }) => {
                             </View>
                         </Col>
                     </Grid>
+
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
-
                         return (
                             <>
-                                <View key={data.time} style={styles.dataContainer}>
+                                <View style={styles.dataContainer}>
                                     <Grid>
                                         <Col size={65}>
                                             <View style={styles.dataRowContainer}>
