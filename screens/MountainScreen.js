@@ -54,9 +54,6 @@ const MountainScreen = ({ route, navigation }) => {
         matchMountainId()
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
             .then((response) => setMountainForecastData(response.data.forecast))
-            // .then(
-            //     console.log("confirmed data")
-            // )
             .then(setTimeout(
                 () => { setMountainIsReady(true) }, 5000))
             .catch((error) => {

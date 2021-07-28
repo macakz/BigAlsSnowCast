@@ -30,22 +30,24 @@ export default StyleSheet.create({
         width: "80%",
         alignSelf: "center"
     },
-    modalContentContainerStyle: {
+    modalContentContainer: {
         backgroundColor: theme.primaryContainerColor,
     },
     dropDownPickerLabel: {
         color: theme.secondaryText
     },
-    button: {
-        alignItems: 'center',
-        borderWidth: 1,
-        borderRadius: 10,
-        borderColor: theme.primaryBorderColor,
+    searchContainer: {
         backgroundColor: theme.primaryContainerColor,
-        padding: 9,
-        margin: 20,
+        borderRadius: 12,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        padding: 5,
+        margin: 5,
+        width: 300,
+
     },
-    buttonText: {
-        color: theme.secondaryText
+    searchText: {
+        textAlign: 'center',
+        color: theme.secondaryText,
     }
 })

@@ -16,7 +16,7 @@ const SearchScreen = ({ navigation }) => {
     const [value, setValue] = useState(null);
     const items = skifields.map(field => {
         return (
-            { label: field.name + ", " + field.region, value: field.name }
+            { label: field.name + ", " + field.region, value: field.name,}
         )
     })
 
@@ -27,8 +27,9 @@ const SearchScreen = ({ navigation }) => {
                     <DropDownPicker
                         listMode="MODAL"
                         style={styles.dropDownPicker}
-                        modalContentContainerStyle={styles.modalContentContainerStyle}
+                        modalContentContainerStyle={styles.modalContentContainer}
                         labelStyle={styles.dropDownPickerLabel}
+                        searchPlaceholderTextColor={styles.searchPlaceholder}
                         placeholder="Choose your mountain"
                         searchPlaceholder="Search here..."
                         searchable={true}
@@ -38,8 +39,8 @@ const SearchScreen = ({ navigation }) => {
                         setOpen={setOpen}
                         setValue={setValue}
                     />
-                    <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.button}>
-                        <Text style={styles.buttonText}>Let's see what Big Al has to say...</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.searchContainer}>
+                        <Text style={styles.searchText}>Let's see what Big Al has to say...</Text>
                     </TouchableOpacity>
                 </ScrollView>
             </SafeAreaView>
