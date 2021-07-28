@@ -43,7 +43,6 @@ const MountainScreen = ({ route, navigation }) => {
     const [hourOpen, setHourOpen] = useState(false)
     const [hourValue, setHourValue] = useState(12)
     const hourOptions = [
-        { label: "3 hourly", value: 3 },
         { label: "6 hourly", value: 6 },
         { label: "12 hourly", value: 12 }
     ]
@@ -122,6 +121,13 @@ const MountainScreen = ({ route, navigation }) => {
 
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
+                        const getDayOfWeek = value => {
+                            const [dd, mm, yyyy] = value.split('/'),
+                                date = new Date(yyyy, mm - 1, dd)
+                            return date.toLocaleDateString('en-US', { weekday: 'long' })
+                        }
+
+
                         return (
                             <>
                                 <View style={styles.dataContainer}>
@@ -129,7 +135,8 @@ const MountainScreen = ({ route, navigation }) => {
                                         <Col size={65}>
                                             <View style={styles.dataRowContainer}>
                                                 <Text style={styles.dataTitle}>Date: </Text>
-                                                <Text style={styles.dataContent}>{data.date}</Text>
+                                                <Text style={styles.dataContent}>
+                                                    {getDayOfWeek(data.date)} {data.date}</Text>
                                             </View>
                                             <View style={styles.dataRowContainer}>
                                                 <Text style={styles.dataTitle}>Time ({hourValue} hourly intervals): </Text>
