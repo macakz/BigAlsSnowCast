@@ -1,9 +1,9 @@
 //react
 import React from 'react';
-import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, Text, View, TouchableOpacity } from 'react-native';
 
 //assets
-import styles from '../style/HomeScreenStyle'
+import styles from '../assets/style/HomeScreenStyle'
 
 
 const HomeScreen = ({ navigation }) => {

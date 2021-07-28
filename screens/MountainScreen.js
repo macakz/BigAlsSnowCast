@@ -8,7 +8,7 @@ import { app_id, app_key } from '../config/weatherKeys'
 //assets
 import * as weatherIcon from '../assets/icons/iconImages'
 import skifields from '../assets/skifields.json'
-import styles from '../style/MountainScreenStyle'
+import styles from '../assets/style/MountainScreenStyle'
 
 
 //packages

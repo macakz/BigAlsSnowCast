@@ -2,7 +2,7 @@
 import { StyleSheet } from 'react-native'
 
 //assets
-import * as theme from '../assets/theme/color'
+import * as theme from '../theme/color'
 
 export default StyleSheet.create({
     screen: {
