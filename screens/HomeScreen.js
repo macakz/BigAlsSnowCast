@@ -3,29 +3,10 @@ import React from 'react';
 import { SafeAreaView, ScrollView, StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 //assets
-import * as theme from '../assets/theme/color'
+import styles from '../style/HomeScreenStyle'
+
 
 const HomeScreen = ({ navigation }) => {
-    const styles = StyleSheet.create({
-        screen: {
-            backgroundColor: theme.primaryBackgroundColor,
-            flex: 1,
-        },
-
-        search: {
-            backgroundColor: 'black',
-            alignSelf: 'center',
-            padding: 5,
-            margin: 5,
-            width: 300,
-        },
-        searchText: {
-            textAlign: 'center',
-            color: 'white',
-        }
-    });
-
-
     return (
 
         <>

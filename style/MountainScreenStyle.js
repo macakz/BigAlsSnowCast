@@ -72,5 +72,4 @@ export default StyleSheet.create({
     weatherUnlockedImage: {
         alignItems: 'center',
     },
-
-});
+})
