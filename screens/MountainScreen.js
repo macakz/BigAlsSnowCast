@@ -135,8 +135,7 @@ const MountainScreen = ({ route, navigation }) => {
                                         <Col size={65}>
                                             <View style={styles.dataRowContainer}>
                                                 <Text style={styles.dataTitle}>Date: </Text>
-                                                <Text style={styles.dataContent}>
-                                                    {getDayOfWeek(data.date)} {data.date}</Text>
+                                                <Text style={styles.dataContent}>{getDayOfWeek(data.date)} - {data.date}</Text>
                                             </View>
                                             <View style={styles.dataRowContainer}>
                                                 <Text style={styles.dataTitle}>Time ({hourValue} hourly intervals): </Text>
