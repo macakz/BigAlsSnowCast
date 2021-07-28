@@ -146,7 +146,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                     <>
                                                         <View style={styles.dataRowContainer}>
                                                             <Text style={styles.dataTitle}>Snow: </Text>
-                                                            <Text style={styles.dataContent}>{data.base.freshsnow_cm}cm</Text>
+                                                            <Text style={styles.dataContent}>{data.base.freshsnow_cm.toFixed(2)}cm</Text>
                                                         </View>
                                                         <View style={styles.dataRowContainer}>
                                                             <Text style={styles.dataTitle}>Temperature: </Text>
@@ -168,7 +168,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                         <>
                                                             <View style={styles.dataRowContainer}>
                                                                 <Text style={styles.dataTitle}>Snow: </Text>
-                                                                <Text style={styles.dataContent}>{data.mid.freshsnow_cm}cm</Text>
+                                                                <Text style={styles.dataContent}>{data.mid.freshsnow_cm.toFixed(2)}cm</Text>
                                                             </View>
                                                             <View style={styles.dataRowContainer}>
                                                                 <Text style={styles.dataTitle}>Temperature: </Text>
@@ -188,7 +188,7 @@ const MountainScreen = ({ route, navigation }) => {
                                                         <>
                                                             <View style={styles.dataRowContainer}>
                                                                 <Text style={styles.dataTitle}>Snow: </Text>
-                                                                <Text style={styles.dataContent}>{data.upper.freshsnow_cm}cm</Text>
+                                                                <Text style={styles.dataContent}>{data.upper.freshsnow_cm.toFixed(2)}cm</Text>
                                                             </View>
                                                             <View style={styles.dataRowContainer}>
                                                                 <Text style={styles.dataTitle}>Temperature: </Text>
