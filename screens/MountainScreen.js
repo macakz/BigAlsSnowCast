@@ -226,7 +226,7 @@ const MountainScreen = ({ route, navigation }) => {
                     <View style={styles.weatherUnlockedContainer}>
                         <TouchableOpacity onPress={() => Linking.openURL('http://www.weatherunlocked.com/')}>
                             <Text style={styles.weatherUnlockedText} >Weather Provided by</Text>
-                            <Image style={styles.weatherUnlockedImage} source={require('../assets/weatherUnlockedLogo.png')} />
+                            <Image style={styles.weatherUnlockedImage} source={require('../assets/images/weatherUnlockedLogo.png')} />
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
