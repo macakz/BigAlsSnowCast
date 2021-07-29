@@ -2,7 +2,7 @@
 import { StyleSheet } from 'react-native'
 
 //assets
-import * as theme from '../theme/color'
+import * as theme from '../theme/theme'
 
 export default StyleSheet.create({
     activityIndicatorContainer: {
@@ -20,9 +20,11 @@ export default StyleSheet.create({
     },
     modalContentContainerStyle: {
         backgroundColor: theme.primaryContainerColor,
+        fontFamily: theme.primaryFontFamily
+
     },
     dropDownPickerLabel: {
-        color: theme.secondaryText
+        color: theme.secondaryText,
     },
     dropDownPickerContainerLeft: {
         paddingTop: 5,
@@ -48,11 +50,12 @@ export default StyleSheet.create({
     },
     dataTitle: {
         fontWeight: 'bold',
-        color: theme.secondaryText
-
+        color: theme.secondaryText,
+        fontFamily: theme.primaryFontFamily
     },
     dataContent: {
-        color: theme.secondaryText
+        color: theme.secondaryText,
+        fontFamily: theme.primaryFontFamily
     },
     imageContainer: {
 

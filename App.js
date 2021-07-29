@@ -14,7 +14,7 @@ import SearchScreen from './screens/SearchScreen'
 import MountainScreen from './screens/MountainScreen'
 
 //theme
-import * as theme from './assets/theme/color'
+import * as theme from './assets/theme/theme'
 
 
 const App = () => {
