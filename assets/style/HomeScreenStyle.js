@@ -1,5 +1,5 @@
 //React
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 //assets
 import * as theme from '../theme/theme'
@@ -22,5 +22,11 @@ export default StyleSheet.create({
     searchText: {
         textAlign: 'center',
         color: theme.secondaryText,
-    }
+    },
+    homeImage: {
+        alignSelf: 'center',
+        height: 400,
+        width: 380,
+        margin: 10,
+    },
 })

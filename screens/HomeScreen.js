@@ -1,6 +1,6 @@
 //react
 import React from 'react';
-import { SafeAreaView, ScrollView, Text, TouchableOpacity } from 'react-native';
+import { SafeAreaView, ScrollView, Text, TouchableOpacity, Image } from 'react-native';
 
 //assets
 import styles from '../assets/style/HomeScreenStyle'
@@ -11,6 +11,8 @@ const HomeScreen = ({ navigation }) => {
         <>
             <SafeAreaView style={styles.screen}>
                 <ScrollView>
+                    <Image style={styles.homeImage} source={require('../assets/images/homeImage.jpg')} />
+
                     <TouchableOpacity style={styles.searchContainer} onPress={() => navigation.navigate('Search')}>
                         <Text style={styles.searchText}>Search for your local mountain here!</Text>
                     </TouchableOpacity>

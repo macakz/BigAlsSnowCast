@@ -10,6 +10,8 @@ import * as weatherIcon from '../assets/icons/iconImages'
 import skifields from '../assets/skifields.json'
 import styles from '../assets/style/MountainScreenStyle'
 
+//components 
+import getDayOfWeek from '../components/getDayOfWeek'
 
 //packages
 import axios from 'axios'
@@ -47,6 +49,7 @@ const MountainScreen = ({ route, navigation }) => {
         { label: "12 hourly", value: 12 }
     ]
 
+    
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
     const mountainForecast = () => {
@@ -73,7 +76,7 @@ const MountainScreen = ({ route, navigation }) => {
     }, [navigation])
 
     // screen data
-    if (!mountainIsReady) {
+    if (getDayOfWeek === null) {
         return (
             <>
                 <View style={styles.activityIndicatorContainer}>
@@ -123,12 +126,6 @@ const MountainScreen = ({ route, navigation }) => {
                     </Grid>
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
-                        const getDayOfWeek = value => {
-                            const [dd, mm, yyyy] = value.split('/'),
-                                date = new Date(yyyy, mm - 1, dd)
-                            return date.toLocaleDateString('en-US', { weekday: 'long' })
-                        }
-
                         return (
                             <>
                                 <View style={styles.dataContainer}>
