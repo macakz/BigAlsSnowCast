@@ -62,8 +62,8 @@ export default StyleSheet.create({
     },
     weatherIcon: {
         overflow: 'hidden',
-        height: 100,
-        width: 100
+        height: 80,
+        width: 80
     },
     weatherUnlockedContainer: {
 
