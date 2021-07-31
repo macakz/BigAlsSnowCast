@@ -1,5 +1,5 @@
 //React
-import { StyleSheet, Dimensions } from 'react-native'
+import { StyleSheet } from 'react-native'
 
 //assets
 import * as theme from '../theme/theme'
