@@ -10,9 +10,8 @@ export default StyleSheet.create({
         flex: 1,
     },
     container: {
-        flex: 1,
-        alignItems: 'center',
         paddingTop: 50,
+        alignItems: 'center',
     },
     search: {
         fontSize: 20,
@@ -49,5 +48,12 @@ export default StyleSheet.create({
     searchText: {
         textAlign: 'center',
         color: theme.secondaryText,
-    }
+    },
+    searchImage: {
+        marginTop: 50,
+        alignSelf: 'center',
+        height: 400,
+        width: 380,
+        margin: 10,
+    },
 })
