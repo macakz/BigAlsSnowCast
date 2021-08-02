@@ -41,7 +41,12 @@ const App = () => {
       }}
       >
         {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
-        <Stack.Screen name="Search" component={SearchScreen} />
+        <Stack.Screen
+          name="Search"
+          component={SearchScreen}
+          options={{
+            headerShown: false,
+          }} />
         <Stack.Screen name="Mountain" component={MountainScreen} />
       </Stack.Navigator>
     </NavigationContainer>

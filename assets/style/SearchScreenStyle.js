@@ -41,7 +41,7 @@ export default StyleSheet.create({
         borderColor: theme.primaryContainerColor
 
     },
-    
+
     modalContentContainer: {
         backgroundColor: theme.primaryContainerColor,
     },
@@ -66,7 +66,6 @@ export default StyleSheet.create({
     imageContainer: {
         height: height,
         width: width,
-        padding: 10,
     },
     searchImage: {
         alignSelf: 'center',
