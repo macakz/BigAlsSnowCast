@@ -53,6 +53,7 @@ const MountainScreen = ({ route, navigation }) => {
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
     const mountainForecast = () => {
+        setMountainIsReady(false)
         matchMountainId()
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
             .then((response) => setMountainForecastData(response.data.forecast))
