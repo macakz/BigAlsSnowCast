@@ -1,5 +1,7 @@
 #import "AppDelegate.h"
-
+#if RCT_DEV
+#import <React/RCTDevLoadingView.h>
+#endif
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
@@ -27,6 +29,15 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSURL *jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.js" fallbackResource:nil];
+
+     RCTBridge *bridge = [[RCTBridge alloc] initWithBundleURL:jsCodeLocation
+                                                 moduleProvider:nil
+                                                  launchOptions:launchOptions];
+     #if RCT_DEV
+      [bridge moduleForClass:[RCTDevLoadingView class]];
+     #endif
+    
 #ifdef FB_SONARKIT_ENABLED
   InitializeFlipper(application);
 #endif
