@@ -43,7 +43,7 @@ const MountainScreen = ({ route, navigation }) => {
 
     // forecast hour interval
     const [hourOpen, setHourOpen] = useState(false)
-    const [hourValue, setHourValue] = useState(12)
+    const [hourValue, setHourValue] = useState(6)
     const hourOptions = [
         { label: "6 hourly", value: 6 },
         { label: "12 hourly", value: 12 }
