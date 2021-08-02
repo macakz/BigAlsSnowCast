@@ -129,31 +129,54 @@ const MountainScreen = ({ route, navigation }) => {
                     </Grid>
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
+                        console.log(data.date + data.time)
                         return (
-                            <>
-                                <View style={styles.dataContainer}>
-                                    <Grid>
-                                        <Col size={65}>
-                                            <View style={styles.dataRowContainer}>
-                                                <Text style={styles.dataTitle}>Date: </Text>
-                                                <Text style={styles.dataContent}>{getDayOfWeek(data.date)} - {data.date}</Text>
-                                            </View>
-                                            <View style={styles.dataRowContainer}>
-                                                <Text style={styles.dataTitle}>Time ({hourValue} hourly intervals): </Text>
-                                                <Text style={styles.dataContent}>{data.time}</Text>
-                                            </View>
-                                            <View style={styles.dataRowContainer}>
-                                                <Text style={styles.dataTitle}>Freezing Level: </Text>
-                                                <Text style={styles.dataContent}>{data.frzglvl_avg_m}m</Text>
-                                            </View>
-                                            {
-                                                //base on mountain
-                                                heightValue === "Base"
+
+                            <View style={styles.dataContainer} key={data.date + data.time}>
+                                <Grid>
+                                    <Col size={65}>
+                                        <View style={styles.dataRowContainer}>
+                                            <Text style={styles.dataTitle}>Date: </Text>
+                                            <Text style={styles.dataContent}>{getDayOfWeek(data.date)} - {data.date}</Text>
+                                        </View>
+                                        <View style={styles.dataRowContainer}>
+                                            <Text style={styles.dataTitle}>Time ({hourValue} hourly intervals): </Text>
+                                            <Text style={styles.dataContent}>{data.time}</Text>
+                                        </View>
+                                        <View style={styles.dataRowContainer}>
+                                            <Text style={styles.dataTitle}>Freezing Level: </Text>
+                                            <Text style={styles.dataContent}>{data.frzglvl_avg_m}m</Text>
+                                        </View>
+                                        {
+                                            //base on mountain
+                                            heightValue === "Base"
+                                                ?
+                                                <>
+                                                    <View style={styles.dataRowContainer}>
+                                                        <Text style={styles.dataTitle}>Snow: </Text>
+                                                        <Text style={styles.dataContent}>{data.base.freshsnow_cm.toFixed(2)}cm</Text>
+                                                    </View>
+                                                    <View style={styles.dataRowContainer}>
+                                                        <Text style={styles.dataTitle}>Temperature: </Text>
+                                                        <Text style={styles.dataContent}>{data.base.temp_c}°C</Text>
+                                                    </View>
+                                                    <View style={styles.dataRowContainer}>
+                                                        <Text style={styles.dataTitle}>Wind Direction and Speed: </Text>
+                                                        <Text style={styles.dataContent}>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
+                                                    </View>
+                                                    <View style={styles.dataRowContainer}>
+                                                        <Text style={styles.dataTitle}>Forecast: </Text>
+                                                        <Text style={styles.dataContent}>{data.base.wx_desc}</Text>
+                                                    </View>
+                                                </>
+                                                :
+                                                //mid mountain
+                                                heightValue === "Mid"
                                                     ?
                                                     <>
                                                         <View style={styles.dataRowContainer}>
                                                             <Text style={styles.dataTitle}>Snow: </Text>
-                                                            <Text style={styles.dataContent}>{data.base.freshsnow_cm.toFixed(2)}cm</Text>
+                                                            <Text style={styles.dataContent}>{data.mid.freshsnow_cm.toFixed(2)}cm</Text>
                                                         </View>
                                                         <View style={styles.dataRowContainer}>
                                                             <Text style={styles.dataTitle}>Temperature: </Text>
@@ -161,65 +184,42 @@ const MountainScreen = ({ route, navigation }) => {
                                                         </View>
                                                         <View style={styles.dataRowContainer}>
                                                             <Text style={styles.dataTitle}>Wind Direction and Speed: </Text>
-                                                            <Text style={styles.dataContent}>{data.base.winddir_compass} {data.base.windspd_kmh}km/h</Text>
+                                                            <Text style={styles.dataContent}>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
                                                         </View>
                                                         <View style={styles.dataRowContainer}>
                                                             <Text style={styles.dataTitle}>Forecast: </Text>
-                                                            <Text style={styles.dataContent}>{data.base.wx_desc}</Text>
+                                                            <Text style={styles.dataContent}>{data.mid.wx_desc}</Text>
                                                         </View>
                                                     </>
                                                     :
-                                                    //mid mountain
-                                                    heightValue === "Mid"
-                                                        ?
-                                                        <>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Snow: </Text>
-                                                                <Text style={styles.dataContent}>{data.mid.freshsnow_cm.toFixed(2)}cm</Text>
-                                                            </View>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Temperature: </Text>
-                                                                <Text style={styles.dataContent}>{data.base.temp_c}°C</Text>
-                                                            </View>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Wind Direction and Speed: </Text>
-                                                                <Text style={styles.dataContent}>{data.mid.winddir_compass} {data.mid.windspd_kmh}km/h</Text>
-                                                            </View>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Forecast: </Text>
-                                                                <Text style={styles.dataContent}>{data.mid.wx_desc}</Text>
-                                                            </View>
-                                                        </>
-                                                        :
-                                                        //upper mountain
-                                                        <>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Snow: </Text>
-                                                                <Text style={styles.dataContent}>{data.upper.freshsnow_cm.toFixed(2)}cm</Text>
-                                                            </View>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Temperature: </Text>
-                                                                <Text style={styles.dataContent}>{data.upper.temp_c}°C</Text>
-                                                            </View>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Wind Direction and Speed: </Text>
-                                                                <Text style={styles.dataContent}>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
-                                                            </View>
-                                                            <View style={styles.dataRowContainer}>
-                                                                <Text style={styles.dataTitle}>Forecast: </Text>
-                                                                <Text style={styles.dataContent}>{data.upper.wx_desc}</Text>
-                                                            </View>
-                                                        </>
-                                            }
-                                        </Col>
-                                        <Col size={20}>
-                                            <View style={styles.imageContainer}>
-                                                <Image style={styles.weatherIcon} source={weatherIcon[icon]} />
-                                            </View>
-                                        </Col>
-                                    </Grid>
-                                </View>
-                            </>
+                                                    //upper mountain
+                                                    <>
+                                                        <View style={styles.dataRowContainer}>
+                                                            <Text style={styles.dataTitle}>Snow: </Text>
+                                                            <Text style={styles.dataContent}>{data.upper.freshsnow_cm.toFixed(2)}cm</Text>
+                                                        </View>
+                                                        <View style={styles.dataRowContainer}>
+                                                            <Text style={styles.dataTitle}>Temperature: </Text>
+                                                            <Text style={styles.dataContent}>{data.upper.temp_c}°C</Text>
+                                                        </View>
+                                                        <View style={styles.dataRowContainer}>
+                                                            <Text style={styles.dataTitle}>Wind Direction and Speed: </Text>
+                                                            <Text style={styles.dataContent}>{data.upper.winddir_compass} {data.upper.windspd_kmh}km/h</Text>
+                                                        </View>
+                                                        <View style={styles.dataRowContainer}>
+                                                            <Text style={styles.dataTitle}>Forecast: </Text>
+                                                            <Text style={styles.dataContent}>{data.upper.wx_desc}</Text>
+                                                        </View>
+                                                    </>
+                                        }
+                                    </Col>
+                                    <Col size={20}>
+                                        <View style={styles.imageContainer}>
+                                            <Image style={styles.weatherIcon} source={weatherIcon[icon]} />
+                                        </View>
+                                    </Col>
+                                </Grid>
+                            </View>
                         )
                     })
                     }
