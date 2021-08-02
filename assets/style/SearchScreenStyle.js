@@ -12,7 +12,6 @@ export default StyleSheet.create({
         flex: 1,
     },
     container: {
-        paddingTop: 50,
         alignItems: 'center',
     },
     search: {
@@ -27,32 +26,35 @@ export default StyleSheet.create({
     },
 
     dropDownPicker: {
+        fontSize: 16,
+
         backgroundColor: theme.primaryContainerColor,
-        width: "80%",
+        width: 300,
         alignSelf: "center"
     },
     modalContentContainer: {
         backgroundColor: theme.primaryContainerColor,
     },
     dropDownPickerLabel: {
+        fontSize: 16,
         color: theme.secondaryText
     },
     searchContainer: {
         backgroundColor: theme.primaryContainerColor,
-        borderRadius: 12,
+        borderRadius: 5,
         alignSelf: 'center',
         justifyContent: 'center',
         padding: 5,
         margin: 5,
         width: 300,
-
     },
     searchText: {
+        fontSize: 16,
         textAlign: 'center',
         color: theme.secondaryText,
     },
     imageContainer: {
-        height: height / 2,
+        height: height * 0.7,
         width: width,
         padding: 10,
     },

@@ -46,7 +46,7 @@ const SearchScreen = ({ navigation }) => {
                             setValue={setValue}
                         />
                         <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.searchContainer}>
-                            <Text style={styles.searchText}>Let's see what Big Al has to say...</Text>
+                            <Text style={styles.searchText}>Find that pow...</Text>
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
