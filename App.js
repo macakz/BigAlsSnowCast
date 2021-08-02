@@ -1,6 +1,6 @@
 //React
 import React from 'react'
-import { StatusBar, StyleSheet } from 'react-native'
+import { StyleSheet } from 'react-native'
 import 'react-native-gesture-handler'
 import 'react-native-gesture-handler'
 
@@ -9,7 +9,6 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 //Screens
-import HomeScreen from './screens/HomeScreen'
 import SearchScreen from './screens/SearchScreen'
 import MountainScreen from './screens/MountainScreen'
 
@@ -18,14 +17,8 @@ import * as theme from './assets/theme/theme'
 
 
 const App = () => {
-  const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      alignItems: 'center',
-      justifyContent: 'center',
-    },
-  });
-  const Stack = createStackNavigator();
+
+  const Stack = createStackNavigator()
 
   return (
     <NavigationContainer>
@@ -40,7 +33,6 @@ const App = () => {
           headerTintColor: theme.primaryText,
         }}
       >
-        {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
         <Stack.Screen
           name="Search"
           component={SearchScreen}
@@ -51,6 +43,9 @@ const App = () => {
         <Stack.Screen
           name="Mountain"
           component={MountainScreen}
+          options={{
+            headerShown: true,
+          }}
         />
       </Stack.Navigator>
     </NavigationContainer>

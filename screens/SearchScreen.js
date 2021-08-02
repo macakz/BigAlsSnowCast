@@ -1,6 +1,6 @@
 //react
 import React, { useState } from 'react'
-import { SafeAreaView, Text, TouchableOpacity, View, Image, StatusBar } from 'react-native'
+import { Text, TouchableOpacity, View, Image, StatusBar } from 'react-native'
 
 //packages
 import DropDownPicker from 'react-native-dropdown-picker'
