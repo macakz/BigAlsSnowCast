@@ -29,15 +29,16 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{
-        headerStyle: {
-          backgroundColor: theme.primaryBackgroundColor,
-        },
-        headerTitleStyle: {
-          color: theme.primaryText
-        },
-        headerTintColor: theme.primaryText,
-      }}
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: theme.primaryBackgroundColor,
+          },
+          headerTitleStyle: {
+            color: theme.primaryText
+          },
+          headerTintColor: theme.primaryText,
+        }}
       >
         {/* <Stack.Screen name="Home" component={HomeScreen} /> */}
         <Stack.Screen
@@ -45,8 +46,12 @@ const App = () => {
           component={SearchScreen}
           options={{
             headerShown: false,
-          }} />
-        <Stack.Screen name="Mountain" component={MountainScreen} />
+          }}
+        />
+        <Stack.Screen
+          name="Mountain"
+          component={MountainScreen}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );
