@@ -1,6 +1,6 @@
 //react
 import React, { useState } from 'react'
-import { SafeAreaView, ScrollView, Text, TouchableOpacity, View, Image } from 'react-native'
+import { SafeAreaView, Text, TouchableOpacity, View, Image } from 'react-native'
 
 //packages
 import DropDownPicker from 'react-native-dropdown-picker'
@@ -24,32 +24,29 @@ const SearchScreen = ({ navigation }) => {
     return (
         <>
             <SafeAreaView style={styles.screen}>
-                <ScrollView>
-                    <View style={styles.imageContainer}>
-                        <Image resizeMode='cover' style={styles.searchImage} source={require('../assets/images/homeImage.jpg')} />
-                    </View>
-
-                    <View style={styles.container}>
-                        <DropDownPicker
-                            listMode="MODAL"
-                            style={styles.dropDownPicker}
-                            modalContentContainerStyle={styles.modalContentContainer}
-                            labelStyle={styles.dropDownPickerLabel}
-                            searchPlaceholderTextColor={styles.searchPlaceholder}
-                            placeholder="Choose your mountain"
-                            searchPlaceholder="Search here..."
-                            searchable={true}
-                            open={open}
-                            value={value}
-                            items={items}
-                            setOpen={setOpen}
-                            setValue={setValue}
-                        />
-                        <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.searchContainer}>
-                            <Text style={styles.searchText}>Find that pow...</Text>
-                        </TouchableOpacity>
-                    </View>
-                </ScrollView>
+                <View style={styles.imageContainer}>
+                    <Image resizeMode='cover' style={styles.searchImage} source={require('../assets/images/homeImage.jpg')} />
+                </View>
+                <View style={styles.container}>
+                    <DropDownPicker
+                        listMode="MODAL"
+                        style={styles.dropDownPicker}
+                        modalContentContainerStyle={styles.modalContentContainer}
+                        labelStyle={styles.dropDownPickerLabel}
+                        searchPlaceholderTextColor={styles.searchPlaceholder}
+                        placeholder="Choose your mountain"
+                        searchPlaceholder="Search here..."
+                        searchable={true}
+                        open={open}
+                        value={value}
+                        items={items}
+                        setOpen={setOpen}
+                        setValue={setValue}
+                    />
+                    <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.searchContainer}>
+                        <Text style={styles.searchText}>Find that pow...</Text>
+                    </TouchableOpacity>
+                </View>
             </SafeAreaView>
         </>
     )

@@ -12,7 +12,15 @@ export default StyleSheet.create({
         flex: 1,
     },
     container: {
-        alignItems: 'center',
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "transparent",
+        zIndex: 1
     },
     search: {
         fontSize: 20,
@@ -27,11 +35,13 @@ export default StyleSheet.create({
 
     dropDownPicker: {
         fontSize: 16,
-
         backgroundColor: theme.primaryContainerColor,
         width: 300,
-        alignSelf: "center"
+        alignSelf: "center",
+        borderColor: theme.primaryContainerColor
+
     },
+    
     modalContentContainer: {
         backgroundColor: theme.primaryContainerColor,
     },
@@ -54,7 +64,7 @@ export default StyleSheet.create({
         color: theme.secondaryText,
     },
     imageContainer: {
-        height: height * 0.7,
+        height: height,
         width: width,
         padding: 10,
     },
