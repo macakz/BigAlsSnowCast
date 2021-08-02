@@ -32,7 +32,7 @@ const MountainScreen = ({ route, navigation }) => {
     }
 
     // dropdown pickers //
-    // mountain height stats
+    // forcast mountain height
     const [heightOpen, setHeightOpen] = useState(false);
     const [heightValue, setHeightValue] = useState("Mid");
     const heightOptions = [
@@ -49,7 +49,7 @@ const MountainScreen = ({ route, navigation }) => {
         { label: "12 hourly", value: 12 }
     ]
 
-    
+
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
     const mountainForecast = () => {
@@ -76,7 +76,7 @@ const MountainScreen = ({ route, navigation }) => {
     }, [navigation])
 
     // screen data
-    if (getDayOfWeek === null) {
+    if (!mountainIsReady) {
         return (
             <>
                 <View style={styles.activityIndicatorContainer}>
