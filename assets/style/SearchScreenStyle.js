@@ -1,8 +1,10 @@
 //React
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 //assets
 import * as theme from '../theme/theme'
+
+const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
     screen: {
@@ -49,11 +51,14 @@ export default StyleSheet.create({
         textAlign: 'center',
         color: theme.secondaryText,
     },
+    imageContainer: {
+        height: height / 2,
+        width: width,
+        padding: 10,
+    },
     searchImage: {
-        marginTop: 50,
         alignSelf: 'center',
-        height: 400,
-        width: 380,
-        margin: 10,
+        height: '100%',
+        width: '100%'
     },
 })

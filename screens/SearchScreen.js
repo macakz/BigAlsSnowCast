@@ -25,7 +25,10 @@ const SearchScreen = ({ navigation }) => {
         <>
             <SafeAreaView style={styles.screen}>
                 <ScrollView>
-                    <Image style={styles.searchImage} source={require('../assets/images/homeImage.jpg')} />
+                    <View style={styles.imageContainer}>
+                        <Image resizeMode='cover' style={styles.searchImage} source={require('../assets/images/homeImage.jpg')} />
+                    </View>
+
                     <View style={styles.container}>
                         <DropDownPicker
                             listMode="MODAL"
