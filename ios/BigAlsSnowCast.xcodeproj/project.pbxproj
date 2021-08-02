@@ -12,28 +12,28 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		202508FE457CBA334D83CBCD /* libPods-BigAlsSnowCast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31B3534B78B1FB1DCCB823E /* libPods-BigAlsSnowCast.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		2F40EF902537445E8F042635 /* ABeeZee-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8315E29A1B3B453A9A986209 /* ABeeZee-Italic.ttf */; };
-		FB44FBEC7E3A4E7FAD0C44FB /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2548836F8882416CA49B6CA9 /* ABeeZee-Regular.ttf */; };
-		68C41179CD3D400DA2697C33 /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D434F8F938045E0810663A0 /* CrimsonText-Bold.ttf */; };
-		F5DBA111F4264BAAA0F1F664 /* CrimsonText-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E493DD67C441E2B8AC8CF1 /* CrimsonText-BoldItalic.ttf */; };
-		3E86D55D5DFE444DB798391F /* CrimsonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34881F1443D4A81884B98A8 /* CrimsonText-Italic.ttf */; };
-		9D23905F46944C6988CC7BE4 /* CrimsonText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33471646791E4F5BAC68CCDF /* CrimsonText-Regular.ttf */; };
-		8DFC184B917B4874A9BDB6D1 /* CrimsonText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A225129944B14E9486ABC138 /* CrimsonText-SemiBold.ttf */; };
 		14F0511683BD49FFAD9B6762 /* CrimsonText-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B3193DD3EA88451DA90D6F82 /* CrimsonText-SemiBoldItalic.ttf */; };
+		202508FE457CBA334D83CBCD /* libPods-BigAlsSnowCast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31B3534B78B1FB1DCCB823E /* libPods-BigAlsSnowCast.a */; };
+		239F874EB1D141ACBA9A71D8 /* EBGaramond-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A96DF5D80F35406A8B39D9A1 /* EBGaramond-VariableFont_wght.ttf */; };
+		2F40EF902537445E8F042635 /* ABeeZee-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8315E29A1B3B453A9A986209 /* ABeeZee-Italic.ttf */; };
+		3E86D55D5DFE444DB798391F /* CrimsonText-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B34881F1443D4A81884B98A8 /* CrimsonText-Italic.ttf */; };
 		48F244EA36BA45CE8581AA86 /* EBGaramond-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1C01ED9AE8F4A63B722EF81 /* EBGaramond-Bold.ttf */; };
+		642C5F81811B4CFD930102D9 /* EBGaramond-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 837E3E8759574B30AAC697B9 /* EBGaramond-Italic-VariableFont_wght.ttf */; };
+		68C41179CD3D400DA2697C33 /* CrimsonText-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D434F8F938045E0810663A0 /* CrimsonText-Bold.ttf */; };
+		6ADB378F2B074B44ADCFEDBB /* EBGaramond-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4596C849CF0B4A3B80929C88 /* EBGaramond-MediumItalic.ttf */; };
+		793C7965ED744A1DA3A5EE15 /* EBGaramond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E79AED4B72CF4A46B57B0B21 /* EBGaramond-Regular.ttf */; };
+		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		8DFC184B917B4874A9BDB6D1 /* CrimsonText-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A225129944B14E9486ABC138 /* CrimsonText-SemiBold.ttf */; };
+		9D23905F46944C6988CC7BE4 /* CrimsonText-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 33471646791E4F5BAC68CCDF /* CrimsonText-Regular.ttf */; };
+		AEA835E1B1F34AA6ADE2AB4F /* EBGaramond-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D8660E51914F1A9A308629 /* EBGaramond-SemiBoldItalic.ttf */; };
+		B0E17DDD22424C9586552D88 /* EBGaramond-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353C57C378854CE7BFF49E6C /* EBGaramond-Medium.ttf */; };
 		B20259CD5474414CB1F87E39 /* EBGaramond-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C90F61F458041B99B290B5B /* EBGaramond-BoldItalic.ttf */; };
 		C6944FBC75A74A17A9829831 /* EBGaramond-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 978CD99661A54737A6FE42AE /* EBGaramond-ExtraBold.ttf */; };
 		D209A0D2427246688E8C542D /* EBGaramond-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74AAFDEBA02643909AA705E6 /* EBGaramond-ExtraBoldItalic.ttf */; };
-		642C5F81811B4CFD930102D9 /* EBGaramond-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 837E3E8759574B30AAC697B9 /* EBGaramond-Italic-VariableFont_wght.ttf */; };
 		D983E7EAFFEE4FCF83AF6478 /* EBGaramond-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 477911CC17C143CC9BFDCA08 /* EBGaramond-Italic.ttf */; };
-		B0E17DDD22424C9586552D88 /* EBGaramond-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 353C57C378854CE7BFF49E6C /* EBGaramond-Medium.ttf */; };
-		6ADB378F2B074B44ADCFEDBB /* EBGaramond-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4596C849CF0B4A3B80929C88 /* EBGaramond-MediumItalic.ttf */; };
-		793C7965ED744A1DA3A5EE15 /* EBGaramond-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E79AED4B72CF4A46B57B0B21 /* EBGaramond-Regular.ttf */; };
+		F5DBA111F4264BAAA0F1F664 /* CrimsonText-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C2E493DD67C441E2B8AC8CF1 /* CrimsonText-BoldItalic.ttf */; };
 		F6EA5A438C4A490CA2F15554 /* EBGaramond-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F658B60A6FA44C0784232D78 /* EBGaramond-SemiBold.ttf */; };
-		AEA835E1B1F34AA6ADE2AB4F /* EBGaramond-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 26D8660E51914F1A9A308629 /* EBGaramond-SemiBoldItalic.ttf */; };
-		239F874EB1D141ACBA9A71D8 /* EBGaramond-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A96DF5D80F35406A8B39D9A1 /* EBGaramond-VariableFont_wght.ttf */; };
+		FB44FBEC7E3A4E7FAD0C44FB /* ABeeZee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2548836F8882416CA49B6CA9 /* ABeeZee-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,34 +56,34 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = BigAlsSnowCast/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BigAlsSnowCast/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = BigAlsSnowCast/main.m; sourceTree = "<group>"; };
+		2548836F8882416CA49B6CA9 /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ABeeZee-Regular.ttf"; path = "../assets/fonts/ABeeZee-Regular.ttf"; sourceTree = "<group>"; };
+		26D8660E51914F1A9A308629 /* EBGaramond-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-SemiBoldItalic.ttf"; path = "../assets/fonts/EBGaramond-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		33471646791E4F5BAC68CCDF /* CrimsonText-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-Regular.ttf"; path = "../assets/fonts/CrimsonText-Regular.ttf"; sourceTree = "<group>"; };
+		353C57C378854CE7BFF49E6C /* EBGaramond-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Medium.ttf"; path = "../assets/fonts/EBGaramond-Medium.ttf"; sourceTree = "<group>"; };
 		379045FB0549458E33E66AC5 /* Pods-BigAlsSnowCast-BigAlsSnowCastTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigAlsSnowCast-BigAlsSnowCastTests.debug.xcconfig"; path = "Target Support Files/Pods-BigAlsSnowCast-BigAlsSnowCastTests/Pods-BigAlsSnowCast-BigAlsSnowCastTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4596C849CF0B4A3B80929C88 /* EBGaramond-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-MediumItalic.ttf"; path = "../assets/fonts/EBGaramond-MediumItalic.ttf"; sourceTree = "<group>"; };
+		477911CC17C143CC9BFDCA08 /* EBGaramond-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Italic.ttf"; path = "../assets/fonts/EBGaramond-Italic.ttf"; sourceTree = "<group>"; };
+		4D434F8F938045E0810663A0 /* CrimsonText-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-Bold.ttf"; path = "../assets/fonts/CrimsonText-Bold.ttf"; sourceTree = "<group>"; };
 		5C965BFEED234C526A6F83A2 /* Pods-BigAlsSnowCast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigAlsSnowCast.debug.xcconfig"; path = "Target Support Files/Pods-BigAlsSnowCast/Pods-BigAlsSnowCast.debug.xcconfig"; sourceTree = "<group>"; };
 		6EDC29D4C43ABC764C3601E5 /* Pods-BigAlsSnowCast-BigAlsSnowCastTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigAlsSnowCast-BigAlsSnowCastTests.release.xcconfig"; path = "Target Support Files/Pods-BigAlsSnowCast-BigAlsSnowCastTests/Pods-BigAlsSnowCast-BigAlsSnowCastTests.release.xcconfig"; sourceTree = "<group>"; };
+		74AAFDEBA02643909AA705E6 /* EBGaramond-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-ExtraBoldItalic.ttf"; path = "../assets/fonts/EBGaramond-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		7C90F61F458041B99B290B5B /* EBGaramond-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-BoldItalic.ttf"; path = "../assets/fonts/EBGaramond-BoldItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BigAlsSnowCast/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8315E29A1B3B453A9A986209 /* ABeeZee-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "ABeeZee-Italic.ttf"; path = "../assets/fonts/ABeeZee-Italic.ttf"; sourceTree = "<group>"; };
+		837E3E8759574B30AAC697B9 /* EBGaramond-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Italic-VariableFont_wght.ttf"; path = "../assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		978CD99661A54737A6FE42AE /* EBGaramond-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-ExtraBold.ttf"; path = "../assets/fonts/EBGaramond-ExtraBold.ttf"; sourceTree = "<group>"; };
+		A225129944B14E9486ABC138 /* CrimsonText-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-SemiBold.ttf"; path = "../assets/fonts/CrimsonText-SemiBold.ttf"; sourceTree = "<group>"; };
 		A31B3534B78B1FB1DCCB823E /* libPods-BigAlsSnowCast.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BigAlsSnowCast.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A96DF5D80F35406A8B39D9A1 /* EBGaramond-VariableFont_wght.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-VariableFont_wght.ttf"; path = "../assets/fonts/EBGaramond-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		B3193DD3EA88451DA90D6F82 /* CrimsonText-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-SemiBoldItalic.ttf"; path = "../assets/fonts/CrimsonText-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		B34881F1443D4A81884B98A8 /* CrimsonText-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-Italic.ttf"; path = "../assets/fonts/CrimsonText-Italic.ttf"; sourceTree = "<group>"; };
+		C2E493DD67C441E2B8AC8CF1 /* CrimsonText-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "CrimsonText-BoldItalic.ttf"; path = "../assets/fonts/CrimsonText-BoldItalic.ttf"; sourceTree = "<group>"; };
+		D1C01ED9AE8F4A63B722EF81 /* EBGaramond-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Bold.ttf"; path = "../assets/fonts/EBGaramond-Bold.ttf"; sourceTree = "<group>"; };
+		E79AED4B72CF4A46B57B0B21 /* EBGaramond-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-Regular.ttf"; path = "../assets/fonts/EBGaramond-Regular.ttf"; sourceTree = "<group>"; };
 		EAC819F8A28244BA62247220 /* Pods-BigAlsSnowCast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigAlsSnowCast.release.xcconfig"; path = "Target Support Files/Pods-BigAlsSnowCast/Pods-BigAlsSnowCast.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F658B60A6FA44C0784232D78 /* EBGaramond-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "EBGaramond-SemiBold.ttf"; path = "../assets/fonts/EBGaramond-SemiBold.ttf"; sourceTree = "<group>"; };
 		F8DA4ADA365267AD54FAEDF2 /* libPods-BigAlsSnowCast-BigAlsSnowCastTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BigAlsSnowCast-BigAlsSnowCastTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8315E29A1B3B453A9A986209 /* ABeeZee-Italic.ttf */ = {isa = PBXFileReference; name = "ABeeZee-Italic.ttf"; path = "../assets/fonts/ABeeZee-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		2548836F8882416CA49B6CA9 /* ABeeZee-Regular.ttf */ = {isa = PBXFileReference; name = "ABeeZee-Regular.ttf"; path = "../assets/fonts/ABeeZee-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4D434F8F938045E0810663A0 /* CrimsonText-Bold.ttf */ = {isa = PBXFileReference; name = "CrimsonText-Bold.ttf"; path = "../assets/fonts/CrimsonText-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		C2E493DD67C441E2B8AC8CF1 /* CrimsonText-BoldItalic.ttf */ = {isa = PBXFileReference; name = "CrimsonText-BoldItalic.ttf"; path = "../assets/fonts/CrimsonText-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B34881F1443D4A81884B98A8 /* CrimsonText-Italic.ttf */ = {isa = PBXFileReference; name = "CrimsonText-Italic.ttf"; path = "../assets/fonts/CrimsonText-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		33471646791E4F5BAC68CCDF /* CrimsonText-Regular.ttf */ = {isa = PBXFileReference; name = "CrimsonText-Regular.ttf"; path = "../assets/fonts/CrimsonText-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A225129944B14E9486ABC138 /* CrimsonText-SemiBold.ttf */ = {isa = PBXFileReference; name = "CrimsonText-SemiBold.ttf"; path = "../assets/fonts/CrimsonText-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		B3193DD3EA88451DA90D6F82 /* CrimsonText-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "CrimsonText-SemiBoldItalic.ttf"; path = "../assets/fonts/CrimsonText-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		D1C01ED9AE8F4A63B722EF81 /* EBGaramond-Bold.ttf */ = {isa = PBXFileReference; name = "EBGaramond-Bold.ttf"; path = "../assets/fonts/EBGaramond-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		7C90F61F458041B99B290B5B /* EBGaramond-BoldItalic.ttf */ = {isa = PBXFileReference; name = "EBGaramond-BoldItalic.ttf"; path = "../assets/fonts/EBGaramond-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		978CD99661A54737A6FE42AE /* EBGaramond-ExtraBold.ttf */ = {isa = PBXFileReference; name = "EBGaramond-ExtraBold.ttf"; path = "../assets/fonts/EBGaramond-ExtraBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		74AAFDEBA02643909AA705E6 /* EBGaramond-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; name = "EBGaramond-ExtraBoldItalic.ttf"; path = "../assets/fonts/EBGaramond-ExtraBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		837E3E8759574B30AAC697B9 /* EBGaramond-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "EBGaramond-Italic-VariableFont_wght.ttf"; path = "../assets/fonts/EBGaramond-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		477911CC17C143CC9BFDCA08 /* EBGaramond-Italic.ttf */ = {isa = PBXFileReference; name = "EBGaramond-Italic.ttf"; path = "../assets/fonts/EBGaramond-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		353C57C378854CE7BFF49E6C /* EBGaramond-Medium.ttf */ = {isa = PBXFileReference; name = "EBGaramond-Medium.ttf"; path = "../assets/fonts/EBGaramond-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		4596C849CF0B4A3B80929C88 /* EBGaramond-MediumItalic.ttf */ = {isa = PBXFileReference; name = "EBGaramond-MediumItalic.ttf"; path = "../assets/fonts/EBGaramond-MediumItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		E79AED4B72CF4A46B57B0B21 /* EBGaramond-Regular.ttf */ = {isa = PBXFileReference; name = "EBGaramond-Regular.ttf"; path = "../assets/fonts/EBGaramond-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		F658B60A6FA44C0784232D78 /* EBGaramond-SemiBold.ttf */ = {isa = PBXFileReference; name = "EBGaramond-SemiBold.ttf"; path = "../assets/fonts/EBGaramond-SemiBold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		26D8660E51914F1A9A308629 /* EBGaramond-SemiBoldItalic.ttf */ = {isa = PBXFileReference; name = "EBGaramond-SemiBoldItalic.ttf"; path = "../assets/fonts/EBGaramond-SemiBoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		A96DF5D80F35406A8B39D9A1 /* EBGaramond-VariableFont_wght.ttf */ = {isa = PBXFileReference; name = "EBGaramond-VariableFont_wght.ttf"; path = "../assets/fonts/EBGaramond-VariableFont_wght.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +146,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		3CB085B3C479451DA7FD7D80 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8315E29A1B3B453A9A986209 /* ABeeZee-Italic.ttf */,
+				2548836F8882416CA49B6CA9 /* ABeeZee-Regular.ttf */,
+				4D434F8F938045E0810663A0 /* CrimsonText-Bold.ttf */,
+				C2E493DD67C441E2B8AC8CF1 /* CrimsonText-BoldItalic.ttf */,
+				B34881F1443D4A81884B98A8 /* CrimsonText-Italic.ttf */,
+				33471646791E4F5BAC68CCDF /* CrimsonText-Regular.ttf */,
+				A225129944B14E9486ABC138 /* CrimsonText-SemiBold.ttf */,
+				B3193DD3EA88451DA90D6F82 /* CrimsonText-SemiBoldItalic.ttf */,
+				D1C01ED9AE8F4A63B722EF81 /* EBGaramond-Bold.ttf */,
+				7C90F61F458041B99B290B5B /* EBGaramond-BoldItalic.ttf */,
+				978CD99661A54737A6FE42AE /* EBGaramond-ExtraBold.ttf */,
+				74AAFDEBA02643909AA705E6 /* EBGaramond-ExtraBoldItalic.ttf */,
+				837E3E8759574B30AAC697B9 /* EBGaramond-Italic-VariableFont_wght.ttf */,
+				477911CC17C143CC9BFDCA08 /* EBGaramond-Italic.ttf */,
+				353C57C378854CE7BFF49E6C /* EBGaramond-Medium.ttf */,
+				4596C849CF0B4A3B80929C88 /* EBGaramond-MediumItalic.ttf */,
+				E79AED4B72CF4A46B57B0B21 /* EBGaramond-Regular.ttf */,
+				F658B60A6FA44C0784232D78 /* EBGaramond-SemiBold.ttf */,
+				26D8660E51914F1A9A308629 /* EBGaramond-SemiBoldItalic.ttf */,
+				A96DF5D80F35406A8B39D9A1 /* EBGaramond-VariableFont_wght.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,37 +213,8 @@
 				379045FB0549458E33E66AC5 /* Pods-BigAlsSnowCast-BigAlsSnowCastTests.debug.xcconfig */,
 				6EDC29D4C43ABC764C3601E5 /* Pods-BigAlsSnowCast-BigAlsSnowCastTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
-		};
-		3CB085B3C479451DA7FD7D80 /* Resources */ = {
-			isa = "PBXGroup";
-			children = (
-				8315E29A1B3B453A9A986209 /* ABeeZee-Italic.ttf */,
-				2548836F8882416CA49B6CA9 /* ABeeZee-Regular.ttf */,
-				4D434F8F938045E0810663A0 /* CrimsonText-Bold.ttf */,
-				C2E493DD67C441E2B8AC8CF1 /* CrimsonText-BoldItalic.ttf */,
-				B34881F1443D4A81884B98A8 /* CrimsonText-Italic.ttf */,
-				33471646791E4F5BAC68CCDF /* CrimsonText-Regular.ttf */,
-				A225129944B14E9486ABC138 /* CrimsonText-SemiBold.ttf */,
-				B3193DD3EA88451DA90D6F82 /* CrimsonText-SemiBoldItalic.ttf */,
-				D1C01ED9AE8F4A63B722EF81 /* EBGaramond-Bold.ttf */,
-				7C90F61F458041B99B290B5B /* EBGaramond-BoldItalic.ttf */,
-				978CD99661A54737A6FE42AE /* EBGaramond-ExtraBold.ttf */,
-				74AAFDEBA02643909AA705E6 /* EBGaramond-ExtraBoldItalic.ttf */,
-				837E3E8759574B30AAC697B9 /* EBGaramond-Italic-VariableFont_wght.ttf */,
-				477911CC17C143CC9BFDCA08 /* EBGaramond-Italic.ttf */,
-				353C57C378854CE7BFF49E6C /* EBGaramond-Medium.ttf */,
-				4596C849CF0B4A3B80929C88 /* EBGaramond-MediumItalic.ttf */,
-				E79AED4B72CF4A46B57B0B21 /* EBGaramond-Regular.ttf */,
-				F658B60A6FA44C0784232D78 /* EBGaramond-SemiBold.ttf */,
-				26D8660E51914F1A9A308629 /* EBGaramond-SemiBoldItalic.ttf */,
-				A96DF5D80F35406A8B39D9A1 /* EBGaramond-VariableFont_wght.ttf */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-			path = "";
 		};
 /* End PBXGroup section */
 
@@ -270,7 +268,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1210;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
 						CreatedOnToolsVersion = 6.2;
@@ -520,13 +518,16 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 379045FB0549458E33E66AC5 /* Pods-BigAlsSnowCast-BigAlsSnowCastTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				DEVELOPMENT_TEAM = 435CRXR8C9;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BigAlsSnowCastTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -547,10 +548,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6EDC29D4C43ABC764C3601E5 /* Pods-BigAlsSnowCast-BigAlsSnowCastTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 435CRXR8C9;
 				INFOPLIST_FILE = BigAlsSnowCastTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -574,6 +578,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 435CRXR8C9;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = BigAlsSnowCast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -585,7 +590,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.macakz.bigalssnowcast;
 				PRODUCT_NAME = BigAlsSnowCast;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -600,6 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 435CRXR8C9;
 				INFOPLIST_FILE = BigAlsSnowCast/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -610,7 +616,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.macakz.bigalssnowcast;
 				PRODUCT_NAME = BigAlsSnowCast;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -666,7 +672,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
@@ -724,7 +730,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					/usr/lib/swift,
 					"$(inherited)",
