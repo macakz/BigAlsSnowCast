@@ -1,6 +1,6 @@
 //react
 import React, { useState, useEffect, useLayoutEffect } from 'react'
-import { SafeAreaView, ScrollView, Text, View, Image, Linking, TouchableOpacity } from 'react-native'
+import { SafeAreaView, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar } from 'react-native'
 
 //config
 import { app_id, app_key } from '../config/weatherKeys'
@@ -56,8 +56,9 @@ const MountainScreen = ({ route, navigation }) => {
         matchMountainId()
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
             .then((response) => setMountainForecastData(response.data.forecast))
-            .then(setTimeout(
-                () => { setMountainIsReady(true) }, 5000))
+            // .then(setTimeout(
+            //     () => { setMountainIsReady(true) }, 5000))
+            .then(() => setMountainIsReady(true))
             .catch((error) => {
                 console.log("Error:", error);
             })
@@ -76,9 +77,10 @@ const MountainScreen = ({ route, navigation }) => {
     }, [navigation])
 
     // screen data
-    if (!mountainIsReady) {
+    if (mountainIsReady === false) {
         return (
             <>
+                <StatusBar barStyle='light-content' />
                 <View style={styles.activityIndicatorContainer}>
                     <Swing size={150} color="white" />
                 </View>
@@ -88,6 +90,7 @@ const MountainScreen = ({ route, navigation }) => {
     return (
         <>
             <SafeAreaView style={styles.screen}>
+                <StatusBar barStyle='light-content' />
                 <ScrollView>
                     <Grid>
                         <Col>

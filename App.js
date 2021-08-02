@@ -29,7 +29,6 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <StatusBar barStyle='light-content' />
       <Stack.Navigator screenOptions={{
         headerStyle: {
           backgroundColor: theme.primaryBackgroundColor,
