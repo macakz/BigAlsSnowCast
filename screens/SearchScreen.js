@@ -28,7 +28,7 @@ const SearchScreen = ({ navigation }) => {
                 <View style={styles.imageContainer}>
                     <Image resizeMode='cover' style={styles.searchImage} source={require('../assets/images/homeImage.jpg')} />
                 </View>
-                <View style={styles.container}>
+                <View style={styles.searchContainer}>
                     <DropDownPicker
                         listMode="MODAL"
                         style={styles.dropDownPicker}
@@ -48,8 +48,8 @@ const SearchScreen = ({ navigation }) => {
                         ?
                         null
                         :
-                        <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.searchContainer}>
-                            <Text style={styles.searchText}>Find that pow...</Text>
+                        <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.buttonContainer}>
+                            <Text style={styles.buttonText}>Find that pow...</Text>
                         </TouchableOpacity>}
 
                 </View>

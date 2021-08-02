@@ -11,7 +11,7 @@ export default StyleSheet.create({
         backgroundColor: theme.primaryBackgroundColor,
         flex: 1,
     },
-    container: {
+    searchContainer: {
         position: "absolute",
         top: 0,
         left: 0,
@@ -22,26 +22,14 @@ export default StyleSheet.create({
         backgroundColor: "transparent",
         zIndex: 1
     },
-    search: {
-        fontSize: 20,
-        borderWidth: 0,
-        borderRadius: 12,
-        borderColor: '#1282E9',
-        backgroundColor: '#fff',
-        padding: 9,
-        margin: 4,
-        width: 300
-    },
-
+    
     dropDownPicker: {
         fontSize: 16,
         backgroundColor: theme.primaryContainerColor,
         width: 300,
         alignSelf: "center",
         borderColor: theme.primaryContainerColor
-
     },
-
     modalContentContainer: {
         backgroundColor: theme.primaryContainerColor,
     },
@@ -49,7 +37,7 @@ export default StyleSheet.create({
         fontSize: 16,
         color: theme.secondaryText
     },
-    searchContainer: {
+    buttonContainer: {
         backgroundColor: theme.primaryContainerColor,
         borderRadius: 5,
         alignSelf: 'center',
@@ -58,7 +46,7 @@ export default StyleSheet.create({
         margin: 5,
         width: 300,
     },
-    searchText: {
+    buttonText: {
         fontSize: 16,
         textAlign: 'center',
         color: theme.secondaryText,
