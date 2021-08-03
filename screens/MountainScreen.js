@@ -1,5 +1,5 @@
 //react
-import React, { useState, useEffect, useLayoutEffect } from 'react'
+import React, { useState, useCallback, useEffect, useLayoutEffect } from 'react'
 import { SafeAreaView, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar } from 'react-native'
 
 //config
@@ -27,7 +27,7 @@ const MountainScreen = ({ route, navigation }) => {
     const mountain = route.params.value
     const [mountainId, setMountainId] = useState()
     const matchMountainId = () => {
-        let match = skifields.find(field => field.name === mountain);
+        const match = skifields.find(field => field.name === mountain)
         setMountainId(match.weatherId);
     }
 
@@ -52,22 +52,20 @@ const MountainScreen = ({ route, navigation }) => {
 
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
-    const mountainForecast = () => {
+    const mountainForecast = useCallback(() => {
         setMountainIsReady(false)
-        matchMountainId()
         axios.get(`https://api.weatherunlocked.com/api/resortforecast/${mountainId}?hourly_interval=${hourValue}&app_id=${app_id}&app_key=${app_key}`)
             .then((response) => setMountainForecastData(response.data.forecast))
-            // .then(setTimeout(
-            //     () => { setMountainIsReady(true) }, 5000))
             .then(() => setMountainIsReady(true))
             .catch((error) => {
                 console.log("Error:", error);
             })
-    }
+    }, [mountainId, hourValue])
 
     // call on load to render the screen data
 
     useEffect(() => {
+        matchMountainId()
         mountainForecast()
     }, [mountainId, hourValue])
 
@@ -130,7 +128,6 @@ const MountainScreen = ({ route, navigation }) => {
                     </Grid>
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
-                        console.log(weatherIcon)
                         return (
                             <View style={styles.dataContainer} key={data.date + data.time}>
                                 <Grid>
