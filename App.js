@@ -1,6 +1,5 @@
 //React
 import React from 'react'
-import { StyleSheet } from 'react-native'
 import 'react-native-gesture-handler'
 import 'react-native-gesture-handler'
 
@@ -15,10 +14,9 @@ import MountainScreen from './screens/MountainScreen'
 //theme
 import * as theme from './assets/theme/theme'
 
+const Stack = createStackNavigator()
 
 const App = () => {
-
-  const Stack = createStackNavigator()
 
   return (
     <NavigationContainer>
