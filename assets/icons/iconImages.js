@@ -1,7 +1,7 @@
 export const Blizzard = require('./weatherIcons/colorful/png/16.png')
 export const Clear = require('./weatherIcons/colorful/png/31.png')
 export const CloudRainThunder = require('./weatherIcons/colorful/png/00.png')
-export const CloudSleetSnowThunder = require('./weatherIcons/colorful/png/07.png')
+export const CloudSleetSnowThunder = require('./weatherIcons/colorful/png/14.png')
 export const Cloudy = require('./weatherIcons/colorful/png/26.png')
 export const Fog = require('./weatherIcons/colorful/png/20.png')
 export const FreezingDrizzle = require('./weatherIcons/colorful/png/10.png')

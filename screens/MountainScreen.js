@@ -128,6 +128,7 @@ const MountainScreen = ({ route, navigation }) => {
                     </Grid>
                     {mountainForecastData.map((data) => {
                         const icon = data.upper.wx_icon.replace(".gif", "")
+                        console.log(icon)
                         return (
                             <View style={styles.dataContainer} key={data.date + data.time}>
                                 <Grid>
