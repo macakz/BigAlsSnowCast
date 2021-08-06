@@ -10,23 +10,23 @@ export default StyleSheet.create({
         flex: 1,
     },
     searchContainer: {
-        backgroundColor: theme.primaryContainerColor,
-        borderRadius: 12,
-        alignSelf: 'center',
-        justifyContent: 'center',
-        padding: 5,
-        margin: 5,
-        width: 300,
-
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "transparent",
+        zIndex: 1
     },
+
     searchText: {
         textAlign: 'center',
         color: theme.secondaryText,
     },
-    homeImage: {
-        alignSelf: 'center',
-        height: 400,
-        width: 380,
-        margin: 10,
-    },
+    backgroundImage: {
+        flex: 1,
+        justifyContent: "center"
+    }
 })
