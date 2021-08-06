@@ -8,6 +8,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 //Screens
+import HomeScreen from './screens/HomeScreen'
 import SearchScreen from './screens/SearchScreen'
 import MountainScreen from './screens/MountainScreen'
 
@@ -31,6 +32,13 @@ const App = () => {
           headerTintColor: theme.primaryText,
         }}
       >
+        <Stack.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            headerShown: true,
+          }}
+        />
         <Stack.Screen
           name="Search"
           component={SearchScreen}

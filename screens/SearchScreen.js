@@ -1,6 +1,6 @@
 //react
 import React, { useState } from 'react'
-import { Text, TouchableOpacity, View, Image, StatusBar } from 'react-native'
+import { Text, TouchableOpacity, View, Image, StatusBar, ImageBackground } from 'react-native'
 
 //packages
 import DropDownPicker from 'react-native-dropdown-picker'
@@ -25,9 +25,8 @@ const SearchScreen = ({ navigation }) => {
         <>
             <View style={styles.screen}>
                 <StatusBar barStyle='dark-content' />
-                <View style={styles.imageContainer}>
-                    <Image resizeMode='cover' style={styles.searchImage} source={require('../assets/images/homeImage.jpg')} />
-                </View>
+                <ImageBackground source={require('../assets/images/homeImage.jpg')} resizeMode="cover" style={styles.backgroundImage} />
+                
                 <View style={styles.searchContainer}>
                     <DropDownPicker
                         listMode="MODAL"

@@ -22,7 +22,7 @@ export default StyleSheet.create({
         backgroundColor: "transparent",
         zIndex: 1
     },
-    
+
     dropDownPicker: {
         fontSize: 16,
         backgroundColor: theme.primaryContainerColor,
@@ -51,13 +51,8 @@ export default StyleSheet.create({
         textAlign: 'center',
         color: theme.secondaryText,
     },
-    imageContainer: {
-        height: height,
-        width: width,
-    },
-    searchImage: {
-        alignSelf: 'center',
-        height: '100%',
-        width: '100%'
-    },
+    backgroundImage: {
+        flex: 1,
+        justifyContent: "center"
+    }
 })
