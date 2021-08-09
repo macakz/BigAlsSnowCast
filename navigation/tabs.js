@@ -42,21 +42,7 @@ const Tabs = () => {
                 name="Favourite"
                 component={FavouriteScreen}
             />
-
-            <Tab.Screen
-                name="Mountain"
-                options={{
-                    headerStyle: {
-                        backgroundColor: theme.primaryBackgroundColor,
-                    },
-                    headerTitleStyle: {
-                        color: theme.primaryText
-                    },
-                    headerTintColor: theme.primaryText,
-                }}
-                component={MountainScreen}
-            />
-
+            
         </Tab.Navigator >
     )
 }

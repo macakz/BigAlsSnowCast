@@ -1,7 +1,6 @@
 //React
 import React from 'react'
 import 'react-native-gesture-handler'
-import 'react-native-gesture-handler'
 
 //react navigation
 import { NavigationContainer } from '@react-navigation/native'
@@ -21,9 +20,28 @@ const App = () => {
 
   return (
     <NavigationContainer>
-      <Tabs />
+      <Stack.Navigator>
+        <Stack.Screen
+          name='Tabs'
+          component={Tabs}
+        />
+
+        <Stack.Screen
+          name="Mountain"
+          options={{
+            headerStyle: {
+              backgroundColor: theme.primaryBackgroundColor,
+            },
+            headerTitleStyle: {
+              color: theme.primaryText
+            },
+            headerTintColor: theme.primaryText,
+          }}
+          component={MountainScreen}
+        />
+      </Stack.Navigator>
     </NavigationContainer>
-  );
-};
+  )
+}
 
 export default App;
