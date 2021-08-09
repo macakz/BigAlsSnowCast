@@ -8,7 +8,6 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Tabs from './navigation/tabs'
 
 //Screens
-import SearchScreen from './screens/SearchScreen'
 import MountainScreen from './screens/MountainScreen'
 
 //theme

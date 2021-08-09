@@ -2,6 +2,7 @@ import React from 'react'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 
+
 import SearchScreen from '../screens/SearchScreen'
 import MountainScreen from '../screens/MountainScreen'
 import HomeScreen from '../screens/HomeScreen'
@@ -19,11 +20,10 @@ const Tabs = () => {
                 tabBarStyle: {
                     backgroundColor: 'white',
                     position: 'absolute',
-                    bottom: 40,
+                    bottom: 20,
                     marginHorizontal: 20,
-                    height: 60,
+                    height: 80,
                     borderRadius: 10,
-                    paddingHorizontal: 20,
                 },
             }}
         >
@@ -42,7 +42,6 @@ const Tabs = () => {
                 name="Favourite"
                 component={FavouriteScreen}
             />
-            
         </Tab.Navigator >
     )
 }

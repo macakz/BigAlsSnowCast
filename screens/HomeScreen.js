@@ -10,10 +10,7 @@ import skifields from '../assets/skifields.json'
 import styles from '../assets/style/SearchScreenStyle'
 
 
-
 const HomeScreen = ({ navigation }) => {
-
-
     return (
         <>
             <View style={{ backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' }}>
