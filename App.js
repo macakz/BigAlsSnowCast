@@ -22,10 +22,11 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name='Tabs'
+          name='Search'
           component={Tabs}
-        />
+          options={{ headerShown: false }}
 
+        />
         <Stack.Screen
           name="Mountain"
           options={{
