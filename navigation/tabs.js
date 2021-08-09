@@ -21,29 +21,28 @@ const Tabs = () => {
                     position: 'absolute',
                     bottom: 40,
                     marginHorizontal: 20,
-                    // Max Height...
                     height: 60,
                     borderRadius: 10,
-                    // Shadow...
-                    shadowColor: '#000',
-                    shadowOpacity: 0.06,
-                    shadowOffset: {
-                        width: 10,
-                        height: 10
-                    },
                     paddingHorizontal: 20,
                 },
             }}
         >
             <Tab.Screen
+                name="Home"
+                component={HomeScreen}
+            />
+            <Tab.Screen
                 name="Search"
                 component={SearchScreen}
                 options={{
                     headerShown: false,
-
                 }}
-
             />
+            <Tab.Screen
+                name="Favourite"
+                component={FavouriteScreen}
+            />
+
             <Tab.Screen
                 name="Mountain"
                 options={{
@@ -57,13 +56,7 @@ const Tabs = () => {
                 }}
                 component={MountainScreen}
             />
-            <Tab.Screen
-                name="Home"
-                component={HomeScreen}
-            /><Tab.Screen
-                name="Favourite"
-                component={FavouriteScreen}
-            />
+
         </Tab.Navigator >
     )
 }

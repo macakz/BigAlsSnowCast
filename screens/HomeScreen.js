@@ -16,8 +16,8 @@ const HomeScreen = ({ navigation }) => {
 
     return (
         <>
-            <View style={styles.screen}>
-                <Text> hello world</Text>
+            <View style={{ backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' }}>
+                <Text > hello world</Text>
             </View>
         </>
     )
