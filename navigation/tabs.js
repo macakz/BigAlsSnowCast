@@ -21,22 +21,27 @@ const Tabs = () => {
             screenOptions={{
                 activeTintColor: 'red',
                 tabBarStyle: {
-                    backgroundColor: '#AED0E690',
+                    backgroundColor: 'rgba(255, 255, 255, 0.5)',
                     position: 'absolute',
                     bottom: 20,
                     marginHorizontal: 20,
-                    height: 80,
+                    height: 100,
                     borderRadius: 10,
                 }
+
 
             }}
         >
             <Tab.Screen
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="home" color={color} size={size} />
-                    ),
+                    tabBarLabelStyle: { color: 'black', fontSize: 18 },
+                    tabBarIcon: ({ focused }) => {
+                        const color = focused ? "black" : "grey";
+                        return (
+                            <Ionicons name='home' color={color} size={30} />
+                        )
+                    },
                 }}
                 name="Home"
                 component={HomeScreen}
@@ -47,9 +52,13 @@ const Tabs = () => {
                 options={{
                     headerShown: false,
                     tabBarLabel: 'Search',
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="search" color={color} size={size} />
-                    ),
+                    tabBarLabelStyle: { color: 'black', fontSize: 18 },
+                    tabBarIcon: ({ focused }) => {
+                        const color = focused ? "black" : "grey";
+                        return (
+                            <Ionicons name='search' color={color} size={30} />
+                        )
+                    },
                 }}
             />
             <Tab.Screen
@@ -57,9 +66,13 @@ const Tabs = () => {
                 component={FavouriteScreen}
                 options={{
                     tabBarLabel: 'Favourites',
-                    tabBarIcon: ({ color, size }) => (
-                        <Ionicons name="star" color={color} size={size} />
-                    ),
+                    tabBarLabelStyle: { color: 'black', fontSize: 18 },
+                    tabBarIcon: ({ focused }) => {
+                        const color = focused ? "black" : "grey";
+                        return (
+                            <Ionicons name='star' color={color} size={30} />
+                        )
+                    },
                 }}
             />
         </Tab.Navigator >
