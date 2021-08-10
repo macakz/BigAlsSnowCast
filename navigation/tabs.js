@@ -18,13 +18,13 @@ const Tabs = () => {
         <Tab.Navigator
             screenOptions={{
                 tabBarStyle: {
-                    backgroundColor: 'white',
+                    backgroundColor: ' rgba(255,255,255, 0.8)',
                     position: 'absolute',
                     bottom: 20,
                     marginHorizontal: 20,
                     height: 80,
                     borderRadius: 10,
-                },
+                }
             }}
         >
             <Tab.Screen
