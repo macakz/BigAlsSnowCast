@@ -26,7 +26,6 @@ const SearchScreen = ({ navigation }) => {
             <View style={styles.screen}>
                 <StatusBar barStyle='dark-content' />
                 <ImageBackground source={require('../assets/images/homeImage.jpg')} resizeMode="cover" style={styles.backgroundImage} />
-                
                 <View style={styles.searchContainer}>
                     <DropDownPicker
                         listMode="MODAL"
@@ -50,7 +49,6 @@ const SearchScreen = ({ navigation }) => {
                         <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.buttonContainer}>
                             <Text style={styles.buttonText}>Find that pow...</Text>
                         </TouchableOpacity>}
-
                 </View>
             </View>
         </>
