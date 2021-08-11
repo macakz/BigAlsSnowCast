@@ -21,7 +21,7 @@ const Tabs = () => {
             screenOptions={{
                 activeTintColor: 'red',
                 tabBarStyle: {
-                    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+                    backgroundColor: 'rgba(255, 255, 255, 0.7)',
                     position: 'absolute',
                     bottom: 20,
                     marginHorizontal: 20,
@@ -35,9 +35,9 @@ const Tabs = () => {
             <Tab.Screen
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarLabelStyle: { color: 'white', fontSize: 18 },
+                    tabBarLabelStyle: { color: 'black', fontSize: 16, fontWeight: 'bold' },
                     tabBarIcon: ({ focused }) => {
-                        const color = focused ? 'white' : 'gray';
+                        const color = focused ? 'black' : 'gray';
                         return (
                             <Ionicons name='home' color={color} size={30} />
                         )
@@ -52,9 +52,9 @@ const Tabs = () => {
                 options={{
                     headerShown: false,
                     tabBarLabel: 'Search',
-                    tabBarLabelStyle: { color: 'white', fontSize: 18 },
+                    tabBarLabelStyle: { color: 'black', fontSize: 16, fontWeight: 'bold' },
                     tabBarIcon: ({ focused }) => {
-                        const color = focused ? 'white' : 'gray';
+                        const color = focused ? 'black' : 'gray';
                         return (
                             <Ionicons name='search' color={color} size={30} />
                         )
@@ -66,9 +66,9 @@ const Tabs = () => {
                 component={FavouriteScreen}
                 options={{
                     tabBarLabel: 'Favourites',
-                    tabBarLabelStyle: { color: 'white', fontSize: 18 },
+                    tabBarLabelStyle: { color: 'black', fontSize: 16, fontWeight: 'bold' },
                     tabBarIcon: ({ focused }) => {
-                        const color = focused ? 'white' : 'gray';
+                        const color = focused ? 'black' : 'gray';
                         return (
                             <Ionicons name='star' color={color} size={30} />
                         )

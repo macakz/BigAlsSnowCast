@@ -25,20 +25,20 @@ export default StyleSheet.create({
 
     dropDownPicker: {
         fontSize: 16,
-        backgroundColor: theme.primaryContainerColor,
+        backgroundColor: theme.secondaryContainerColor,
         width: 300,
         alignSelf: "center",
-        borderColor: theme.primaryContainerColor
+        borderColor: theme.secondaryContainerColor
     },
     modalContentContainer: {
-        backgroundColor: theme.primaryContainerColor,
+        backgroundColor: theme.secondaryContainerColor,
     },
     dropDownPickerLabel: {
         fontSize: 16,
         color: theme.secondaryText
     },
     buttonContainer: {
-        backgroundColor: theme.primaryContainerColor,
+        backgroundColor: theme.secondaryContainerColor,
         borderRadius: 5,
         alignSelf: 'center',
         justifyContent: 'center',
