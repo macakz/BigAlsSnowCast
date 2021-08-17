@@ -20,7 +20,7 @@ export default StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         backgroundColor: "transparent",
-        zIndex: 1
+        zIndex: 1,
     },
 
     dropDownPicker: {
@@ -35,7 +35,7 @@ export default StyleSheet.create({
     },
     dropDownPickerLabel: {
         fontSize: 16,
-        color: theme.secondaryText
+        color: theme.secondaryText,
     },
     buttonContainer: {
         backgroundColor: theme.secondaryContainerColor,
