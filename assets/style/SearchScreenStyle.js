@@ -23,7 +23,7 @@ export default StyleSheet.create({
 
     dropDownPicker: {
         fontSize: 16,
-        backgroundColor: 'rgba(255, 255, 255, 0.7)',
+        backgroundColor: 'rgba(255, 255, 255, 0.5)',
         width: 300,
         alignSelf: "center",
         borderColor: theme.secondaryContainerColor

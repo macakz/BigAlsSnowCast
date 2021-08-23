@@ -53,7 +53,7 @@ const SearchScreen = ({ navigation }) => {
                         }>
                         {items}
                     </Picker>
-                    {selectedField === null
+                    {selectedField === "Choose your mountain"
                         ?
                         null
                         :
