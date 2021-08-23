@@ -40,8 +40,6 @@ export default StyleSheet.create({
     dataContainer: {
         margin: 5,
         padding: 5,
-        borderWidth: 2,
-        borderColor: theme.primaryBorderColor,
         backgroundColor: theme.primaryContainerColor,
     },
     dataRowContainer: {

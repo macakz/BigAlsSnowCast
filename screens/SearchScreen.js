@@ -4,6 +4,7 @@ import { Text, TouchableOpacity, View, Image, StatusBar, ImageBackground } from 
 
 //packages
 import DropDownPicker from 'react-native-dropdown-picker'
+import { Picker } from '@react-native-picker/picker';
 
 //assets
 import skifields from '../assets/skifields.json'
@@ -12,13 +13,15 @@ import styles from '../assets/style/SearchScreenStyle'
 
 
 const SearchScreen = ({ navigation }) => {
+    const [selectedField, setSelectedField] = useState();
 
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
     const items = skifields.map(field => {
         return (
-            { label: field.name + ", " + field.region, value: field.name, }
+            <Picker.Item label={field.name} value={field.name} />
         )
+
     })
 
     return (
@@ -27,7 +30,7 @@ const SearchScreen = ({ navigation }) => {
                 <StatusBar barStyle='dark-content' />
                 <ImageBackground source={require('../assets/images/remarkables.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 <View style={styles.searchContainer}>
-                    <DropDownPicker
+                    {/* <DropDownPicker
                         listMode="MODAL"
                         style={styles.dropDownPicker}
                         modalContentContainerStyle={styles.modalContentContainer}
@@ -41,8 +44,16 @@ const SearchScreen = ({ navigation }) => {
                         items={items}
                         setOpen={setOpen}
                         setValue={setValue}
-                    />
-                    {value === null
+                    /> */}
+                    <Picker
+                        style={styles.dropDownPicker}
+                        selectedValue={selectedField}
+                        onValueChange={(itemValue, itemIndex) =>
+                            setSelectedField(itemValue)
+                        }>
+                        {items}
+                    </Picker>
+                    {selectedField === null
                         ?
                         null
                         :
