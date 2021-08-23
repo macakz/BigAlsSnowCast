@@ -35,7 +35,7 @@ export default StyleSheet.create({
     },
     dropDownPickerLabel: {
         fontSize: 16,
-        color: theme.secondaryText,
+        color: theme.primaryText,
     },
     buttonContainer: {
         backgroundColor: theme.secondaryContainerColor,
@@ -49,7 +49,7 @@ export default StyleSheet.create({
     buttonText: {
         fontSize: 16,
         textAlign: 'center',
-        color: theme.secondaryText,
+        color: theme.primaryText,
     },
     backgroundImage: {
         flex: 1,

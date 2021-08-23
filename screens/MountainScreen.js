@@ -110,9 +110,6 @@ const MountainScreen = ({ route, navigation }) => {
                         <Col>
                             <View style={styles.dropDownPickerContainerRight}>
                                 <DropDownPicker
-                                    dropDownContainerStyle={{
-                                        fontFamily: 'CrimsonText-Regular'
-                                    }}
                                     listMode="MODAL"
                                     style={styles.dropDownPicker}
                                     modalContentContainerStyle={styles.modalContentContainerStyle}

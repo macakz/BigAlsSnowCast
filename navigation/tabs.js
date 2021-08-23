@@ -9,9 +9,9 @@ import HomeScreen from '../screens/HomeScreen'
 import FavouriteScreen from '../screens/FavouriteScreen'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-//theme
+//style
+import styles from '../assets/style/tabsStyle'
 import * as theme from '../assets/theme/theme'
-import { color } from 'react-native-reanimated'
 
 const Tab = createBottomTabNavigator()
 
@@ -19,7 +19,6 @@ const Tabs = () => {
     return (
         <Tab.Navigator
             screenOptions={{
-                activeTintColor: 'red',
                 tabBarStyle: {
                     backgroundColor: 'rgba(255, 255, 255, 0.7)',
                     position: 'absolute',
@@ -28,16 +27,14 @@ const Tabs = () => {
                     height: 100,
                     borderRadius: 10,
                 }
-
-
             }}
         >
             <Tab.Screen
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarLabelStyle: { color: 'black', fontSize: 16, fontWeight: 'bold' },
+                    tabBarLabelStyle: styles.tabBarLabel,
                     tabBarIcon: ({ focused }) => {
-                        const color = focused ? 'black' : 'gray';
+                        const color = focused ? theme.primaryFocusedIcon : theme.primaryUnfocusedIcon;
                         return (
                             <Ionicons name='home' color={color} size={30} />
                         )
@@ -52,9 +49,9 @@ const Tabs = () => {
                 options={{
                     headerShown: false,
                     tabBarLabel: 'Search',
-                    tabBarLabelStyle: { color: 'black', fontSize: 16, fontWeight: 'bold' },
+                    tabBarLabelStyle: styles.tabBarLabel,
                     tabBarIcon: ({ focused }) => {
-                        const color = focused ? 'black' : 'gray';
+                        const color = focused ? theme.primaryFocusedIcon : theme.primaryUnfocusedIcon;
                         return (
                             <Ionicons name='search' color={color} size={30} />
                         )
@@ -66,9 +63,9 @@ const Tabs = () => {
                 component={FavouriteScreen}
                 options={{
                     tabBarLabel: 'Favourites',
-                    tabBarLabelStyle: { color: 'black', fontSize: 16, fontWeight: 'bold' },
+                    tabBarLabelStyle: styles.tabBarLabel,
                     tabBarIcon: ({ focused }) => {
-                        const color = focused ? 'black' : 'gray';
+                        const color = focused ? theme.primaryFocusedIcon : theme.primaryUnfocusedIcon;
                         return (
                             <Ionicons name='star' color={color} size={30} />
                         )

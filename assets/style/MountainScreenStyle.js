@@ -20,11 +20,10 @@ export default StyleSheet.create({
     },
     modalContentContainerStyle: {
         backgroundColor: theme.primaryContainerColor,
-        fontFamily: theme.primaryFontFamily
 
     },
     dropDownPickerLabel: {
-        color: theme.secondaryText,
+        color: theme.primaryText,
     },
     dropDownPickerContainerLeft: {
         paddingTop: 5,
@@ -43,19 +42,18 @@ export default StyleSheet.create({
         padding: 5,
         borderWidth: 2,
         borderColor: theme.primaryBorderColor,
-        backgroundColor: theme.primaryContainerColor
+        backgroundColor: theme.primaryContainerColor,
     },
     dataRowContainer: {
         flexDirection: 'row'
     },
     dataTitle: {
         fontWeight: 'bold',
-        color: theme.secondaryText,
-        fontFamily: theme.primaryFontFamily
+        color: theme.primaryText,
     },
     dataContent: {
-        color: theme.secondaryText,
-        fontFamily: theme.primaryFontFamily
+        color: theme.primaryText,
+
     },
     imageContainer: {
 

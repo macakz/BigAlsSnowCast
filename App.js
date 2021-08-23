@@ -33,9 +33,9 @@ const App = () => {
               backgroundColor: theme.primaryBackgroundColor,
             },
             headerTitleStyle: {
-              color: theme.primaryText
+              color: theme.secondaryText
             },
-            headerTintColor: theme.primaryText,
+            headerTintColor: theme.secondaryText,
           }}
           component={MountainScreen}
         />
