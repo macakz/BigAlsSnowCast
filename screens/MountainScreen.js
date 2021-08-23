@@ -24,7 +24,7 @@ const MountainScreen = ({ route, navigation }) => {
     const [mountainIsReady, setMountainIsReady] = useState(false)
 
     //matches the mountain id for api to the chosen mountain from previous screen, passed through params
-    const mountain = route.params.value
+    mountain = route.params.selectedField
     const [mountainId, setMountainId] = useState()
     const matchMountainId = () => {
         const match = skifields.find(field => field.name === mountain)

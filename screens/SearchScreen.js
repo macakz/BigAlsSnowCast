@@ -23,7 +23,6 @@ const SearchScreen = ({ navigation }) => {
         )
 
     })
-
     return (
         <>
             <View style={styles.screen}>
@@ -57,7 +56,7 @@ const SearchScreen = ({ navigation }) => {
                         ?
                         null
                         :
-                        <TouchableOpacity onPress={() => navigation.navigate('Mountain', { value })} style={styles.buttonContainer}>
+                        <TouchableOpacity onPress={() => navigation.navigate('Mountain',  {selectedField} )} style={styles.buttonContainer}>
                             <Text style={styles.buttonText}>Find that pow...</Text>
                         </TouchableOpacity>}
                 </View>
