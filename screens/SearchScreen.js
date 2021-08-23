@@ -25,7 +25,7 @@ const SearchScreen = ({ navigation }) => {
         <>
             <View style={styles.screen}>
                 <StatusBar barStyle='dark-content' />
-                <ImageBackground source={require('../assets/images/ruapehuwhite.jpg')} resizeMode="cover" style={styles.backgroundImage} />
+                <ImageBackground source={require('../assets/images/remarkables.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 <View style={styles.searchContainer}>
                     <DropDownPicker
                         listMode="MODAL"

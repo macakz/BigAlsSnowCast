@@ -13,13 +13,11 @@ export default StyleSheet.create({
     },
     searchContainer: {
         position: "absolute",
-        top: 0,
+        top: 300,
         left: 0,
         right: 0,
         bottom: 0,
-        justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "transparent",
         zIndex: 1,
     },
 
