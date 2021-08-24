@@ -26,7 +26,7 @@ export default StyleSheet.create({
 
     },
     picker: {
-        backgroundColor: 'rgba(255, 255, 255, 0.5)',
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
         width: 300,
         alignSelf: "center",
         borderColor: theme.secondaryContainerColor,
@@ -40,13 +40,11 @@ export default StyleSheet.create({
         color: theme.primaryText,
     },
     buttonContainer: {
-        backgroundColor: theme.secondaryContainerColor,
+        backgroundColor: 'rgba(255, 255, 255, 0.7)',
         borderRadius: 10,
-        alignSelf: 'center',
-        justifyContent: 'center',
         padding: 5,
         margin: 5,
-        width: 300,
+        width: 200,
     },
     buttonText: {
         fontSize: 16,
