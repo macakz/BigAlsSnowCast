@@ -19,7 +19,7 @@ const SearchScreen = ({ navigation }) => {
     const [value, setValue] = useState(null);
     const items = skifields.map(field => {
         return (
-            <Picker.Item label={field.name} value={field.name} />
+            <Picker.Item key={field.name}label={field.name} value={field.name} />
         )
 
     })
