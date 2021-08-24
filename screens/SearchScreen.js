@@ -1,9 +1,8 @@
 //react
 import React, { useState } from 'react'
-import { Text, TouchableOpacity, View, Image, StatusBar, ImageBackground } from 'react-native'
+import { Text, TouchableOpacity, View, StatusBar, ImageBackground } from 'react-native'
 
 //packages
-import DropDownPicker from 'react-native-dropdown-picker'
 import { Picker } from '@react-native-picker/picker';
 
 //assets
@@ -29,7 +28,7 @@ const SearchScreen = ({ navigation }) => {
                         itemStyle={styles.pickerItem}
                         style={styles.picker}
                         selectedValue={selectedField}
-                        onValueChange={(itemValue, itemIndex) =>
+                        onValueChange={(itemValue,) =>
                             setSelectedField(itemValue)
                         }>
                         {pickerItems}
