@@ -13,20 +13,24 @@ export default StyleSheet.create({
     },
     searchContainer: {
         position: "absolute",
-        top: 300,
+        top: 0,
         left: 0,
         right: 0,
         bottom: 0,
         alignItems: "center",
+        justifyContent: "center",
         zIndex: 1,
     },
-
-    dropDownPicker: {
+    pickerItem: {
         fontSize: 16,
+
+    },
+    picker: {
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
         width: 300,
         alignSelf: "center",
-        borderColor: theme.secondaryContainerColor
+        borderColor: theme.secondaryContainerColor,
+        borderRadius: 10,
     },
     modalContentContainer: {
         backgroundColor: theme.secondaryContainerColor,
@@ -37,7 +41,7 @@ export default StyleSheet.create({
     },
     buttonContainer: {
         backgroundColor: theme.secondaryContainerColor,
-        borderRadius: 5,
+        borderRadius: 10,
         alignSelf: 'center',
         justifyContent: 'center',
         padding: 5,
