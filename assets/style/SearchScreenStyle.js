@@ -11,7 +11,7 @@ export default StyleSheet.create({
         backgroundColor: theme.primaryBackgroundColor,
         flex: 1,
     },
-    searchContainer: {
+    pickerContainer: {
         position: "absolute",
         top: 0,
         left: 0,
