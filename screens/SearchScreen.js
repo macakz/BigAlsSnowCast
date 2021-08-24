@@ -12,7 +12,7 @@ import styles from '../assets/style/SearchScreenStyle'
 
 
 const SearchScreen = ({ navigation }) => {
-    const [selectedField, setSelectedField] = useState();
+    const [selectedField, setSelectedField] = useState("");
     const pickerItems = skifields.map(field => {
         return (
             <Picker.Item key={field.name} label={field.name} value={field.name} />
@@ -33,7 +33,7 @@ const SearchScreen = ({ navigation }) => {
                         }>
                         {pickerItems}
                     </Picker>
-                    {selectedField === "Choose your mountain..." || " "
+                    {selectedField === "Choose your mountain..." || selectedField === ""
                         ?
                         null
                         :
