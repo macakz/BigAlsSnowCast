@@ -22,7 +22,7 @@ const SearchScreen = ({ navigation }) => {
         <>
             <View style={styles.screen}>
                 <StatusBar barStyle='dark-content' />
-                <ImageBackground source={require('../assets/images/homeImage.jpg')} resizeMode="cover" style={styles.backgroundImage} />
+                <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 <View style={styles.pickerContainer}>
                     <Picker
                         itemStyle={styles.pickerItem}
