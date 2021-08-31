@@ -1,4 +1,4 @@
-## SnowForecast Native App
+## SnowForecast React Native App
 
 <div display="flex">
   <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/resources/readmeImages/searchScreen.png" alt="search for a mountain"/>
