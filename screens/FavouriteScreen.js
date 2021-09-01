@@ -7,7 +7,7 @@ import DropDownPicker from 'react-native-dropdown-picker'
 
 //assets
 import skifields from '../assets/skifields.json'
-import styles from '../assets/style/SearchScreenStyle'
+import styles from '../assets/style/FavouriteScreenStyle'
 
 
 
@@ -16,8 +16,8 @@ const FavouriteScreen = ({ navigation }) => {
 
     return (
         <>
-            <View style={{ backgroundColor: 'white', alignItems: 'center', justifyContent: 'center' }}>
-                <Text > hello world</Text>
+            <View style={styles.screen}>
+                <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
             </View>
         </>
     )
