@@ -23,8 +23,8 @@ const App = () => {
         <Stack.Screen
           name='Search'
           component={Tabs}
+          // stops double overlap of header as nav component do not remove headershown here, look in nav
           options={{ headerShown: false }}
-
         />
         <Stack.Screen
           name="Mountain"
