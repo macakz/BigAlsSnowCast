@@ -1,6 +1,6 @@
 //react
 import React, { useState, useCallback, useEffect, useLayoutEffect } from 'react'
-import { SafeAreaView, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar, } from 'react-native'
+import {  SafeAreaView, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar, } from 'react-native'
 
 //config
 import { app_id, app_key } from '../config/weatherKeys'
