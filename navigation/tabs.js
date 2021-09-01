@@ -19,6 +19,7 @@ const Tabs = () => {
     return (
         <Tab.Navigator
             screenOptions={{
+                headerShown: false,
                 tabBarStyle: {
                     backgroundColor: 'rgba(255, 255, 255, 0.7)',
                     position: 'absolute',
@@ -47,7 +48,6 @@ const Tabs = () => {
                 name="Search"
                 component={SearchScreen}
                 options={{
-                    headerShown: false,
                     tabBarLabel: 'Search',
                     tabBarLabelStyle: styles.tabBarLabel,
                     tabBarIcon: ({ focused }) => {
