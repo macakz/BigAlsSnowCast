@@ -79,7 +79,6 @@ const MountainScreen = ({ route, navigation }) => {
     if (mountainIsReady === false) {
         return (
             <>
-                <StatusBar barStyle='light-content' />
                 <View style={styles.activityIndicatorContainer}>
                     <Swing size={150} color="white" />
                 </View>
@@ -89,7 +88,6 @@ const MountainScreen = ({ route, navigation }) => {
     return (
         <>
             <SafeAreaView style={styles.screen}>
-                <StatusBar barStyle='light-content' />
 
                 <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 {/* <SafeAreaView style={styles.dropdownMainContainer}>

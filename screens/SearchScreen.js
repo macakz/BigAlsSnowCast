@@ -21,7 +21,7 @@ const SearchScreen = ({ navigation }) => {
     return (
         <>
             <View style={styles.screen}>
-                <StatusBar barStyle='dark-content' />
+                
                 <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 <View style={styles.pickerContainer}>
                     <Picker
