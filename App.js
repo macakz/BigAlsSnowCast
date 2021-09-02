@@ -1,7 +1,7 @@
 //React
 import React from 'react'
 import 'react-native-gesture-handler'
-import { StatusBar } from 'react-native'
+import { StatusBar, View, Text, TouchableOpacity } from 'react-native'
 
 //react navigation
 import { NavigationContainer } from '@react-navigation/native'
@@ -13,6 +13,7 @@ import MountainScreen from './screens/MountainScreen'
 
 //theme
 import * as theme from './assets/theme/theme'
+import styles from './assets/style/AppStyle'
 
 //redux
 import { Provider } from 'react-redux'
@@ -35,16 +36,31 @@ const App = () => {
             />
             <Stack.Screen
               name="Mountain"
-              options={{
+              options={({ navigation }) => ({
                 headerTransparent: true,
-                headerTitleStyle: {
-                  color: theme.secondaryText,
-                  
-                },
-                headerTintColor: theme.secondaryText,
+                headerTitle: ()=> (
+                  <View style={styles.headerButtonCentreContainer}>
+                    <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                      <Text style={styles.headerButtonCentreText}>Coronet Peak</Text>
+                    </TouchableOpacity>
+                  </View>
+                ),
+                headerLeft: () => (
+                  <View style={styles.headerButtonLeftContainer}>
+                    <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                      <Text style={styles.headerButtonText}> - Search</Text>
+                    </TouchableOpacity>
+                  </View>
+                ),
+                headerRight: () => (
+                  <View style={styles.headerButtonRightContainer}>
+                    <TouchableOpacity style={styles.headerButton}>
+                      <Text style={styles.headerButtonText}>Options</Text>
+                    </TouchableOpacity>
+                  </View>
+                ),
+              })}
 
-
-              }}
               component={MountainScreen}
             />
           </Stack.Navigator>
