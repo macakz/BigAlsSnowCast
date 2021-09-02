@@ -87,7 +87,7 @@ const MountainScreen = ({ route, navigation }) => {
     }
     return (
         <>
-            <SafeAreaView style={styles.screen}>
+            <View style={styles.screen}>
 
                 <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 {/* <SafeAreaView style={styles.dropdownMainContainer}>
@@ -229,7 +229,7 @@ const MountainScreen = ({ route, navigation }) => {
                         </View>
                         </ScrollView>
                     </View>
-            </SafeAreaView>
+            </View>
         </>
     )
 }

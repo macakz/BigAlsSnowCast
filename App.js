@@ -1,7 +1,7 @@
 //React
 import React from 'react'
 import 'react-native-gesture-handler'
-import {StatusBar} from 'react-native'
+import { StatusBar } from 'react-native'
 
 //react navigation
 import { NavigationContainer } from '@react-navigation/native'
@@ -24,7 +24,7 @@ const App = () => {
   return (
     <>
       <Provider store={store}>
-      <StatusBar barStyle='dark-content' />
+        <StatusBar barStyle='dark-content' />
         <NavigationContainer>
           <Stack.Navigator>
             <Stack.Screen
@@ -36,14 +36,14 @@ const App = () => {
             <Stack.Screen
               name="Mountain"
               options={{
-                headerStyle: {
-                  backgroundColor: theme.primaryBackgroundColor,
-                },
+                headerTransparent: true,
                 headerTitleStyle: {
-                  color: theme.secondaryText
+                  color: theme.secondaryText,
+                  
                 },
                 headerTintColor: theme.secondaryText,
-                
+
+
               }}
               component={MountainScreen}
             />

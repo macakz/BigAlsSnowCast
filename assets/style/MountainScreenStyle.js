@@ -1,8 +1,9 @@
 //React
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Dimensions } from 'react-native'
 
 //assets
 import * as theme from '../theme/theme'
+const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
     activityIndicatorContainer: {
@@ -41,6 +42,7 @@ export default StyleSheet.create({
         paddingRight: 5,
     },
     dataContainer: {
+        top: height* 0.1,
         margin: 10,
         padding: 10,
         backgroundColor: theme.primaryContainerColor,
