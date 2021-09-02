@@ -79,8 +79,11 @@ const MountainScreen = ({ route, navigation }) => {
     if (mountainIsReady === false) {
         return (
             <>
-                <View style={styles.activityIndicatorContainer}>
-                    <Swing size={150} color="white" />
+                <View style={styles.screen}>
+                    <View style={styles.loading}>
+                        <Swing size={150} color="white" />
+                    </View>
+                    <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 </View>
             </>
         )
@@ -124,8 +127,8 @@ const MountainScreen = ({ route, navigation }) => {
                         </Col>
                     </Grid>
                 </SafeAreaView> */}
-              
-                    <View style={styles.mountainDataOverlay}>
+
+                <View style={styles.mountainDataOverlay}>
                     <ScrollView>
                         {mountainForecastData.map((data) => {
                             const icon = data.upper.wx_icon.replace(".gif", "")
@@ -227,8 +230,8 @@ const MountainScreen = ({ route, navigation }) => {
                                 <Image style={styles.weatherUnlockedImage} resizeMode={'cover'} source={require('../assets/images/weatherUnlockedLogo.png')} />
                             </TouchableOpacity>
                         </View>
-                        </ScrollView>
-                    </View>
+                    </ScrollView>
+                </View>
             </View>
         </>
     )

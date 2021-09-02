@@ -6,10 +6,15 @@ import * as theme from '../theme/theme'
 const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
-    activityIndicatorContainer: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
+    loading: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        alignItems: "center",
+        justifyContent: "center",
+        zIndex: 1,
     },
     screen: {
         backgroundColor: theme.primaryBackgroundColor,
@@ -42,7 +47,7 @@ export default StyleSheet.create({
         paddingRight: 5,
     },
     dataContainer: {
-        top: height* 0.1,
+        top: height * 0.1,
         margin: 10,
         padding: 10,
         backgroundColor: theme.primaryContainerColor,
@@ -67,7 +72,7 @@ export default StyleSheet.create({
         width: 80
     },
     weatherUnlockedContainer: {
-        
+
     },
     weatherUnlockedText: {
         color: theme.primaryText,
@@ -75,7 +80,7 @@ export default StyleSheet.create({
     },
     weatherUnlockedImage: {
         alignItems: 'center',
-        
+
     },
     backgroundImage: {
         flex: 1,
