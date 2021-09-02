@@ -9,7 +9,6 @@ export default StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-        backgroundColor: theme.primaryBackgroundColor
     },
     screen: {
         backgroundColor: theme.primaryBackgroundColor,
@@ -22,8 +21,12 @@ export default StyleSheet.create({
         backgroundColor: theme.primaryContainerColor,
 
     },
+
     dropDownPickerLabel: {
         color: theme.primaryText,
+    },
+    dropdownMainContainer: {
+
     },
     dropDownPickerContainerLeft: {
         paddingTop: 5,
@@ -38,9 +41,10 @@ export default StyleSheet.create({
         paddingRight: 5,
     },
     dataContainer: {
-        margin: 5,
-        padding: 5,
+        margin: 10,
+        padding: 10,
         backgroundColor: theme.primaryContainerColor,
+        borderRadius: 10,
     },
     dataRowContainer: {
         flexDirection: 'row'
@@ -51,7 +55,6 @@ export default StyleSheet.create({
     },
     dataContent: {
         color: theme.primaryText,
-
     },
     imageContainer: {
 
@@ -62,7 +65,7 @@ export default StyleSheet.create({
         width: 80
     },
     weatherUnlockedContainer: {
-
+        
     },
     weatherUnlockedText: {
         color: theme.primaryText,
@@ -70,5 +73,18 @@ export default StyleSheet.create({
     },
     weatherUnlockedImage: {
         alignItems: 'center',
+        
+    },
+    backgroundImage: {
+        flex: 1,
+        justifyContent: "center"
+    },
+    mountainDataOverlay: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 1,
     },
 })
