@@ -1,5 +1,5 @@
 //react
-import React, { useState, useCallback, useEffect,} from 'react'
+import React, { useState, useCallback, useEffect, } from 'react'
 import { ImageBackground, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar, } from 'react-native'
 
 //config
@@ -9,7 +9,7 @@ import { app_id, app_key } from '../config/weatherKeys'
 import * as weatherIcon from '../assets/icons/iconImages'
 import skifields from '../assets/skifields.json'
 import styles from '../assets/style/MountainScreenStyle'
-
+import Icon from 'react-native-vector-icons/MaterialIcons';
 //components 
 import getDayOfWeek from '../components/getDayOfWeek'
 
@@ -123,24 +123,17 @@ const MountainScreen = ({ route, navigation }) => {
                 <View style={styles.mountainDataOverlay}>
                     <ScrollView>
                         <View style={styles.headerContainer}>
-                            <View style={styles.headerButtonCentreContainer}>
-                                <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                                    <Text style={styles.headerButtonCentreText}>{mountain}</Text>
-                                </TouchableOpacity>
-                            </View>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                                <Icon name="arrow-back-ios" size={35} color="black" />
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                                <Text style={styles.headerButtonText}>{mountain}</Text>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={styles.headerButton}>
+                                <Icon name="settings" size={35} color="black" />
+                            </TouchableOpacity>
                         </View>
-                        <View style={styles.headerSubContainer}>
-                        <View style={styles.headerButtonLeftContainer}>
-                                <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                                    <Text style={styles.headerButtonText}>Search</Text>
-                                </TouchableOpacity>
-                            </View>
-                            <View style={styles.headerButtonRightContainer}>
-                                <TouchableOpacity style={styles.headerButton}>
-                                    <Text style={styles.headerButtonText}>Options</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
+
                         {mountainForecastData.map((data) => {
                             const icon = data.upper.wx_icon.replace(".gif", "")
                             return (
