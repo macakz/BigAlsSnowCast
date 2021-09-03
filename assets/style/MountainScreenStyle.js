@@ -8,37 +8,42 @@ const { height, width } = Dimensions.get('window')
 export default StyleSheet.create({
     headerContainer: {
         top: height * 0.05,
-        flexDirection: 'row'
+        alignSelf: 'center',
+    },
+    headerSubContainer: {
+        top: height * 0.05,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
     headerButtonCentreContainer: {
-        paddingLeft: 15,
-        paddingRight: 15,
-        paddingTop: 5,
-        paddingBottom: 5,
+        paddingLeft: 35,
+        paddingRight: 35,
+        paddingTop: 10,
+        paddingBottom: 10,
         marginLeft: 5,
         marginRight: 5,
         marginTop: 5,
         marginBottom: 5,
-        backgroundColor: theme.secondaryContainerColor,
+        backgroundColor: theme.primaryContainerColor,
         borderRadius: 10,
 
     },
     headerButtonLeftContainer: {
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 20,
+        paddingRight: 20,
         paddingTop: 5,
         paddingBottom: 5,
         marginLeft: 15,
         marginRight: 5,
         marginTop: 5,
         marginBottom: 5,
-        backgroundColor: theme.secondaryContainerColor,
+        backgroundColor: theme.primaryContainerColor,
         borderRadius: 10,
 
     },
     headerButtonRightContainer: {
-        paddingLeft: 15,
-        paddingRight: 15,
+        paddingLeft: 20,
+        paddingRight: 20,
         paddingTop: 5,
         paddingBottom: 5,
         marginLeft: 5,

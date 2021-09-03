@@ -1,6 +1,6 @@
 //react
-import React, { useState, useCallback, useEffect, useLayoutEffect } from 'react'
-import { ImageBackground, SafeAreaView, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar, } from 'react-native'
+import React, { useState, useCallback, useEffect,} from 'react'
+import { ImageBackground, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar, } from 'react-native'
 
 //config
 import { app_id, app_key } from '../config/weatherKeys'
@@ -69,12 +69,6 @@ const MountainScreen = ({ route, navigation }) => {
         mountainForecast()
     }, [mountainId, hourValue])
 
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            title: `${mountain}`,
-        })
-    }, [navigation])
-
     // screen data
     if (mountainIsReady === false) {
         return (
@@ -126,18 +120,19 @@ const MountainScreen = ({ route, navigation }) => {
                         </Col>
                     </Grid>
                 </SafeAreaView> */}
-
                 <View style={styles.mountainDataOverlay}>
                     <ScrollView>
                         <View style={styles.headerContainer}>
-                            <View style={styles.headerButtonLeftContainer}>
-                                <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                                    <Text style={styles.headerButtonText}> - Search</Text>
-                                </TouchableOpacity>
-                            </View>
                             <View style={styles.headerButtonCentreContainer}>
                                 <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                                    <Text style={styles.headerButtonCentreText}>Coronet Peak</Text>
+                                    <Text style={styles.headerButtonCentreText}>{mountain}</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                        <View style={styles.headerSubContainer}>
+                        <View style={styles.headerButtonLeftContainer}>
+                                <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                                    <Text style={styles.headerButtonText}>Search</Text>
                                 </TouchableOpacity>
                             </View>
                             <View style={styles.headerButtonRightContainer}>
