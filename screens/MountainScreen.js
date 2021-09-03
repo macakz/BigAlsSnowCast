@@ -91,7 +91,6 @@ const MountainScreen = ({ route, navigation }) => {
     return (
         <>
             <View style={styles.screen}>
-
                 <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
                 {/* <SafeAreaView style={styles.dropdownMainContainer}>
                     <Grid>
@@ -130,6 +129,23 @@ const MountainScreen = ({ route, navigation }) => {
 
                 <View style={styles.mountainDataOverlay}>
                     <ScrollView>
+                        <View style={styles.headerContainer}>
+                            <View style={styles.headerButtonLeftContainer}>
+                                <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                                    <Text style={styles.headerButtonText}> - Search</Text>
+                                </TouchableOpacity>
+                            </View>
+                            <View style={styles.headerButtonCentreContainer}>
+                                <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                                    <Text style={styles.headerButtonCentreText}>Coronet Peak</Text>
+                                </TouchableOpacity>
+                            </View>
+                            <View style={styles.headerButtonRightContainer}>
+                                <TouchableOpacity style={styles.headerButton}>
+                                    <Text style={styles.headerButtonText}>Options</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
                         {mountainForecastData.map((data) => {
                             const icon = data.upper.wx_icon.replace(".gif", "")
                             return (

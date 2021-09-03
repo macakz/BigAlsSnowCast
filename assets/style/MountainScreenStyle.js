@@ -6,6 +6,57 @@ import * as theme from '../theme/theme'
 const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
+    headerContainer: {
+        top: height * 0.05,
+        flexDirection: 'row'
+    },
+    headerButtonCentreContainer: {
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingTop: 5,
+        paddingBottom: 5,
+        marginLeft: 5,
+        marginRight: 5,
+        marginTop: 5,
+        marginBottom: 5,
+        backgroundColor: theme.secondaryContainerColor,
+        borderRadius: 10,
+
+    },
+    headerButtonLeftContainer: {
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingTop: 5,
+        paddingBottom: 5,
+        marginLeft: 15,
+        marginRight: 5,
+        marginTop: 5,
+        marginBottom: 5,
+        backgroundColor: theme.secondaryContainerColor,
+        borderRadius: 10,
+
+    },
+    headerButtonRightContainer: {
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingTop: 5,
+        paddingBottom: 5,
+        marginLeft: 5,
+        marginRight: 15,
+        marginTop: 5,
+        marginBottom: 5,
+        backgroundColor: theme.secondaryContainerColor,
+        borderRadius: 10,
+    },
+    headerButton: {
+
+    },
+    headerButtonCentreText: {
+        fontSize: 20,
+    },
+    headerButtonText: {
+        fontSize: 12,
+    },
     loading: {
         position: "absolute",
         top: 0,
@@ -47,7 +98,7 @@ export default StyleSheet.create({
         paddingRight: 5,
     },
     dataContainer: {
-        top: height * 0.1,
+        top: height * 0.05,
         margin: 10,
         padding: 10,
         backgroundColor: theme.primaryContainerColor,

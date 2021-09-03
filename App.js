@@ -38,27 +38,7 @@ const App = () => {
               name="Mountain"
               options={({ navigation }) => ({
                 headerTransparent: true,
-                headerTitle: ()=> (
-                  <View style={styles.headerButtonCentreContainer}>
-                    <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                      <Text style={styles.headerButtonCentreText}>Coronet Peak</Text>
-                    </TouchableOpacity>
-                  </View>
-                ),
-                headerLeft: () => (
-                  <View style={styles.headerButtonLeftContainer}>
-                    <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                      <Text style={styles.headerButtonText}> - Search</Text>
-                    </TouchableOpacity>
-                  </View>
-                ),
-                headerRight: () => (
-                  <View style={styles.headerButtonRightContainer}>
-                    <TouchableOpacity style={styles.headerButton}>
-                      <Text style={styles.headerButtonText}>Options</Text>
-                    </TouchableOpacity>
-                  </View>
-                ),
+                headerShown: false
               })}
 
               component={MountainScreen}
