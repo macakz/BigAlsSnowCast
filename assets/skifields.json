@@ -120,7 +120,8 @@
         "name": "Coronet Peak",
         "region": "Otago",
         "club": false,
-        "weatherId": "4424660"
+        "weatherId": "4424660",
+        "websiteReport": "https://www.coronetpeak.co.nz/weather-report/"
     },
     {
         "name": "The Remarkables",

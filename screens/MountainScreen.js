@@ -28,9 +28,14 @@ const MountainScreen = ({ route, navigation }) => {
     const [mountainId, setMountainId] = useState()
     const matchMountainId = () => {
         const match = skifields.find(field => field.name === mountain)
-        setMountainId(match.weatherId);
+        setMountainId(match.weatherId)
+        websiteWeatherReport()
     }
-
+    const [websiteReport, setWebsiteReport]= useState()
+    const websiteWeatherReport = () => {
+        const match = skifields.find(field => field.name === mountain)
+        setWebsiteReport(match.websiteReport)
+    }
     // dropdown pickers //
     // forcast mountain height
     const [heightOpen, setHeightOpen] = useState(false);
@@ -82,6 +87,7 @@ const MountainScreen = ({ route, navigation }) => {
             </>
         )
     }
+    console.log(websiteReport)
     return (
         <>
             <View style={styles.screen}>
@@ -126,7 +132,7 @@ const MountainScreen = ({ route, navigation }) => {
                             <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
                                 <Icon name="arrow-back-ios" size={35} color="black" />
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => Linking.openURL(websiteReport)}>
                                 <Text style={styles.headerButtonText}>{mountain}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.headerButton}>
