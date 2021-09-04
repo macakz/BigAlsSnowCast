@@ -87,7 +87,6 @@ const MountainScreen = ({ route, navigation }) => {
             </>
         )
     }
-    console.log(websiteReport)
     return (
         <>
             <View style={styles.screen}>
