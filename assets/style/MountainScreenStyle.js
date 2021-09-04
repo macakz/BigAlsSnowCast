@@ -7,20 +7,9 @@ const { height, width } = Dimensions.get('window')
 
 export default StyleSheet.create({
     headerContainer: {
-        top: height * 0.05,
+        top: height * 0.06,
         alignSelf: 'center',
         flexDirection: 'row',
-        justifyContent: 'space-around',
-
-
-    },
-    headerButtonCentreContainer: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around',
-        backgroundColor: 'transparent',
-
-
     },
 
     headerButtonText: {
@@ -70,7 +59,7 @@ export default StyleSheet.create({
         paddingRight: 5,
     },
     dataContainer: {
-        top: height * 0.05,
+        top: height * 0.07,
         margin: 10,
         padding: 10,
         backgroundColor: theme.primaryContainerColor,

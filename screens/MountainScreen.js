@@ -129,13 +129,13 @@ const MountainScreen = ({ route, navigation }) => {
                     <ScrollView>
                         <View style={styles.headerContainer}>
                             <TouchableOpacity style={styles.headerButton} onPress={() => navigation.navigate('Search')}>
-                                <Icon name="arrow-back-ios" size={35} color="black" />
+                                <Icon name="arrow-back-ios" size={30} color="black" />
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.headerButton} onPress={() => Linking.openURL(websiteReport)}>
                                 <Text style={styles.headerButtonText}>{mountain}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.headerButton}>
-                                <Icon name="settings" size={35} color="black" />
+                                <Icon name="settings" size={30} color="black" />
                             </TouchableOpacity>
                         </View>
 
