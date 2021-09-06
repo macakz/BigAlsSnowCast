@@ -6,115 +6,134 @@
         "name": "Tukino",
         "region": "Mount Ruapehu",
         "club": true,
-        "weatherId": "3770807"
+        "weatherId": "3770807",
+        "websiteReport": ""
     },
     {
         "name": "Turoa",
         "region": "Mount Ruapehu",
         "club": false,
-        "weatherId": "3858456"
+        "weatherId": "3858456",
+        "websiteReport": ""
     },
     {
         "name": "Whakapapa",
         "region": "Mount Ruapehu",
         "club": false,
-        "weatherId": "738004"
+        "weatherId": "738004",
+        "websiteReport": ""
     },
     {
         "name": "Manganui",
         "region": "Taranaki",
         "club": true,
-        "weatherId": "178005"
+        "weatherId": "178005",
+        "websiteReport": ""
     },
     {
         "name": "Awakino",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "54888717"
+        "weatherId": "54888717",
+        "websiteReport": ""
     },
     {
         "name": "Broken River",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "3187270"
+        "weatherId": "3187270",
+        "websiteReport": ""
     },
     {
         "name": "Craigieburn Valley",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "108"
+        "weatherId": "108",
+        "websiteReport": ""
     },
     {
         "name": "Mount Cheeseman",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "795315"
+        "weatherId": "795315",
+        "websiteReport": ""
     },
     {
         "name": "Mount Olympus",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "3185840"
+        "weatherId": "3185840",
+        "websiteReport": ""
     },
     {
         "name": "Fox Peak",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "6858539"
+        "weatherId": "6858539",
+        "websiteReport": ""
     },
     {
         "name": "Hanmer Springs Ski Area",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "315012"
+        "weatherId": "315012",
+        "websiteReport": ""
     },
     {
         "name": "Mount Dobson",
         "region": "Canterbury",
         "club": false,
-        "weatherId": "309008"
+        "weatherId": "309008",
+        "websiteReport": ""
     },
     {
         "name": "Mount Hutt",
         "region": "Canterbury",
         "club": false,
-        "weatherId": "811002"
+        "weatherId": "811002",
+        "websiteReport": ""
     },
     {
         "name": "Mount Lyford",
         "region": "Canterbury",
         "club": false,
-        "weatherId": "178006"
+        "weatherId": "178006",
+        "websiteReport": ""
     },
     {
         "name": "Ohau",
         "region": "Canterbury ",
         "club": false,
-        "weatherId": "885009"
+        "weatherId": "885009",
+        "websiteReport": ""
     },
     {
         "name": "Porters Ski Area",
         "region": "Canterbury",
         "club": false,
-        "weatherId": "3797087"
+        "weatherId": "3797087",
+        "websiteReport": ""
     },
     {
         "name": "Roundhill",
         "region": "Canterbury",
         "club": false,
-        "weatherId": "36806123"
+        "weatherId": "36806123",
+        "websiteReport": ""
     },
     {
         "name": "Temple Basin",
         "region": "Canterbury",
         "club": true,
-        "weatherId": "3777788"
+        "weatherId": "3777788",
+        "websiteReport": ""
     },
     {
         "name": "Rainbow",
         "region": "Nelson Lakes",
         "club": false,
-        "weatherId": "861005"
+        "weatherId": "861005",
+        "websiteReport": ""
     },
     {
         "name": "Coronet Peak",
@@ -127,24 +146,28 @@
         "name": "The Remarkables",
         "region": "Otago",
         "club": false,
-        "weatherId": "615013"
+        "weatherId": "615013",
+        "websiteReport": ""
     },
     {
         "name": "Cardrona Alpine Resort",
         "region": "Otago",
         "club": false,
-        "weatherId": "411011"
+        "weatherId": "411011",
+        "websiteReport": "https://new.cardrona.com/mountain/snow-report"
     },
     {
         "name": "Snow Farm",
         "region": "Otago",
         "club": false,
-        "weatherId": "4437542"
+        "weatherId": "4437542",
+        "websiteReport": ""
     },
     {
         "name": "Treble Cone",
         "region": "Otago",
         "club": false,
-        "weatherId": "4437443"
+        "weatherId": "4437443",
+        "websiteReport": ""
     }
 ]
