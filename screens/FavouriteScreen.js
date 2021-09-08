@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import { Text, TouchableOpacity, View, Image, StatusBar, ImageBackground } from 'react-native'
 
 //packages
-import DropDownPicker from 'react-native-dropdown-picker'
 
 //assets
 import skifields from '../assets/skifields.json'

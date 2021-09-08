@@ -15,7 +15,6 @@ import getDayOfWeek from '../components/getDayOfWeek'
 
 //packages
 import axios from 'axios'
-import DropDownPicker from 'react-native-dropdown-picker'
 import { Col, Grid } from "react-native-easy-grid"
 import { Swing } from 'react-native-animated-spinkit'
 
@@ -36,16 +35,16 @@ const MountainScreen = ({ route, navigation }) => {
         const match = skifields.find(field => field.name === mountain)
         setWebsiteReport(match.websiteReport)
     }
-    // dropdown pickers //
+    
     // forcast mountain height
     const [heightValue, setHeightValue] = useState("Mid");
-
 
     // forecast hour interval
     const [hourValue, setHourValue] = useState(12)
 
-
+    // modal state for options to customise api call
     const [showOptions, setShowOptions] = useState(false)
+
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
     const mountainForecast = useCallback(() => {
@@ -82,40 +81,6 @@ const MountainScreen = ({ route, navigation }) => {
         <>
             <View style={styles.screen}>
                 <ImageBackground source={require('../assets/images/alps.jpg')} resizeMode="cover" style={styles.backgroundImage} />
-                {/* <SafeAreaView style={styles.dropdownMainContainer}>
-                    <Grid>
-                        <Col>
-                            <View style={styles.dropDownPickerContainerLeft}>
-                                <DropDownPicker
-                                    listMode="FLATLIST"
-                                    style={styles.dropDownPicker}
-                                    modalContentContainerStyle={styles.modalContentContainerStyle}
-                                    labelStyle={styles.dropDownPickerLabel}
-                                    open={heightOpen}
-                                    value={heightValue}
-                                    items={heightOptions}
-                                    setOpen={setHeightOpen}
-                                    setValue={setHeightValue}
-                                />
-                            </View>
-                        </Col>
-                        <Col>
-                            <View style={styles.dropDownPickerContainerRight}>
-                                <DropDownPicker
-                                    listMode="FLATLIST"
-                                    style={styles.dropDownPicker}
-                                    modalContentContainerStyle={styles.modalContentContainerStyle}
-                                    labelStyle={styles.dropDownPickerLabel}
-                                    open={hourOpen}
-                                    value={hourValue}
-                                    items={hourOptions}
-                                    setOpen={setHourOpen}
-                                    setValue={setHourValue}
-                                />
-                            </View>
-                        </Col>
-                    </Grid>
-                </SafeAreaView> */}
                 <View style={styles.mountainDataOverlay}>
                     <ScrollView>
                         <View style={styles.headerContainer}>
@@ -129,7 +94,6 @@ const MountainScreen = ({ route, navigation }) => {
                                 <Icon name="settings" size={30} color="black" />
                             </TouchableOpacity>
                         </View>
-
                         {mountainForecastData.map((data) => {
                             const icon = data.upper.wx_icon.replace(".gif", "")
                             return (
