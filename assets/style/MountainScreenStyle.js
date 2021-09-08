@@ -14,7 +14,7 @@ export default StyleSheet.create({
 
     headerButtonText: {
         fontSize: 20,
-        width: width *0.7,
+        width: width * 0.7,
         textAlign: 'center',
     },
 
@@ -105,5 +105,34 @@ export default StyleSheet.create({
         right: 0,
         bottom: 0,
         zIndex: 1,
+    },
+    confirmButton: {
+
+        width: 200,
+        alignSelf: 'center',
+        padding: 10,
+        margin: 10,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: '#fff',
+        borderRadius: 10,
+        color: '#E6BE8A',
+        fontSize: 20,
+    },
+    mainContainer: {
+        flex: 1,
+        alignItems: "center",
+        justifyContent: "center",
+        backgroundColor: 'rgba(0,0,0,0.9)'
+    },
+
+    subContainer: {
+        padding: 13,
+        backgroundColor: 'transparent',
+        borderRadius: 13
+    },
+    message: {
+        fontSize: 20,
+        color: '#E6BE8A',
     },
 })

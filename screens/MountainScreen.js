@@ -1,6 +1,6 @@
 //react
 import React, { useState, useCallback, useEffect, } from 'react'
-import { ImageBackground, ScrollView, Text, View, Image, Linking, TouchableOpacity, StatusBar, } from 'react-native'
+import { ImageBackground, ScrollView, Text, View, Image, Linking, TouchableOpacity, Modal } from 'react-native'
 
 //config
 import { app_id, app_key } from '../config/weatherKeys'
@@ -31,30 +31,21 @@ const MountainScreen = ({ route, navigation }) => {
         setMountainId(match.weatherId)
         websiteWeatherReport()
     }
-    const [websiteReport, setWebsiteReport]= useState()
+    const [websiteReport, setWebsiteReport] = useState()
     const websiteWeatherReport = () => {
         const match = skifields.find(field => field.name === mountain)
         setWebsiteReport(match.websiteReport)
     }
     // dropdown pickers //
     // forcast mountain height
-    const [heightOpen, setHeightOpen] = useState(false);
     const [heightValue, setHeightValue] = useState("Mid");
-    const heightOptions = [
-        { label: "Base", value: "Base" },
-        { label: "Mid-Mountain", value: "Mid" },
-        { label: "Upper-Mountain", value: "Upper" }
-    ]
+
 
     // forecast hour interval
-    const [hourOpen, setHourOpen] = useState(false)
     const [hourValue, setHourValue] = useState(12)
-    const hourOptions = [
-        { label: "6 hourly", value: 6 },
-        { label: "12 hourly", value: 12 }
-    ]
 
 
+    const [showOptions, setShowOptions] = useState(false)
     // determine the forecast for selected mountain by calling api
     const [mountainForecastData, setMountainForecastData] = useState([])
     const mountainForecast = useCallback(() => {
@@ -65,14 +56,14 @@ const MountainScreen = ({ route, navigation }) => {
             .catch((error) => {
                 console.log("Error:", error);
             })
-    }, [mountainId, hourValue])
+    }, [mountainId, hourValue, heightValue])
 
     // call on load to render the screen data
 
     useEffect(() => {
         matchMountainId()
         mountainForecast()
-    }, [mountainId, hourValue])
+    }, [mountainId, hourValue, heightValue])
 
     // screen data
     if (mountainIsReady === false) {
@@ -134,7 +125,7 @@ const MountainScreen = ({ route, navigation }) => {
                             <TouchableOpacity style={styles.headerButton} onPress={() => Linking.openURL(websiteReport)}>
                                 <Text style={styles.headerButtonText}>{mountain}</Text>
                             </TouchableOpacity>
-                            <TouchableOpacity style={styles.headerButton}>
+                            <TouchableOpacity style={styles.headerButton} onPress={() => setShowOptions(true)}>
                                 <Icon name="settings" size={30} color="black" />
                             </TouchableOpacity>
                         </View>
@@ -240,11 +231,36 @@ const MountainScreen = ({ route, navigation }) => {
                             </TouchableOpacity>
                         </View>
                     </ScrollView>
+                    <Modal transparent={true} animationType='fade' visible={showOptions}>
+                        <View style={styles.mainContainer}>
+                            <View style={styles.subContainer}>
+                                <Text style={styles.message}>Choose mountain height</Text>
+                                <TouchableOpacity onPress={() => setHeightValue('Base')}>
+                                    <Text style={styles.confirmButton}>Base</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => setHeightValue('Mid')}>
+                                    <Text style={styles.confirmButton}>Mid</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => setHeightValue('Upper')}>
+                                    <Text style={styles.confirmButton}>Upper</Text>
+                                </TouchableOpacity>
+                                <Text style={styles.message}>Choose hourly interval</Text>
+                                <TouchableOpacity onPress={() => setHourValue(6)}>
+                                    <Text style={styles.confirmButton}>6 Hourly</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => setHourValue(12)}>
+                                    <Text style={styles.confirmButton}>12 Hourly</Text>
+                                </TouchableOpacity>
+                                <TouchableOpacity onPress={() => setShowOptions(false)}>
+                                    <Text style={styles.confirmButton}>Close</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </Modal>
                 </View>
             </View>
         </>
     )
 }
-
 
 export default MountainScreen
