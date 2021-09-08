@@ -236,23 +236,23 @@ const MountainScreen = ({ route, navigation }) => {
                             <View style={styles.subContainer}>
                                 <Text style={styles.message}>Choose mountain height</Text>
                                 <TouchableOpacity onPress={() => setHeightValue('Base')}>
-                                    <Text style={styles.confirmButton}>Base</Text>
+                                    <Text style={styles.modalButton}>Base</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() => setHeightValue('Mid')}>
-                                    <Text style={styles.confirmButton}>Mid</Text>
+                                    <Text style={styles.modalButton}>Mid</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() => setHeightValue('Upper')}>
-                                    <Text style={styles.confirmButton}>Upper</Text>
+                                    <Text style={styles.modalButton}>Upper</Text>
                                 </TouchableOpacity>
                                 <Text style={styles.message}>Choose hourly interval</Text>
                                 <TouchableOpacity onPress={() => setHourValue(6)}>
-                                    <Text style={styles.confirmButton}>6 Hourly</Text>
+                                    <Text style={styles.modalButton}>6 Hourly</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() => setHourValue(12)}>
-                                    <Text style={styles.confirmButton}>12 Hourly</Text>
+                                    <Text style={styles.modalButton}>12 Hourly</Text>
                                 </TouchableOpacity>
                                 <TouchableOpacity onPress={() => setShowOptions(false)}>
-                                    <Text style={styles.confirmButton}>Close</Text>
+                                    <Text style={styles.modalCloseButton}>Close</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>

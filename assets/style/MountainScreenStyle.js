@@ -106,9 +106,8 @@ export default StyleSheet.create({
         bottom: 0,
         zIndex: 1,
     },
-    confirmButton: {
-
-        width: 200,
+    modalButton: {
+        width: 180,
         alignSelf: 'center',
         padding: 10,
         margin: 10,
@@ -117,7 +116,19 @@ export default StyleSheet.create({
         borderColor: '#fff',
         borderRadius: 10,
         color: '#E6BE8A',
-        fontSize: 20,
+        fontSize: 16,
+    },
+    modalCloseButton: {
+        width: 180,
+        alignSelf: 'center',
+        padding: 10,
+        marginTop: 80,
+        textAlign: 'center',
+        borderWidth: 1,
+        borderColor: '#fff',
+        borderRadius: 10,
+        color: '#E6BE8A',
+        fontSize: 16,
     },
     mainContainer: {
         flex: 1,
@@ -134,5 +145,7 @@ export default StyleSheet.create({
     message: {
         fontSize: 20,
         color: '#E6BE8A',
+        textAlign: 'center',
+        padding: 15
     },
 })
