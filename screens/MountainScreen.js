@@ -89,6 +89,7 @@ const MountainScreen = ({ route, navigation }) => {
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.headerButton} onPress={() => Linking.openURL(websiteReport)}>
                                 <Text style={styles.headerButtonText}>{mountain}</Text>
+                                <Text style={styles.subHeaderText}>{heightValue}</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style={styles.headerButton} onPress={() => setShowOptions(true)}>
                                 <Icon name="settings" size={30} color="black" />

@@ -149,4 +149,8 @@ paddingBottom: 50,
         textAlign: 'center',
         padding: 15
     },
+    subHeaderText: {
+        paddingTop: 10,
+        textAlign: 'center',
+    },
 })
