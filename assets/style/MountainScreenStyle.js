@@ -84,10 +84,11 @@ export default StyleSheet.create({
         width: 80
     },
     weatherUnlockedContainer: {
-
+top: 50,
+paddingBottom: 50,
     },
     weatherUnlockedText: {
-        color: theme.primaryText,
+        color: 'white',
         textAlign: 'center'
     },
     weatherUnlockedImage: {

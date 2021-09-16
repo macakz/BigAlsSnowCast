@@ -188,12 +188,12 @@ const MountainScreen = ({ route, navigation }) => {
                             )
                         })
                         }
-                        {/* <View style={styles.weatherUnlockedContainer}>
+                        <View style={styles.weatherUnlockedContainer}>
                             <TouchableOpacity onPress={() => Linking.openURL('http://www.weatherunlocked.com/')}>
                                 <Text style={styles.weatherUnlockedText} >Weather Provided by</Text>
                                 <Image style={styles.weatherUnlockedImage} resizeMode={'cover'} source={require('../assets/images/weatherUnlockedLogo.png')} />
                             </TouchableOpacity>
-                        </View> */}
+                        </View> 
                     </ScrollView>
                     <Modal transparent={true} animationType='fade' visible={showOptions}>
                         <View style={styles.mainContainer}>
