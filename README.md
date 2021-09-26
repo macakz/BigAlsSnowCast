@@ -5,7 +5,9 @@
   <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/assets/readmeImages/searchScreen1.2.png" alt="search for a mountain"/>
   <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/assets/readmeImages/searchScreenFind1.2.png" alt="mountain to chose"/>
   <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/assets/readmeImages/loading1.2.png" alt="loading"/>
-  <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/assets/readmeImages/forecast1.2.png" alt="forecast"/>
+  <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/assets/readmeImages/screenforecast1.2.png" alt="forecast"/>
+  <img height="500" src="https://github.com/macakz/BigAlsSnowCast/blob/main/assets/readmeImages/modal1.2.PNG" alt="settingsmodal"/>
+
 </div>
 
 ### Version 1.0
